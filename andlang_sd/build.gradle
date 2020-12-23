@@ -1,7 +1,9 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.jakewharton.butterknife'
+
 apply plugin: 'com.github.dcendents.android-maven'
 group="com.github.wugemu"
+
 //apply plugin: 'maven'
 //uploadArchives {
 //    configuration = configurations.archives
