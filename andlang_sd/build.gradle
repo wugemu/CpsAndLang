@@ -9,7 +9,7 @@ group="com.github.wugemu"
 //    configuration = configurations.archives
 //    repositories {
 //        mavenDeployer {
-//            repository(url: "http://192.168.11.244:8086/repository/nysoapp/"){
+//            repository(uurl: "http://192.168.11.244:8086/repository/nysoapp/"){
 //                authentication(userName: 1111, password: 1111)
 //            }
 //            pom.project {
