@@ -1,24 +1,25 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.jakewharton.butterknife'
-
-apply plugin: 'maven'
-uploadArchives {
-    configuration = configurations.archives
-    repositories {
-        mavenDeployer {
-            repository(url: "http://192.168.11.244:8086/repository/nysoapp/"){
-                authentication(userName: 1111, password: 1111)
-            }
-            pom.project {
-                version '1.0.53'
-                artifactId 'andlang'
-                groupId 'com.nyso.library'
-                packaging 'aar'
-                description '基础库'
-            }
-        }
-    }
-}
+apply plugin: 'com.github.dcendents.android-maven'
+group="com.github.wugemu"
+//apply plugin: 'maven'
+//uploadArchives {
+//    configuration = configurations.archives
+//    repositories {
+//        mavenDeployer {
+//            repository(url: "http://192.168.11.244:8086/repository/nysoapp/"){
+//                authentication(userName: 1111, password: 1111)
+//            }
+//            pom.project {
+//                version '1.0.53'
+//                artifactId 'andlang'
+//                groupId 'com.nyso.library'
+//                packaging 'aar'
+//                description '基础库'
+//            }
+//        }
+//    }
+//}
 
 android {
     compileSdkVersion 28
