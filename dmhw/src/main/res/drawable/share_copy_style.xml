@@ -1,0 +1,12 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <!-- 圆角弧度 20 -->
+    <corners android:radius="@dimen/dp_7"/>
+
+    <!-- 变化率 -->
+    <gradient
+        android:endColor="#f9472c"
+        android:startColor="#ff3056" />
+
+</shape>

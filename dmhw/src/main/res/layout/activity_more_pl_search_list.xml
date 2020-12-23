@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <View
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_24"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_7"
+        >
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_4"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="@dimen/dp_9"
+                android:layout_height="@dimen/dp_18"
+                android:layout_margin="@dimen/dp_9"
+                android:scaleType="centerCrop"
+                android:tint="@color/color_999999"
+                android:src="@mipmap/btn_back_default" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/network_list_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:background="@drawable/search_page_background"
+            android:layout_toEndOf="@+id/back"
+            android:layout_toStartOf="@+id/search_list_btn"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_5"
+            >
+
+            <ImageView
+                android:id="@+id/search_img"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/more_pl_searicon"/>
+
+            <EditText
+                android:id="@+id/network_list_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_15"
+                android:textColor="#666666"
+                android:background="@null"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/search_img"
+                android:layout_toLeftOf="@+id/del_img"
+                android:singleLine="true"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:textCursorDrawable="@drawable/my_cursor"
+                android:cursorVisible="true"/>
+
+            <ImageView
+                android:id="@+id/del_img"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                android:tint="#c2c2c2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:visibility="gone"
+                android:src="@mipmap/search_close"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/search_list_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingEnd="@dimen/dp_12"
+            android:paddingStart="@dimen/dp_10"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:textColor="#333333"
+                android:text="搜索"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/search_magic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="#EEEEEE"
+        />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/search_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f4"
+        />
+
+</LinearLayout>

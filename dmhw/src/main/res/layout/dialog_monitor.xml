@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyaout000"
+    android:orientation="vertical"
+    android:background="@color/dialogTransparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.lxkj.dmhw.view.ScaleLayout
+        android:id="@+id/lyaout_scale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_45"
+        android:layout_marginEnd="@dimen/dp_45"
+        android:layout_centerInParent="true"
+        app:widthToHeight="1.286"
+        >
+
+        <LinearLayout
+            android:id="@+id/lyaout001"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/search_mori_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_122"
+                    android:layout_marginEnd="@dimen/dp_25"
+                    android:layout_marginBottom="@dimen/dp_48"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        tools:ignore="ScrollViewSize">
+
+                        <TextView
+                            android:id="@+id/dialog_monitor_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_15"
+                            android:layout_marginEnd="@dimen/dp_15"
+                            android:gravity="center"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/sp_12"
+                            tools:text="测试测试测试测试测试测试测试测试测试测试测试测试" />
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/dialog_monitor_tao"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_48"
+                        android:layout_height="@dimen/dp_48"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/monitor_tao" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dialog_monitor_jd"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_48"
+                        android:layout_height="@dimen/dp_48"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/monitor_jd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dialog_monitor_pdd"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_48"
+                        android:layout_height="@dimen/dp_48"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/monitor_pdd" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dialog_monitor_wph"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_48"
+                        android:layout_height="@dimen/dp_48"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/monitor_wph" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.lxkj.dmhw.view.ScaleLayout>
+    <ImageView
+        android:id="@+id/dialog_monitor_close"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lyaout_scale"
+        android:layout_marginTop="@dimen/dp_20"
+        android:src="@mipmap/close_new"
+        />
+</RelativeLayout>

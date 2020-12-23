@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/limit_magic_layout"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/limit_magic_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/sp_13"
+            android:textColor="#FF4933"
+            tools:text="14:00"
+            />
+
+        <TextView
+            android:id="@+id/limit_magic_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_10"
+            android:textColor="#F81802"
+            tools:text="已抢购"
+            tools:ignore="SmallSp" />
+
+    </LinearLayout>
+
+</LinearLayout>

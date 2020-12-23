@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">@color/themeColor</color>
+    <color name="colorPrimaryDark">@color/themeColor</color>
+    <color name="colorAccent">@color/mainColor</color>
+
+    <color name="dialogTransparent">#00000000</color>
+    <color name="DialogOutsideBg">#00000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorDialog">#1A000000</color>
+    <color name="Transparent00000000">#00000000</color>
+    <color name="gray">#adadad</color> // 灰色
+    <color name="black">#000000</color> // 黑色
+    <color name="white">#ffffff</color> // 白色
+    <color name="red">#E43F3E</color> // 红色
+    <color name="blue">#FF375BF1</color>// 蓝色
+    <color name="yellow">#FFF7D23E</color>// 黄色
+    <color name="green">#FF34A350</color>// 绿色
+
+    <color name="progressColor">#ff0173</color>
+    <color name="radioBackgroundColor">@color/mainColor</color>
+    <color name="radioTransparentColor">#00000000</color>
+    <color name="mainColor">#ee2532</color>//主要色调
+    <color name="themeColor">@color/white</color>//主题色
+    <color name="radioBackground">#ffffff</color>//导航背景色
+    <color name="color_666666">#666666</color>//灰色
+    <color name="color_999999">#999999</color>//灰色
+    <color name="color_333333">#333333</color>
+    <color name="color_D74D38">#D74D38</color>
+    <color name="color_EE2325">#EE2325</color>
+    <color name="color_fafafa">#fafafa</color>
+    <color name="color_EAEAEA"> #EAEAEA</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_ff5c4d">#ff5c4d</color>
+    <color name="color_ee2325">#ee2325</color>
+    <color name="mainColor2">#FFFEFE</color>
+    <color name="color_F8F8F8">#F8F8F8</color>
+    <color name="color_main_tab_htn">#666666</color>
+    <color name="color_050505">#050505</color>
+    <color name="color_262627">#262627</color>
+    <color name="color_FF373A">#FF373A</color>
+    <color name="color_B58630">#B58630</color>
+
+    <!-- 进度条渐变  -->
+    <color name="progress_start">#1694fe</color>
+    <color name="progress_center">#5ef4fd</color>
+    <color name="progress_end">#5ef4fd</color>
+
+    <!--背景色-->
+    <color name="colorBackGroud">#F5F5F5</color>
+    <color name="colorRedBg2">#FDE8E7</color>
+    <!--字体颜色-->
+    <color name="colorBlackText">#242424</color>
+    <color name="colorBlackText3">#626262</color>
+    <color name="colorBlackText2">#999999</color>
+    <color name="colorBlackHint">#b8b8b8</color>
+    <color name="hitTxt">#ADADAD</color>
+    <color name="colorBlueText4">#3BA5F6</color>
+    <color name="colorBlueText5">#6184E7</color>
+    <color name="colorRedMainApalh94">#1AFF1341</color>
+    <color name="colorGoldMain">#B5A054</color>
+    <color name="colorRedMain">#000000</color>
+    <color name="colorRedMainApalh50">#80FF1341</color>
+    <color name="colorRed">#DA0303</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="line_grey">#E6E6E6</color>
+    <color name="line_color">#f0f0f0</color>
+    <color name="line_color2">#DBDBDB</color>
+    <color name="line_color3">#ededed</color>
+
+    <color name="colorOrageBg3">#FFFBDC</color>
+    <color name="colorOrageBg">#FFFCED</color>
+    <color name="colorOrageBg4">#FFAA20</color>
+    <color name="colorOrageBg5">#FFF5DA</color>
+    <color name="colorOrageText4">#E9AA00</color>
+    <color name="invalid">#fafafa</color>
+    <color name="colorTra99">#99000000</color>
+
+    <color name="colorSwitch">#4cd964</color>
+    <color name="colorBlueText3">#458CEE</color>
+    <color name="colorBlueText">#429BE7</color>
+    <color name="colorOrageText2">#F2A243</color>
+    <color name="colorOrageText3">#8E7244</color>
+
+    <color name="blackBg">#454545</color>
+    <color name="blackTxt">#909090</color>
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="colorBackGroud2">#F3F4F4</color>
+</resources>

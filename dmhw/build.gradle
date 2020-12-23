@@ -1,0 +1,367 @@
+apply plugin: 'com.android.application'
+apply plugin: 'bugly'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.nn.shop"
+        minSdkVersion 23
+        //升级到android9.0
+        targetSdkVersion 28
+        versionCode 100
+        //正式发布版本号
+        versionName "1.0.0"
+        //内部测试版本号
+//        versionName "3.5.2.2"
+        multiDexEnabled true
+        lintOptions {
+            //true--所有正式版构建执行规则生成崩溃的lint检查，如果有崩溃问题将停止构建
+            checkReleaseBuilds false
+            //true--错误发生后停止gradle构建
+            abortOnError false
+        }
+        // 声明需要使用注解功能.AS3.0之后的变化，不能再setting中设置了
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi'//, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "111",
+                GETUI_APP_KEY   : "222",
+                GETUI_APP_SECRET: "222",
+
+                HUAWEI_APP_ID   : "222",
+
+                MEIZU_APP_ID    : "222",
+                MEIZU_APP_KEY   : "222",
+
+                XIAOMI_APP_ID   : "222",
+                XIAOMI_APP_KEY  : "222",
+
+                OPPO_APP_KEY   : "222",
+                OPPO_APP_SECRET  : "222",
+
+                VIVO_APP_ID   : "222",
+                VIVO_APP_KEY  : "222"
+        ]
+    }
+    signingConfigs {
+        config {
+            storeFile file('cps.jks')
+            storePassword "123456"
+            keyAlias "release"
+            keyPassword "123456"
+        }
+    }
+    buildTypes {
+        release {
+//            buildConfigField("String", "HttpCommon", "\"\"")
+//            buildConfigField("String", "HttpMorePl", "\"\"")
+            minifyEnabled true
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+//            buildConfigField("String", "HttpCommon", "\"http://wx.mi.dmjvip.com/\"")
+//            buildConfigField("String", "HttpMorePl", "\"http://wx.mi.dmjvip.com/\"")
+            signingConfig signingConfigs.config
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    repositories {
+        flatDir {
+            dirs 'libs', '../../../../library_module/libs'
+        }
+    }
+  // 不同的产品及渠道
+    flavorDimensions "free"
+    productFlavors {
+        app{}
+        huawei{}
+    }
+  // 替换对应的值
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:support-fragment:28.0.0@aar'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    //GalleryFinal相册
+    implementation 'cn.finalteam:galleryfinal:1.4.8.7'
+
+    //ForListView万能适配器
+    implementation 'com.zhy:base-adapter:3.0.3'
+
+    //VerticalBannerView竖向滚动Banner
+    implementation project(':library')
+    implementation project(':pulltorefresh')
+//    implementation 'com.github.Rowandjj:VerticalBannerView:1.0'
+
+    //ImageLoader
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    //Transformations图片加载器依赖图片变换
+    implementation 'jp.wasabeef:glide-transformations:2.0.1'
+
+    //MMKV内存事件
+    implementation 'com.tencent:mmkv:1.0.12'
+
+    //ButterKnife替代findViewById()
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    //Banner横向滑动Banner
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+
+    //页面滑动返回事件
+
+    //    implementation 'com.youngfeng.android:snake:0.3.2'
+
+    //    annotationProcessor 'com.youngfeng.android:snake-compiler:0.3.0'
+
+    //MagicIndicator导航指示器
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    implementation 'org.apache.httpcomponents:httpmime:4.5.2'
+
+    //下拉刷新事件
+    implementation 'in.srain.cube:ultra-ptr:1.0.11'
+
+    //下拉刷新事件依赖库
+    implementation 'in.srain.cube:cube-sdk:1.0.44@aar'
+
+    //BRVAHRecyclerView适配器
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+
+    //PhotoView带缩放功能
+    implementation 'com.github.chrisbanes:PhotoView:1.2.6'
+
+    //EventBus代替广播同步通知
+    implementation 'org.greenrobot:eventbus:3.0.0'
+
+    //logger代替log日志打印
+    implementation 'com.orhanobut:logger:1.15'
+
+    //Fragmentation代替官方Fragment
+    implementation 'me.yokeyword:fragmentation:1.3.6'
+
+    //加载中样式
+    implementation 'com.zyao89:zloading:1.2.0'
+
+    //XRichText富文本类库
+    implementation 'com.github.limedroid:XRichText:v1.0.0'
+
+    //视频播放器
+    implementation 'cn.jzvd:jiaozivideoplayer:6.4.1'
+
+    //下载功能
+    implementation 'com.liulishuo.filedownloader:library:1.7.6'
+
+    //海报用的ViewPager
+    implementation('com.alibaba.android:ultraviewpager:1.0.7.7@aar') {
+        transitive = true
+    }
+
+    //个推
+    implementation 'com.getui:sdk:2.14.0.0'
+
+    //华为个推厂商通道
+    implementation 'com.getui:hwp:1.0.6'
+
+    //魅族个推厂商通道
+    implementation 'com.getui:mzp:1.0.9'
+
+    //小米个推厂商通道
+    implementation 'com.getui:xmp:1.0.7'
+
+    //OPPO个推厂商通道
+    implementation 'com.assist:oppo:1.0.6'
+
+    //VIVO个推厂商通道
+    implementation 'com.assist:vivo:1.0.4'
+
+    //二维码
+    implementation 'com.google.zxing:core:3.3.0'
+    implementation 'com.google.zxing:android-core:3.3.0'
+
+    //仿IOS选择器
+    implementation 'com.contrarywind:Android-PickerView:4.1.3'
+
+    //---------------------阿里组件start----------------------
+
+    //1、基础安全组件
+    implementation 'com.taobao.android:securityguardaar3:5.4.171@aar'
+    implementation 'com.taobao.android:securitybodyaar3:5.4.99@aar'
+    implementation 'com.taobao.android:avmpaar3:5.4.36@aar'
+    implementation 'com.taobao.android:sgmiddletieraar3:5.4.9@aar'
+
+    //2、mtop组件
+
+    // Mtop，网关（稳定的高性能无线RPC网关，网关本身包含了一套安全体系，包括加密传输、防攻击、防刷、防篡改、过载保护等安全策略，同时针对无线网络的特点，在连通性、网络加速、流量方面进行了针对性优化）
+    implementation 'com.taobao.android:mtopsdk_allinone_open:3.1.2.5@jar'
+
+    //3、登录授权
+    implementation 'com.ali.auth.sdk:alibabauth_core:2.0.0.6@aar'
+    implementation 'com.ali.auth.sdk:alibabauth_ui:2.0.0.6@aar'
+    implementation 'com.ali.auth.sdk:alibabauth_ext:2.0.0.6@aar'
+
+    //4、appLink（必选）
+
+    //applink，打通“手机淘宝”与三方app的桥梁，实现手机淘宝与三方app之间的往返跳转,包括登陆时跳手淘授权,用手淘打开商品页,店铺等
+    implementation 'com.alibaba.sdk.android:alibc_link_partner:4.1.11@aar'
+
+    //基础电商组件（必选）
+
+    //包含打开detail,淘客分佣,jsbridge注入等功能
+    implementation 'com.alibaba.sdk.android:AlibcTradeCommon:4.0.0.2@aar'
+    implementation 'com.alibaba.sdk.android:AlibcTradeBiz:4.0.0.2@aar'
+    implementation 'com.alibaba.sdk.android:nb_trade:4.0.0.2@aar'
+
+    //ut
+    implementation 'com.taobao.android:utdid4all:1.1.5.3_proguard'
+    implementation 'com.alibaba.mtl:app-monitor-sdk:2.6.4.5_for_bc'
+
+    //FastJson数据处理
+    implementation 'com.alibaba:fastjson:1.2.9'
+
+    //---------------------阿里组件end----------------------
+
+    //QQSDK
+    implementation files('libs/open_sdk_r5990_lite.jar')
+
+    //注解包
+    implementation 'org.projectlombok:lombok:1.16.20'
+    implementation 'org.glassfish:javax.annotation:10.0-b28'
+
+    //腾讯TBS
+    implementation files('libs/tbs_sdk_thirdapp_v4.3.0.1148_43697_sharewithdownloadwithfile_withoutGame_obfs_20190805_175505.jar')
+
+
+    //AutoFitTextView
+    implementation 'me.grantland:autofittextview:0.2.1'
+
+    //支付宝支付
+
+    //    implementation files('libs/alipaySdk-20180601')
+    implementation(name: 'alipaySdk-15.7.4-20200228192319-noUtdid', ext: 'aar')
+
+    //兼容5.0一下系统的分包问题
+    implementation 'com.android.support:multidex:1.0.1'
+
+    //圆形进度条
+    implementation 'com.github.ziyexiao:RoundProgressBar:1.0.3'
+
+    //图片的压缩工具Compressor
+
+    //    implementation 'id.zelory:compressor:2.1.0'
+
+    //Glide图片加载器
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+
+    //验货直播间
+//    implementation 'com.facebook.fresco:fresco:0.9.0+'
+
+    //noinspection GradleCompatible 阻尼动画
+    implementation 'com.android.support:support-dynamic-animation:25.+'
+
+    //信用卡SDK
+    implementation(name: 'beishengsdklib-release', ext: 'aar')
+    implementation 'org.greenrobot:greendao:3.2.2'
+
+    //鲁班图片压缩
+
+    //implementation 'top.zibin:Luban:1.1.3'
+
+    //网络请求框架okhttp4.0
+    implementation 'com.squareup.okhttp3:okhttp:4.0.1'
+    implementation 'com.squareup.okio:okio:2.2.2'
+
+    //微信
+
+    //微信小程序和APP交互
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+    //友盟统计
+//    implementation 'com.umeng.umsdk:analytics:8.0.0'
+//    implementation 'com.umeng.umsdk:common:2.0.0'
+
+    //友盟分享
+
+    //    implementation  'com.umeng.umsdk:share-core:6.9.4'
+
+    //    implementation  'com.umeng.umsdk:share-board:6.9.4'
+
+    //    implementation  'com.umeng.umsdk:share-qq:6.9.4'
+
+    //    implementation  'com.umeng.umsdk:share-wx:6.9.4'
+
+    //网易七鱼（客服功能）
+    implementation 'com.qiyukf.unicorn:unicorn:5.4.0'
+
+    //JD京东联盟SDK
+    implementation project(':JDCPSSDK_1.0.0')
+
+    //闪验本机一键登录
+    implementation (name: 'shanyan_sdk_v2.3.2.0', ext: 'aar')
+    //业务AD
+    implementation "com.bx:adsdk:1.3.3"
+    //穿山甲视频普通版SDK
+//    implementation (name: 'open_ad_sdk', ext: 'aar')
+      //穿山甲视频OPPPO版SDK
+    implementation (name: 'open_ad_sdk', ext: 'aar')
+    //广点通广告
+    implementation (name: 'GDTSDK.unionNoPlugin.4.270.1140', ext: 'aar')
+
+    implementation project(':andlang_sd')
+    implementation project(':mytablayout')
+    implementation project(':FlycoBanner_Lib')
+    implementation project(':picture_library')
+
+    //上拉刷新 下拉刷新组件 https://github.com/genius158/PullRefreshLayout
+    implementation 'com.yan:pullrefreshlayout:2.2.6'
+
+    //视频播放引入
+    implementation 'com.shuyu:GSYVideoPlayer:6.0.2'
+    //根据你的需求ijk模式的so
+    implementation 'com.shuyu:gsyVideoPlayer-armv7a:6.0.2'
+    implementation 'com.shuyu:gsyVideoPlayer-x86:6.0.2'
+
+    implementation files('libs/umeng-share-core-6.9.6.jar')
+//    implementation files('libs/umeng-share-QQ-simplify-6.9.6.jar')
+    implementation files('libs/umeng-share-sina-simplify-6.9.6.jar')
+    implementation files('libs/umeng-share-wechat-simplify-6.9.6.jar')
+    implementation files('libs/umeng-shareboard-widget-6.9.6.jar')
+    implementation files('libs/umeng-sharetool-6.9.6.jar')
+}
+repositories {
+    mavenCentral()
+    google()
+}

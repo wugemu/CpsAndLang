@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="right"
+    >
+
+    <TextView
+        android:padding="8dp"
+        android:text="这是一个弹框这是一个弹框这是一个弹框"
+        android:textSize="10sp"
+        android:textColor="@color/colorRedMain"
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_order_delay_tip"
+        android:gravity="center"
+        android:maxWidth="240dp"
+        android:minWidth="64dp" />
+
+    <ImageView
+        android:layout_marginRight="30dp"
+        android:layout_width="8dp"
+        android:layout_height="4dp"
+        android:src="@mipmap/pink_arrow_down" />
+
+</LinearLayout>

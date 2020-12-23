@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom">
+
+    <LinearLayout
+        android:id="@+id/dialog_layout_02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/share_bottom_bg1"
+        android:paddingTop="@dimen/dp_20"
+        android:orientation="vertical"
+        >
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:textSize="@dimen/sp_15"
+          android:textColor="@color/color_333333"
+          android:text="分享到"
+          />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_20"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/dialog_littleapp_share_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_41"
+                    android:layout_height="@dimen/dp_41"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/wechat"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="#666666"
+                    android:text="微信"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/dialog_littleapp_share_wechat_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_41"
+                    android:layout_height="@dimen/dp_41"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/wechat_friends"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="#666666"
+                    android:text="朋友圈"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+
+            <LinearLayout
+                android:id="@+id/dialog_littleapp_share_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_41"
+                    android:layout_height="@dimen/dp_41"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/qq"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="#666666"
+                    android:text="QQ"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/dialog_littleapp_share_QQZone_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/dialog_littleapp_share_QQZone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_41"
+                    android:layout_height="@dimen/dp_41"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/qq_zone"/>
+
+                <TextView
+                    android:id="@+id/qqzone_image_vedio_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:textSize="@dimen/sp_11"
+                    android:textColor="#666666"
+                    android:text="QQ空间"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/dp_0_5"
+         android:background="#DDDDDD"
+         android:layout_marginTop="@dimen/dp_20"
+         />
+        <TextView
+            android:id="@+id/little_dismiss"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/color_333333"
+            android:gravity="center"
+            android:text="取消"
+            />
+
+    </LinearLayout>
+</LinearLayout>

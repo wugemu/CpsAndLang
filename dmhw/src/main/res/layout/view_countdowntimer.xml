@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_1"
+        android:paddingBottom="@dimen/dp_1"
+        android:gravity="center"
+        android:background="@drawable/limit_time_bg"
+        >
+        <TextView
+            android:id="@+id/tv_hour_decade"
+            style="@style/CountDownTimerViewStyle"
+            android:textSize="@dimen/sp_13"
+            android:textColor="#4A392A"
+            android:text="0"
+            />
+
+        <TextView
+            android:id="@+id/tv_hour_unit"
+            style="@style/CountDownTimerViewStyle"
+            android:textSize="@dimen/sp_13"
+            android:textColor="#4A392A"
+            android:text="0"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text=":"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_5"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_1"
+        android:paddingBottom="@dimen/dp_1"
+        android:gravity="center"
+        android:background="@drawable/limit_time_bg"
+        >
+    <TextView
+        android:id="@+id/tv_min_decade"
+        style="@style/CountDownTimerViewStyle"
+        android:textSize="@dimen/sp_13"
+        android:textColor="#4A392A"
+        android:text="0"
+        />
+
+    <TextView
+        android:id="@+id/tv_min_unit"
+        style="@style/CountDownTimerViewStyle"
+        android:textSize="@dimen/sp_13"
+        android:textColor="#4A392A"
+        android:text="0" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:text=":"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_5"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_5"
+        android:paddingEnd="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_1"
+        android:paddingBottom="@dimen/dp_1"
+        android:gravity="center"
+        android:background="@drawable/limit_time_bg"
+        >
+    <TextView
+        android:id="@+id/tv_sec_decade"
+        style="@style/CountDownTimerViewStyle"
+        android:textSize="@dimen/sp_13"
+        android:textColor="#4A392A"
+        android:text="0"
+        />
+
+    <TextView
+        android:id="@+id/tv_sec_unit"
+        style="@style/CountDownTimerViewStyle"
+        android:textSize="@dimen/sp_13"
+        android:textColor="#4A392A"
+        android:text="0" />
+    </LinearLayout>
+</LinearLayout>

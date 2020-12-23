@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_426"
+        android:layout_marginStart="@dimen/dp_51"
+        android:layout_marginEnd="@dimen/dp_51"
+        android:background="@mipmap/version_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_48"
+                android:layout_marginStart="@dimen/dp_28"
+                android:layout_marginEnd="@dimen/dp_28"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_19"
+                    android:textColor="#666666"
+                    android:text="发现新版本"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="V "
+                        android:textSize="@dimen/sp_12"
+                        android:textColor="#666666"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/dialog_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="1.2.1"
+                        android:textSize="@dimen/sp_15"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dp_63"
+                android:layout_marginStart="@dimen/dp_27"
+                android:layout_marginEnd="@dimen/dp_27"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_13"
+                    android:textColor="#333333"
+                    android:text="更新内容："
+                    android:layout_marginBottom="@dimen/dp_13"
+                    tools:ignore="HardcodedText" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="ScrollViewSize">
+
+                        <TextView
+                            android:id="@+id/dialog_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fadeScrollbars="false"
+                            android:textSize="@dimen/sp_12"
+                            android:textColor="#333333"
+                            tools:text="·修复若干BUG\n·修复聊天通话结束出错\n·修复若干BUG\n·修复聊天通话结束出错\n·修复若干BUG\n·修复聊天通话结束出错\n·修复若干BUG\n·修复聊天通话结束出错\n·修复若干BUG\n·修复聊天通话结束出错\n·修复若干BUG\n·修复聊天通话结束出错"
+                            android:lineSpacingMultiplier="1.2" />
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/dialog_cancel"
+                    android:layout_width="@dimen/dp_99"
+                    android:layout_height="@dimen/dp_31"
+                    android:background="@drawable/alipay_code_btn"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="以后再说"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/mainColor"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dialog_assign"
+                    android:layout_width="@dimen/dp_99"
+                    android:layout_height="@dimen/dp_31"
+                    android:background="@drawable/login_btn_style"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="立即更新"
+                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/white"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

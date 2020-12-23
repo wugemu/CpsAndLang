@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_120"
+        android:background="@drawable/personal_grid_bg"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100">
+
+                <ImageView
+                    android:id="@+id/onekey_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="@mipmap/default_for_pic"/>
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_12"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/type_img"
+                        android:layout_width="@dimen/dp_14"
+                        android:layout_height="@dimen/dp_14"
+                        android:src="@mipmap/tmall_icon"
+                        android:layout_marginTop="@dimen/dp_3"
+                        />
+                    <TextView
+                        android:id="@+id/onekey_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="#333333"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:layout_marginStart="@dimen/dp_3"
+                        tools:text="测试测试测试测试测试测试测试测试测试测试"/>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/dp_8"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <LinearLayout
+                                android:id="@+id/layout_03"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/onekey_after_price_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="券后  "
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/sp_12"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="¥"
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/sp_11" />
+
+                                <TextView
+                                    android:id="@+id/onekey_after_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/sp_18"
+                                    android:textStyle="bold"
+                                    tools:text="29.0" />
+
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/onekey_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp_10"
+                                android:gravity="bottom"
+                                android:textColor="#9A9A9A"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="@dimen/dp_5"
+                                tools:text="已售1000"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layout_02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/dp_3"
+                            tools:ignore="RtlHardcoded">
+                            <TextView
+                                android:id="@+id/onekey_original_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp_11"
+                                android:textColor="#9A9A9A"
+                                tools:text="原价 56"/>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center_vertical"
+                                android:layout_alignParentEnd="true">
+
+
+                                <LinearLayout
+                                    android:id="@+id/coupon_layout"
+                                    android:layout_width="@dimen/dp_61"
+                                    android:layout_height="@dimen/dp_16"
+                                    android:background="@mipmap/coponbg"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingLeft="@dimen/dp_15"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/onekey_discount"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="@dimen/sp_11"
+                                            android:textColor="#FFFFFF"
+                                            tools:text="29"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="bottom"
+                                            android:textSize="@dimen/sp_10"
+                                            android:textColor="#FFFFFF"
+                                            android:text="元"
+                                            tools:ignore="HardcodedText"
+                                            />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_28"
+                        android:orientation="horizontal"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        tools:ignore="RtlHardcoded">
+
+                        <LinearLayout
+                            android:id="@+id/onekey_share_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/onekey_share_bg"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/onekey_share_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:lineSpacingMultiplier="0.9"
+                                android:textSize="@dimen/sp_11"
+                                android:textColor="#814E2A"
+                                android:text="分享"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/onekey_up_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/onekey_up_bg">
+
+                            <TextView
+                                android:id="@+id/onekey_up_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:lineSpacingMultiplier="0.9"
+                                android:textSize="@dimen/sp_11"
+                                android:textColor="@color/white"
+                                android:text="购买"
+                                tools:ignore="HardcodedText,SmallSp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

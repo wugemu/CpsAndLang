@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="@dimen/dp_15"
+    android:gravity="center"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="@dimen/dp_65"
+        android:layout_height="@dimen/dp_65"
+        android:background="@drawable/super_sort_grey_bg"
+        >
+    <ImageView
+        android:id="@+id/adapter_classification_grid_image"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/adapter_classification_grid_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textSize="@dimen/sp_11"
+        android:textColor="#868686"
+        tools:text="二级标题"/>
+
+</LinearLayout>

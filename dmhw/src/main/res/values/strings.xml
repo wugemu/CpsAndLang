@@ -1,0 +1,75 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <item name="holder_id" type="id" />
+    <string name="app_name">NN俱乐部</string>
+    <string name="mis_action_button_string">%1$s(%2$d/%3$d)</string>
+    <string name="password">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789</string>
+    <string name="weChat">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_-</string>
+    <string name="money">¥&#160;</string>
+    <string name="wechat"><u>点击此处关注公众号，即可在微信公众号上完成提现。</u></string>
+    <!--网络监测-->
+    <string name="net_work_error">网络连接异常，请稍后重试</string>
+    <string name="net_work_timeout">网络超时，请确保当前网络可用</string>
+    <string name="net_work_state_wifi">当前使用wifi</string>
+    <string name="net_work_state_mobile">当前使用时移动网络</string>
+    <string name="net_work_canuse">当前网络可使用</string>
+    <string name="net_work_unconnect">当前网络已断开，请连接网络</string>
+    <string name="net_work_isreconnect">网络已重新连接</string>
+    <string name="net_work_refresh">点我刷新页面重试</string>
+
+    <!--订单-->
+    <string name="order_empty_txt1">您还没有相关的订单</string>
+    <string name="order_empty_txt2">可以去看看有哪些想买的</string>
+
+    <string name="collect_empty_txt1">这里已经空空如也</string>
+    <string name="collect_empty_txt2">藏藏更健康~</string>
+
+    <string name="save_cart_empty_txt1">很遗憾</string>
+    <string name="save_cart_empty_txt2">您的购物车中未发现活动商品</string>
+
+    <string name="net_empty_txt1">加载失败，请检查您的网络</string>
+    <string name="net_empty_txt2">稍后刷新页面重试</string>
+
+
+    <string name="agnet_empty_txt1">暂无成员</string>
+    <string name="agnet_empty_txt2">马上去邀请</string>
+
+
+    <string name="foot_empty_txt1">暂无足迹</string>
+    <string name="foot_empty_txt2">快去逛逛吧</string>
+
+
+    <string name="update_nick_alter_txt">注意：与NN俱乐部业务或品牌冲突的昵称，NN俱乐部将有权收回</string>
+
+
+    <string name="tlogin_txt1">应淘宝要求，获得返佣前请先进行官方授权！</string>
+    <string name="tlogin_txt2">NN俱乐部APP是淘宝联盟官方合作伙伴，领券省钱，就上NN俱乐部！</string>
+
+    <string name="str_invite_01"><Data><![CDATA[您的<font color="#F82141">%1$s</font>]]></Data></string>
+    <string name="str_invite_02"><Data><![CDATA[海报<font color="#F82141">%1$s</font>]]></Data></string>
+    <string name="str_invite_03"><Data><![CDATA[未来他的<font color="#F82141">%1$s</font>您都有奖励,]]></Data></string>
+
+    <string name="str_bussiness_team">NN俱乐部为合作伙伴提供多元化、一站式的社交电商解决方案，平台可无缝对接淘客、微商和各类电商项目，还可赋能线下传统门店，能够有效帮助初创公司和成熟企业快速切入社交电商领域，抢占风口红利！</string>
+    <string name="str_bussiness_goods">平台拥有数百万级的用户体量、超强的渠道分发能力，整合了包括淘客、微商、直播、自媒体、短视频和社群团购等资源，使得商品能在短时间拥有极大的曝光量！</string>
+    <string name="str_bussiness_tech">全面的社交电商服务平台，聚合社交电商行业中的各领域技术资源，为每一位社交电商行业从业者提供完整的技术支持，也为技术团队提供便捷的技术输出渠道，助力为社交电商行业共荣！</string>
+    <string name="str_user_protol">欢迎使用NN俱乐部APP，我们将通过《NN俱乐部隐私声明及用户协议》向您说明：
+        \n1.为了您正常使用查询相关基本功能，我们会收集、使用必要的信息；
+        \n2.基于您的明示授权，我们可能会获取设备号信息(以保障您账号与交易安全)等信息，您有权拒绝或取消授权；
+        \n3.未经您同意，我们不会从第三方处获取，共享或向其提供您的信息；
+        \n4.您可以查询、更正和删除您的个人信息，我们也提供账号注销的渠道。
+    </string>
+    <string name="str_user_protol01">在您使用NN俱乐部APP前认真阅读《服务协议》和《隐私政策》的全部内容，帮您了解我们收集、使用、存储和保护您的个人信息等情况，以及您享有的相关权利</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="str_delaccount_content">请在下方输入“我已知注销后果并确定注销NN俱乐部账号”后点击下一步</string>
+    <string name="str_delaccount_checkcontent">我已知注销后果并确定注销NN俱乐部账号</string>
+    <string name="str_pdd_expalin">本提示以拼多多比价订单调整新规相关，如规避低佣风险。具体详见《拼多多新规说明》</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="show_wifi_tip">您当前正在使用移动网络，继续播放将消耗流量。</string>
+    <string name="tip_btn_fast">您的手速有点快，稍微等下下哦</string>
+
+    <string name="income_cash">1. 提现次数：每个账户每月仅限 1 次；\n2. 提现申请时间：每月 21 号至 27 号（二月份为 21 号至 25 号）；\n3. 提现到账时间：3 个工作日内；\n4. 起提金额：10 元起提；\n5. 提现需扣除相应费率；\n6. 充值金额只能消费不能提现，在您消费时会优先使用充值金额进行抵扣。\n\n特别提醒：提现需要完成账户实名认证且绑定的银行卡持有人必须与账户实名制认证信息一致，否则提现将会失败。</string>
+
+    <string name="edit_idcard_info">1.海外购商品需要清关后入境，根据海关需求，需要您填写订购人身份证信息进行物品入境申报。\n2.身份证信息将加密报送，不会泄露您的个人信息。\n3.因为海关会对订购人的身份证信息进行验证，请确保填写正确，否则商品可能无法正常通关。\n4.账户实名认证信息请到惠玩APP中查看</string>
+
+</resources>

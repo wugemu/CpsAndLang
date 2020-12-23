@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--  设置背景色（黑色）  -->
+
+    <item  android:id="@android:id/background" >
+
+        <shape>
+
+            <corners android:radius="@dimen/dp_5" />
+
+            <gradient
+
+                android:startColor="#f6f6f6"
+
+                android:endColor="#f6f6f6" />
+
+        </shape>
+
+    </item>
+
+
+
+    <!--  设置进度条颜色（白色）  -->
+
+    <item  android:id="@android:id/progress" >
+
+        <scale android:scaleWidth="100%"
+            android:drawable="@drawable/mybar_scale_color_two"   />
+
+    </item>
+
+</layer-list>

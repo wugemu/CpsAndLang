@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        >
+        <TextView
+            android:id="@+id/live_im_comes_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12"
+            tools:text="NN俱乐部"
+            android:singleLine="true"
+            android:maxEms="10"
+            android:ellipsize="end"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="50dp"
+            android:paddingTop="2dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/room_im_left_bg"
+            />
+        <TextView
+            android:id="@+id/who_like_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已购买"
+            android:textSize="@dimen/sp_12"
+            android:paddingBottom="2dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingTop="2dp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="-30dp"
+            android:layout_toRightOf="@+id/live_im_comes_tv"
+            android:background="@drawable/room_im_right_bg"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

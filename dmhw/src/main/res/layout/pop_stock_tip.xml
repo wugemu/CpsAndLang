@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:text="库存有限 不要错过噢"
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:id="@+id/tv_tip"
+        android:layout_width="119dp"
+        android:layout_height="25dp"
+        android:background="@drawable/bg_stock_tip"
+        android:gravity="center"
+       />
+
+    <ImageView
+        android:layout_width="8dp"
+        android:layout_height="4dp"
+        android:src="@mipmap/red_arrow_down" />
+
+</LinearLayout>

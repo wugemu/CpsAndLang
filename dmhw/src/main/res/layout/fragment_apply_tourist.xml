@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dp_115"
+            android:layout_height="@dimen/dp_13"
+            android:layout_marginTop="@dimen/dp_22"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/fragment_apply_top_tourist"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginStart="@dimen/dp_37">
+
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/fragment_apply_one"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_3"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp_12"
+                android:textColor="#8e7a3b"
+                android:text="享有自购省钱、分享赚佣金的权限"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_9"
+            android:layout_marginStart="@dimen/dp_37">
+
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/fragment_apply_two"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/dp_3"
+                android:textSize="@dimen/sp_12"
+                android:textColor="#8e7a3b"
+                android:text="享有直属会员推广收益的20%奖励"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="bottom">
+
+           <LinearLayout
+               android:id="@+id/fragment_apply_tourist_btn"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/dp_100"
+               android:layout_marginEnd="@dimen/dp_100"
+               android:layout_marginTop="@dimen/dp_10"
+               android:layout_marginBottom="@dimen/dp_30"
+               android:paddingTop="@dimen/dp_7"
+               android:paddingBottom="@dimen/dp_7"
+               android:background="@drawable/fragment_apply_btn"
+               android:gravity="center">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="@dimen/sp_17"
+                   android:textColor="#decf8e"
+                   android:text="立即升级"
+                   tools:ignore="HardcodedText" />
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

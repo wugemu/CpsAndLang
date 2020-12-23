@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@color/black">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_270">
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_225"
+            android:layout_height="@dimen/dp_253"
+            android:orientation="vertical"
+            android:background="@drawable/sign_bg_style"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_85">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_18"
+                    android:textColor="#F3790A"
+                    android:text="任务完成!"
+                    tools:ignore="HardcodedText" />
+
+
+                <TextView
+                    android:id="@+id/give_bi_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_18"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:textColor="#F3790A"
+                    tools:text="奖励20个NN币"
+                    tools:ignore="HardcodedText" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_32"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/dialog_register_goto"
+                    android:layout_width="@dimen/dp_120"
+                    android:layout_height="@dimen/dp_45"
+                    android:gravity="center"
+                    android:background="@drawable/sign_btn_style">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_15"
+                        android:textColor="#9A4E0A"
+                        android:text="知道了"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/dp_118"
+            android:layout_height="@dimen/dp_102"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/search_task_icon"/>
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/dialog_sign_clean"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_39"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/close_adv"
+        android:visibility="gone"
+        />
+
+
+
+</LinearLayout>

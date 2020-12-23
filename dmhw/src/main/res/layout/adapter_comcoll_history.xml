@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f4f4f4"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:orientation="vertical"
+        android:background="@drawable/personal_grid_bg"
+        >
+    <LinearLayout
+        android:id="@+id/adapter_new_one_fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_130"
+            android:layout_height="@dimen/dp_93">
+
+            <ImageView
+                android:id="@+id/adapter_parttwo_image"
+                android:layout_width="@dimen/dp_130"
+                android:layout_height="@dimen/dp_93"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/default_for_pic"/>
+
+            <ImageView
+                android:id="@+id/adapter_new_one_fragment_video"
+                android:layout_width="@dimen/dp_59"
+                android:layout_height="@dimen/dp_59"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/commodity_video"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_marginBottom="@dimen/dp_1"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/adapter_parttwo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#333333"
+                android:lines="1"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/dp_5"
+                tools:text="测试测试测试测试测试测试测试测试测试测试"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            >
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    >
+                    <TextView
+                        android:id="@+id/adapter_parttwo_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_11"
+                        android:textColor="#999999"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        tools:text="1000人已学习"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:layout_toEndOf="@+id/adapter_parttwo_number"
+                        >
+                        <ImageView
+                            android:id="@+id/adapter_parttwo_share"
+                            android:layout_width="@dimen/dp_11"
+                            android:layout_height="@dimen/dp_11"
+                            android:src="@mipmap/cc_share"
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="fitXY"/>
+                        <TextView
+                            android:id="@+id/adapter_share_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_5"
+                            android:textSize="@dimen/sp_11"
+                            android:textColor="#999999"
+                            android:layout_gravity="center_vertical"
+                            tools:text="1000"/>
+
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+        </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

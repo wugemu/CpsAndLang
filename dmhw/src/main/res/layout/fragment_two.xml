@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:attr="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_90"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1A1A1A"
+        android:orientation="vertical"
+        >
+    <View
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_24"
+        />
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/mengquan_title"
+            android:layout_width="@dimen/dp_58"
+            android:layout_height="@dimen/dp_20"
+            android:src="@mipmap/mengquan_top_bg"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/recommend_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp_40"
+            android:paddingEnd="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_12"
+            tools:ignore="RtlHardcoded">
+
+            <LinearLayout
+                android:id="@+id/recommend_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:background="@drawable/recommend_tab_check_left_bg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/recommend_btn_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="爆款推荐"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/top_split_one_layout"
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="@dimen/dp_30"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/top_split_one"
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="@dimen/dp_13"
+                    android:layout_centerVertical="true"
+                    android:background="#B6AFAF"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/market_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:background="@drawable/recommend_tab_middle_bg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/market_btn_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="营销素材"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/top_split_two_layout"
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="@dimen/dp_30"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/top_split_two"
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="@dimen/dp_13"
+                    android:layout_centerVertical="true"
+                    android:background="#B6AFAF" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/shang_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_weight="1"
+                android:background="@drawable/recommend_tab_right_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/shang_btn_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商学院"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/fragment_two_magic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:visibility="gone"
+        />
+
+
+        <LinearLayout
+            android:id="@+id/recommend_btn_arrow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:paddingStart="@dimen/dp_42"
+            android:paddingEnd="@dimen/dp_42">
+
+            <LinearLayout
+                android:id="@+id/recommend_btn_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_22"
+                    android:layout_height="@dimen/dp_9"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/recommend_arrow" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/market_btn_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_22"
+                    android:layout_height="@dimen/dp_9"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/recommend_arrow" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shang_btn_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_22"
+                    android:layout_height="@dimen/dp_9"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@mipmap/recommend_arrow" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/network_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/view_no_net_empty"
+        android:visibility="gone"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_two_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

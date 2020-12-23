@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ll_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:id="@+id/tv_TextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="延迟提醒"
+            android:textColor="@color/colorBlackText"
+            android:textSize="16sp" />
+
+        <ListView
+            android:minHeight="66dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:id="@+id/lv_tip"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:scrollbars="none"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@color/lang_colortransparent">
+
+            <LinearLayout
+                android:id="@+id/ll_cancel_btn"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_color"
+                    />
+
+                <Button
+                    android:id="@+id/dialog_cancel_btn"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorRedMain" />
+            </LinearLayout>
+
+
+            <Button
+                android:gravity="center"
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/dialog_ok_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/dialog_right_btn_bg_red"
+                android:text="确定"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_close"
+        android:layout_alignParentRight="true"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/close_new"/>
+</RelativeLayout>

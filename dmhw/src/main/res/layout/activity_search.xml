@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SearchActivity">
+
+    <View
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_24"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/dp_11"
+                android:layout_height="@dimen/dp_19"
+                android:layout_margin="@dimen/dp_9"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/btn_back_default" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_5"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_32"
+                android:background="@drawable/search_page_background"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/dp_13"
+                android:paddingStart="@dimen/dp_10"
+                android:orientation="horizontal"
+                tools:ignore="RtlSymmetry">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_14"
+                    android:layout_height="@dimen/dp_14"
+                    android:src="@mipmap/more_pl_searicon"/>
+
+                <EditText
+                    android:id="@+id/search_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:lines="1"
+                    android:background="@null"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="#333333"
+                    android:textColorHint="#cccccc"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:hint="搜索商品名或黏贴宝贝标题"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:dropDownHeight="wrap_content"
+                    android:dropDownWidth="match_parent"
+                    android:dropDownVerticalOffset="@dimen/dp_12"
+                    android:completionThreshold="1"
+                    tools:ignore="HardcodedText,NestedWeights"
+                    android:textCursorDrawable="@drawable/my_cursor"
+                    android:cursorVisible="true" />
+                
+                <LinearLayout
+                    android:id="@+id/search_close_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_10">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_14"
+                        android:layout_height="@dimen/dp_14"
+                        android:tint="#c2c2c2"
+                        android:src="@mipmap/search_close"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="#333333"
+                    android:text="搜索"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginRight="@dimen/dp_13"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/search_magic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/search_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f4"
+        />
+
+</LinearLayout>

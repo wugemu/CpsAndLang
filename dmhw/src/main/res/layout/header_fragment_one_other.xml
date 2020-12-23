@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bigkoo.convenientbanner.ConvenientBanner
+        android:id="@+id/header_fragment_one_other_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_149"
+        app:canLoop="true"/>
+
+    <com.lxkj.dmhw.defined.ObserveGridView
+        android:id="@+id/header_fragment_one_other_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        android:numColumns="4"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        android:background="#f4f4f4"/>
+
+</LinearLayout>

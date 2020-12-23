@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/adapter_shop_recommend_layout"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/adapter_shop_recommend_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/default_for_pic"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:id="@+id/adapter_shop_recommend_money_layout"
+            android:layout_width="@dimen/dp_62"
+            android:layout_height="@dimen/dp_21"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp_8"
+            android:paddingEnd="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/recommend_money_background">
+
+            <TextView
+                android:id="@+id/adapter_shop_recommend_money_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:textColor="@color/white"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.9"
+                tools:text="29.9"/>
+            
+        </LinearLayout>
+
+        <com.lxkj.dmhw.view.RoundImageView
+            android:id="@+id/adapter_new_one_fragment_hasnogoods"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/recommend_nogoods"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

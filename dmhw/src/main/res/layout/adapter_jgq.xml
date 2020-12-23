@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adapter_icon_layout"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="@dimen/dp_80"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:id="@+id/header_fragment_one_new_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/header_fragment_one_new_one_image"
+            android:layout_width="@dimen/dp_53"
+            android:layout_height="@dimen/dp_53"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/header_fragment_one_new_one_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_11"
+            android:textColor="#000"
+            tools:text="人气宝贝"/>
+
+    </LinearLayout>
+
+</LinearLayout>

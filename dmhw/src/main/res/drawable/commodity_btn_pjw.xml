@@ -1,0 +1,15 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <!-- 圆角弧度 20 -->
+    <corners
+        android:topRightRadius="@dimen/dp_22"
+        android:bottomRightRadius="@dimen/dp_22"/>
+
+    <!-- 变化率 -->
+    <gradient
+        android:endColor="#F8483F"
+        android:startColor="#FD6E70" />
+
+
+</shape>

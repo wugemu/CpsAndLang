@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@color/black">
+    <com.lxkj.dmhw.view.ScaleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_44"
+        android:layout_marginEnd="@dimen/dp_44"
+        app:widthToHeight="1.45"
+        >
+
+        <com.lxkj.dmhw.view.ScaleLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/personal_grid_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            app:widthToHeight="1.15"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_55"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="#333333"
+                    android:text="该商品有低佣风险"
+                    tools:ignore="HardcodedText" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_31"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:paddingStart="@dimen/dp_18"
+                    android:paddingEnd="@dimen/dp_18"
+                    android:gravity="center_vertical"
+                    android:textColor="#FA474A"
+                    android:text="建议先收藏，10分钟后再下单"
+                    android:background="@mipmap/pdd_explain_bg"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/explain_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_15"
+                    android:textColor="#666666"
+                    android:text="本提示以拼多多比价订单调整新规相关，如规避低佣风险。具体详见《拼多多新规说明》"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginEnd="@dimen/dp_30"
+                    android:lineSpacingExtra="@dimen/dp_2"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/dialog_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/pddexplain_btn_style"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/dp_22"
+                    android:layout_marginStart="@dimen/dp_31"
+                    android:layout_marginEnd="@dimen/dp_31"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_15"
+                        android:textColor="#fff"
+                        android:text="我知道了"
+                        tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </com.lxkj.dmhw.view.ScaleLayout>
+        <com.lxkj.dmhw.view.ScaleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_52"
+            android:layout_marginEnd="@dimen/dp_52"
+            android:layout_marginTop="@dimen/dp_5"
+            app:widthToHeight="0.71"
+            >
+        <ImageView
+            android:id="@+id/explain_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/pdd_explain_img"/>
+        </com.lxkj.dmhw.view.ScaleLayout>
+    </com.lxkj.dmhw.view.ScaleLayout>
+
+</LinearLayout>

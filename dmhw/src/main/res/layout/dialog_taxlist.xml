@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ll_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/TextTip"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="税费明细"
+            android:textColor="@color/colorBlackText"
+            android:textSize="15sp" />
+        <com.example.test.andlang.widget.CustomListView
+            android:id="@+id/lv_dialog_tax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="0dp"
+            android:divider="@null"
+            android:scrollbars="none"/>
+        <TextView
+            android:id="@+id/dialog_content"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="根据国家政策规定，跨境商品订单总税费以实际交易价格（包括商品售价、运费）为基础进行计算"
+            android:textSize="12sp"
+            android:textColor="@color/colorBlackText2"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:background="@color/lang_colortransparent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line_color"
+                    />
+
+                <Button
+                    android:gravity="center"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:id="@+id/dialog_cancel_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:text="知道了"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlackText" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

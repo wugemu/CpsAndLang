@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#eaeaea"/>
+
+        <LinearLayout
+            android:id="@+id/popup_sort_default"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_15"
+            android:paddingEnd="@dimen/dp_30">
+
+            <TextView
+                android:id="@+id/popup_sort_default_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#f371ab"
+                android:text="默认排序"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:id="@+id/popup_sort_default_image"
+                    android:layout_width="@dimen/dp_11"
+                    android:layout_height="@dimen/dp_9"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/popup_yes"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#eaeaea"/>
+
+        <LinearLayout
+            android:id="@+id/popup_sort_high"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_15"
+            android:paddingEnd="@dimen/dp_30">
+
+            <TextView
+                android:id="@+id/popup_sort_high_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#666666"
+                android:text="价格由高到低"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:id="@+id/popup_sort_high_image"
+                    android:layout_width="@dimen/dp_11"
+                    android:layout_height="@dimen/dp_9"
+                    android:scaleType="centerCrop"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#eaeaea"/>
+
+        <LinearLayout
+            android:id="@+id/popup_sort_low"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_15"
+            android:paddingEnd="@dimen/dp_30">
+
+            <TextView
+                android:id="@+id/popup_sort_low_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#666666"
+                android:text="价格由低到高"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:id="@+id/popup_sort_low_image"
+                    android:layout_width="@dimen/dp_11"
+                    android:layout_height="@dimen/dp_9"
+                    android:scaleType="centerCrop"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#eaeaea"/>
+
+        <LinearLayout
+            android:id="@+id/popup_commission_high"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_15"
+            android:paddingEnd="@dimen/dp_30">
+
+            <TextView
+                android:id="@+id/popup_commission_high_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#666666"
+                android:text="佣金由高到低"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:id="@+id/popup_commission_high_image"
+                    android:layout_width="@dimen/dp_11"
+                    android:layout_height="@dimen/dp_9"
+                    android:scaleType="centerCrop"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#eaeaea"/>
+
+        <LinearLayout
+            android:id="@+id/popup_commission_low"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_43"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_15"
+            android:paddingEnd="@dimen/dp_30">
+
+            <TextView
+                android:id="@+id/popup_commission_low_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#666666"
+                android:text="佣金由低到高"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:id="@+id/popup_commission_low_image"
+                    android:layout_width="@dimen/dp_11"
+                    android:layout_height="@dimen/dp_9"
+                    android:scaleType="centerCrop"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#eaeaea"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/popup_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

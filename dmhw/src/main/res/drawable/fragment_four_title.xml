@@ -1,0 +1,10 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <!-- 变化率 -->
+    <gradient
+        android:endColor="#ff5c49"
+        android:startColor="#ff285d" />
+
+
+</shape>

@@ -1,0 +1,11 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 变化率 -->
+    <gradient
+        android:endColor="#EAC8A2"
+        android:startColor="#F4D8BF" />
+    <corners
+        android:topLeftRadius="@dimen/dp_2"
+        android:bottomLeftRadius="@dimen/dp_2"/>
+
+</shape>

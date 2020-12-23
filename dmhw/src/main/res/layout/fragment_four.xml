@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:src="@mipmap/four_fragment_top_bg"
+        android:scaleType="fitXY"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/dp_5"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_24"/>
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_centerVertical="true"
+            android:visibility="visible"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/dp_19"
+                android:layout_height="@dimen/dp_22"
+                android:layout_marginStart="@dimen/dp_9"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:scaleType="centerCrop"
+                android:tint="@color/white"
+                android:src="@mipmap/vedio_back" />
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="@dimen/dp_81"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:src="@mipmap/fragment_four_title"
+            android:layout_centerHorizontal="true"
+            />
+      </RelativeLayout>
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/fragment_four_magic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/fragment_four_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_10"
+            />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/network_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/view_no_net_empty"
+        android:visibility="gone"
+        />
+</RelativeLayout>

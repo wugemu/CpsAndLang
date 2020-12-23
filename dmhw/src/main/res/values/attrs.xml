@@ -1,0 +1,109 @@
+<resources>
+    <declare-styleable name="SmoothCheckBox">
+        <attr name="duration" format="integer"/>
+        <attr name="stroke_width" format="dimension"/>
+        <attr name="color_tick" format="color"/>
+        <attr name="color_checked" format="color"/>
+        <attr name="color_unchecked" format="color"/>
+        <attr name="color_unchecked_stroke" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="ScaleLayout">
+        <attr name="widthToHeight" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="LimitScroller">
+        <!--显示的条目数量-->
+        <attr name="limit" format="integer" />
+        <!--滚动速度，比如3000，滚动时间会持续3秒钟-->
+        <attr name="durationTime" format="integer" />
+        <!--滚动间隔，比如5000，滚动完成后停留5秒继续滚动-->
+        <attr name="periodTime" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="ArcBackgroundView">
+        <attr name="ArcBackgroundViewStartColor" format="color" />
+        <attr name="ArcBackgroundViewTopHeight" format="dimension" />
+        <attr name="ArcBackgroundViewEndColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundImageView">
+    <attr name="roundType" />
+    <attr name="scale" />
+    <attr name="borderRadius" />
+    <attr name="top_left" />
+    <attr name="top_right" />
+    <attr name="bottom_left" />
+    <attr name="bottom_right" />
+    </declare-styleable>
+
+    <attr name="borderRadius" format="dimension" />
+    <attr name="roundType">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+    <attr name="scale">
+        <enum name="crop" value="0" />
+        <enum name="fit" value="1" />
+    </attr>
+    <attr name="top_left" format="boolean" />
+    <attr name="top_right" format="boolean" />
+    <attr name="bottom_left" format="boolean" />
+    <attr name="bottom_right" format="boolean" />
+
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer"></attr>
+        <attr name="startAngle" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="AutoEditTextView">
+        <!--//左侧设置的文字，如果设置了就显示，不设置就不显示-->
+        <attr name="leftText" format="string" />
+        <!--左侧文字的颜色-->
+        <attr name="leftTextColor" format="color" />
+        <!--左侧文字的大小-->
+        <attr name="leftTextSize" format="float" />
+        <!--左侧文字距离光标的距离-->
+        <attr name="leftTextPadding" format="integer" />
+        <!--右侧图标点击需要处理的类型 0 删除当前内容 1隐藏和显示密码-->
+        <attr name="rightButtonClickType" format="integer" />
+        <!--是否要显示底部的线-->
+        <attr name="isShowDownLine" format="boolean" />
+        <!--设置底部线默认的颜色-->
+        <attr name="downLineDefaultColor" format="color"/>
+        <!--设置EditText获取焦点之后底部线的颜色-->
+        <attr name="downLineFocusColor" format="color"/>
+    </declare-styleable>
+
+    <attr name="autoScaleTextViewStyle"/>
+    <declare-styleable name="AutoScaleTextView">
+        <attr name="minTextSize" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="XMarqueeView">
+        <attr name="isSetAnimDuration" format="boolean"/>
+        <attr name="isSingleLine" format="boolean"/>
+        <attr name="marquee_count" format="integer"/>
+        <attr name="marquee_interval" format="integer|reference"/>
+        <attr name="marquee_animDuration" format="integer|reference"/>
+        <attr name="marquee_textSize" format="dimension|reference"/>
+        <attr name="marquee_textColor" format="color|reference"/>
+        <attr name="isFlippingLessCount" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="MaxHeightRecyclerView">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.lxkj.dmhw.activity.self.PayResultActivity"
+    tools:showIn="@layout/activity_pay_result"
+    android:background="@color/colorWhite">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:src="@mipmap/payresult" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/tv_result"
+            android:textSize="14sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="付款成功"
+            android:textColor="@color/colorBlackText" />
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_marginBottom="20dp"
+            android:textSize="12sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="您的订单已经成功付款，宝贝正在准备朝您飞来"
+            android:textColor="@color/colorBlackText2" />
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_margin="8dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorRedMain"
+                android:id="@+id/btn_look_order"
+                android:layout_width="125dp"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_pay_result_btn"
+                android:text="查看订单" />
+            <View
+                android:layout_width="15dp"
+                android:layout_height="0.5dp"
+                android:background="@color/colorWhite"
+                />
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_margin="8dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorRedMain"
+                android:id="@+id/btn_buy_again"
+                android:layout_width="125dp"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_pay_result_btn"
+                android:text="继续购买" />
+        </LinearLayout>
+       <include layout="@layout/include_pay_return_cash_share"
+           android:layout_marginTop="22dp"
+           android:layout_width="match_parent"
+           android:layout_height="60dp"
+           android:visibility="gone"
+           />
+    </LinearLayout>
+    <include layout="@layout/lang_common_loading"/>
+</RelativeLayout>

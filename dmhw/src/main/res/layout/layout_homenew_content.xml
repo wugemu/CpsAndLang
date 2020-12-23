@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/Transparent00000000">
+
+    <com.lxkj.dmhw.widget.swipe.RefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/sw_todaysale"
+        android:layout_above="@+id/layout_bottom_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:addStatesFromChildren="true"
+        android:background="@color/Transparent00000000"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Transparent00000000">
+
+            <com.yan.pullrefreshlayout.PullRefreshLayout
+                android:id="@+id/pr_refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:prl_autoLoadingEnable="false"
+                app:prl_footerViewId="@layout/layout_loadmore_bottom"
+                app:prl_headerShowGravity="placeholder"
+                app:prl_loadMoreEnable="true"
+                app:prl_refreshEnable="false"
+                app:prl_targetId="@+id/rv_todaysale"
+                app:prl_twinkEnable="true">
+                <android.support.v7.widget.RecyclerView
+                    android:background="@color/colorBackGroud"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:overScrollMode="never"
+                    android:id="@+id/rv_todaysale"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.yan.pullrefreshlayout.PullRefreshLayout>
+            <android.support.design.widget.AppBarLayout
+                app:elevation="0dp"
+                app:layout_behavior="com.lxkj.dmhw.widget.AppBarLayoutBehavior"
+                android:id="@+id/appbar_todaysale"
+                android:padding="0dp"
+                android:layout_margin="0dp"
+                android:background="@color/Transparent00000000"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:background="@color/Transparent00000000"
+                    android:id="@+id/collapsingToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@color/Transparent00000000">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/iv_center_bigact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/ll_banner_topicon"
+                                android:layout_alignBottom="@+id/ll_banner_topicon"/>
+                            <LinearLayout
+                                android:id="@+id/ll_banner_topicon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:background="@color/colorWhite">
+                                <include layout="@layout/include_banner"/>
+                                <RelativeLayout
+                                    android:id="@+id/rl_topicon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <include layout="@layout/include_topicon_new"/>
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/colorWhite">
+                            <include layout="@layout/include_atheme_new"/>
+                            <include layout="@layout/include_good_new"/>
+                            <include layout="@layout/include_theme_new"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.design.widget.CollapsingToolbarLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_limitime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBackGroud">
+                    <ImageView
+                        android:background="@color/white"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/iv_home_xsms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_home_xsms"/>
+                    <android.support.design.widget.TabLayout
+                        android:layout_marginLeft="1dp"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:background="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/iv_home_xsms"
+                        android:overScrollMode="never"
+                        android:id="@+id/tb_limittime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:tabBackground="@null"
+                        app:tabIndicatorColor="@null"
+                        app:tabIndicatorHeight="0dp"/>
+                </RelativeLayout>
+                <View
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="800dp"
+                    android:id="@+id/empty_view"/>
+            </android.support.design.widget.AppBarLayout>
+
+        </android.support.design.widget.CoordinatorLayout>
+    </com.lxkj.dmhw.widget.swipe.RefreshLayout>
+
+    <include layout="@layout/lang_common_bottom_loading"
+        android:id="@+id/layout_bottom_loading"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageView
+        android:id="@+id/iv_self_cart"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/return_top"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="194dp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_self_mine"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/return_top"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="134dp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_back_to_top"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/return_top"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="34dp"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

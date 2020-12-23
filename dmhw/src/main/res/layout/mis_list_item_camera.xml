@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lxkj.dmhw.defined.MultiImage.view.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#343535"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_37"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:background="@mipmap/mis_asy"/>
+
+        <TextView
+            android:text="拍摄照片"
+            android:textSize="@dimen/sp_14"
+            android:textColor="#CDCECE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</com.lxkj.dmhw.defined.MultiImage.view.SquareFrameLayout>

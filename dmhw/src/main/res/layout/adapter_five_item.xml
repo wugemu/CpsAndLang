@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <LinearLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_52"
+        android:background="@drawable/personal_grid_bg"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dp_21"
+        tools:ignore="RtlSymmetry"
+        >
+
+        <ImageView
+            android:id="@+id/adapter_promotion_image"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/fragment_five_agent_money"
+            tools:ignore="ContentDescription" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:paddingTop="@dimen/dp_12"
+            android:paddingBottom="@dimen/dp_12"
+            android:paddingEnd="@dimen/dp_21"
+            android:paddingStart="@dimen/dp_10"
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/title_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_13"
+                android:textColor="#555555"
+                tools:text="邀请码"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                tools:ignore="RtlHardcoded">
+                <TextView
+                    android:id="@+id/item_title_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="#999"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    tools:text="自定义商城推广"
+                    tools:ignore="HardcodedText" />
+                <ImageView
+                    android:layout_width="@dimen/dp_5"
+                    android:layout_height="@dimen/dp_10"
+                    android:scaleType="centerCrop"
+                    android:tint="#CCCCCC"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/arrow"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/split_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="#EEEEEE"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
+        />
+</LinearLayout>

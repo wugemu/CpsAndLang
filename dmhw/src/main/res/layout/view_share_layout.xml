@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="1080px"
+    android:layout_height="1920px"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:ignore="PxUsage">
+
+    <ImageView
+        android:id="@+id/view_share_type"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_marginTop="67px"
+        android:layout_marginStart="60px"
+        android:src="@mipmap/bitmap_share_taobao"/>
+
+    <TextView
+        android:id="@+id/view_share_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60px"
+        android:layout_marginEnd="60px"
+        android:layout_marginStart="60px"
+        android:textSize="48px"
+        android:textColor="#333333"
+        tools:text="测试测试测试测试测试"/>
+
+    <LinearLayout
+        android:id="@+id/quanhoujia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="208px"
+        android:layout_marginStart="60px"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.9"
+                android:textSize="36px"
+                android:textColor="@color/mainColor"
+                android:text="券后价:  "
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/view_share_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.9"
+                android:textSize="90px"
+                android:textColor="@color/mainColor"
+                tools:text="9.8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.9"
+                android:textSize="36px"
+                android:textColor="@color/mainColor"
+                android:text=" 元"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/view_share_yuanjia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.9"
+            android:textSize="36px"
+            android:textColor="#999999"
+            tools:text="原价 199"/>
+
+    </LinearLayout>
+
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_alignBaseline="@+id/quanhoujia"
+      android:layout_marginTop="201px"
+      android:layout_marginEnd="60px"
+      >
+    <LinearLayout
+        android:id="@+id/youhuiquan"
+        android:layout_width="329px"
+        android:layout_height="105px"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:background="@mipmap/share_discount">
+
+        <View
+            android:layout_width="45dp"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="9px"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/view_share_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:lineSpacingMultiplier="0.9"
+                    android:textSize="51px"
+                    android:textColor="#c9010c"
+                    tools:text="15"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:lineSpacingMultiplier="0.9"
+                    android:textSize="21px"
+                    android:textColor="#c9010c"
+                    android:text="元"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+      <TextView
+          android:id="@+id/view_share_sales"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="38px"
+          android:includeFontPadding="false"
+          android:lineSpacingMultiplier="0.9"
+          android:layout_below="@+id/youhuiquan"
+          android:layout_alignParentRight="true"
+          android:textSize="36px"
+          android:textColor="#999999"
+          tools:text="1234人已购"/>
+  </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/view_share_image"
+        android:layout_width="1044px"
+        android:layout_height="1044px"
+        android:layout_marginTop="432px"
+        android:layout_centerHorizontal="true"
+        tools:src="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="372px"
+        android:layout_height="197px"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:layout_marginEnd="8px"
+        android:layout_marginBottom="426px"
+        android:paddingStart="44px"
+        android:paddingEnd="43px"
+        android:background="@mipmap/bitmap_share_money">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.9"
+                android:textSize="43px"
+                android:textColor="#fce12b"
+                android:text="@string/money"/>
+
+            <TextView
+                android:id="@+id/view_share_moneys"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.9"
+                android:textStyle="bold"
+                android:lines="1"
+                android:textSize="80px"
+                android:textColor="#fce12b"
+                tools:text="100.8"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="660px"
+        android:layout_height="402px"
+        android:orientation="vertical"
+        android:layout_marginStart="60px"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:src="@mipmap/bitmap_share_recommend"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.9"
+                android:layout_marginStart="24px"
+                android:textSize="48px"
+                android:textColor="@color/mainColor"
+                android:text="推荐理由"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/view_share_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.9"
+            android:lines="6"
+            android:ellipsize="end"
+            android:layout_marginTop="30px"
+            android:textSize="40px"
+            android:textColor="#999999"
+            tools:text="测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/view_share_qr"
+        android:layout_width="205px"
+        android:layout_height="205px"
+        android:layout_marginBottom="123px"
+        android:layout_marginEnd="101px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        tools:src="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:lineSpacingMultiplier="0.9"
+        android:layout_marginEnd="82px"
+        android:layout_marginBottom="71px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="30px"
+        android:textColor="#999999"
+        android:text="长按识别领券购买"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

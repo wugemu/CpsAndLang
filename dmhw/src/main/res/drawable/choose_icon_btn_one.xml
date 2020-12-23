@@ -1,0 +1,8 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 设置边缘四周颜色   以及边缘线的宽度 -->
+
+    <corners android:bottomRightRadius="25dp"
+        android:topRightRadius="25dp"/>
+    <solid android:color="@color/color_EE2325"/>
+
+</shape>

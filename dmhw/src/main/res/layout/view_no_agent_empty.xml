@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    >
+
+    <RelativeLayout
+        android:id="@+id/network_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            >
+            <ImageView
+                android:id="@+id/an_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/no_agent"
+
+                />
+            <TextView
+                android:id="@+id/an_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/agnet_empty_txt1"
+                android:textColor="@color/color_666666"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/sp_16"
+                android:layout_below="@+id/an_img"
+                />
+            <Button
+                android:id="@+id/refresh_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_36"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@drawable/team_emptyview_btn_style"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20"
+                android:text="@string/agnet_empty_txt2"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/white"
+                android:layout_below="@+id/an_txt"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

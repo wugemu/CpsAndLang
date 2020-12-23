@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/Transparent00000000"
+    android:id="@+id/layout_root"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.lxkj.dmhw.view.ScaleLayout
+        android:id="@+id/layout_root_child"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="@dimen/dp_32"
+        android:layout_marginEnd="@dimen/dp_32"
+        app:widthToHeight="1.66"
+        android:background="@drawable/personal_grid_bg">
+
+        <TextView
+            android:id="@+id/content_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_21"
+            android:textColor="#161615"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:gravity="center_horizontal"
+            android:text="温馨提示"
+            android:layout_gravity="center"
+            />
+        <ScrollView
+            android:id="@+id/layout_root_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_below="@+id/content_title_tv"
+            android:layout_above="@+id/bottom_content"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:id="@+id/content_tv01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/sp_13"
+                android:textColor="#6E6E6E"
+                android:lineSpacingExtra="@dimen/dp_6"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:id="@+id/content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:text=""
+                android:textSize="@dimen/sp_13"
+                android:textColor="#6E6E6E"
+                android:lineSpacingExtra="@dimen/dp_6"
+                android:layout_gravity="center"
+                />
+
+
+        </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:id="@+id/bottom_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_25"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+
+                <LinearLayout
+                    android:id="@+id/noagree"
+                    android:layout_width="@dimen/dp_119"
+                    android:layout_height="@dimen/dp_34"
+                    android:gravity="center"
+                    android:background="@drawable/start_user_protocal_bg"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_15"
+                        android:textColor="#666666"
+                        android:text="不同意"
+                        tools:ignore="HardcodedText"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+
+                <LinearLayout
+                    android:id="@+id/agree"
+                    android:layout_width="@dimen/dp_119"
+                    android:layout_height="@dimen/dp_34"
+                    android:gravity="center"
+                    android:background="@drawable/start_user_protocal_bg01"
+                   >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_15"
+                        android:textColor="#FFFFFF"
+                        android:text="同意并继续"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.lxkj.dmhw.view.ScaleLayout>
+</LinearLayout>

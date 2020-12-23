@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackGroud" >
+
+    <RelativeLayout
+        android:background="@color/colorWhite"
+        android:id="@+id/rl_coupon_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/TextTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="优惠券"
+            android:textColor="@color/colorBlackText"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:layout_toRightOf="@+id/TextTip"
+            android:text="（金额门槛仅为商品总价，不含税费和运费哦）"
+            android:textColor="@color/colorBlackText2"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/iv_coupon_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/share_close" />
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@color/colorWhite"
+        android:layout_below="@+id/rl_coupon_top"
+        android:id="@+id/ll_coupon_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/ll_keyong"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/tv_keyong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可用优惠券"
+                android:textColor="@color/colorBlackText2"
+                android:textSize="13sp" />
+            <View
+                android:layout_marginTop="6dp"
+                android:id="@+id/view_keyong"
+                android:visibility="gone"
+                android:layout_width="25dp"
+                android:layout_height="4dp"
+                android:background="@drawable/bg_rect_red"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_bukeyong"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/tv_bukeyong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不可用优惠券"
+                android:textColor="@color/colorBlackText"
+                android:textSize="13sp"/>
+            <View
+                android:layout_marginTop="6dp"
+                android:id="@+id/view_bukeyong"
+                android:visibility="visible"
+                android:layout_width="25dp"
+                android:layout_height="4dp"
+                android:background="@drawable/bg_rect_red"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <ListView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/ll_coupon_tab"
+        android:layout_above="@+id/dialog_ok_btn"
+        android:id="@+id/lv_coupon_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp"/>
+    <include
+        android:layout_below="@+id/ll_coupon_tab"
+        android:layout_above="@+id/dialog_ok_btn"
+        layout="@layout/lang_common_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"/>
+
+    <Button
+        android:textSize="16sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/dialog_ok_btn"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/colorRedMain"
+        android:text="确 认"
+        android:textColor="@color/colorWhite" />
+
+</RelativeLayout>

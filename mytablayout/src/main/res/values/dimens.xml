@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dialog_sku_divider">2dp</dimen>
+    <dimen name="dialog_sku_divider3">3dp</dimen>
+    <dimen name="home_subject_line">0dp</dimen>
+    <dimen name="view_toview_two">10dp</dimen>
+    <dimen name="indicator_width">32dp</dimen>
+    <dimen name="indicator_width2">34dp</dimen>
+    <dimen name="group_tab_margin">5dp</dimen>
+    <dimen name="tab_margin">8.5dp</dimen>
+    <dimen name="value_1dp">1dp</dimen>
+    <dimen name="value_24dp">24dp</dimen>
+    <dimen name="value_20dp">20dp</dimen>
+</resources>

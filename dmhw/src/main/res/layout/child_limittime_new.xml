@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:id="@+id/ll_saletime_time"
+    android:gravity="center"
+    android:paddingLeft="7dp"
+    android:paddingRight="7dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tv_limite_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00"
+            android:textColor="@color/colorBlackText"
+            android:textSize="17sp"/>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:id="@+id/tv_limite_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:text="秒杀中"
+            android:textColor="@color/colorBlackText2"
+            android:textSize="11sp" />
+        <View
+            android:visibility="invisible"
+            android:id="@+id/view_indicator"
+            android:layout_marginTop="2dp"
+            android:layout_width="31dp"
+            android:layout_height="2dp"
+            android:background="@color/black"/>
+    </LinearLayout>
+</LinearLayout>

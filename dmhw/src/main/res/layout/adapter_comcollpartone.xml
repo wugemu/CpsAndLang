@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adapter_promotion_layout"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/adapter_partone_image"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:scaleType="fitXY"
+            android:src="@mipmap/newhangfile"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/adapter_partone_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.9"
+            android:layout_marginTop="@dimen/dp_5"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_14"
+            android:textColor="#333333"
+            android:text="新手入门"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/adapter_partone_subtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.9"
+            android:layout_marginTop="@dimen/dp_5"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_11"
+            android:textColor="#999999"
+            android:text="快速了解"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:gravity="right"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/black"
+    tools:ignore="RtlHardcoded">
+
+    <View
+        android:id="@+id/dialog_right_menu_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_274"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/dp_23"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:ignore="ScrollViewSize">
+
+                <LinearLayout
+                    android:id="@+id/dialog_right_menu_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dp_8"
+                    android:paddingEnd="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_12"
+                        android:textColor="#666666"
+                        android:text="品牌"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right">
+
+                        <ImageView
+                            android:id="@+id/dialog_right_menu_arrow"
+                            android:layout_width="@dimen/dp_11"
+                            android:layout_height="@dimen/dp_6"
+                            android:tint="#333333"
+                            android:src="@mipmap/header_withdrawals_activity_arrow"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dialog_right_menu_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_378">
+
+                    <com.lxkj.dmhw.defined.ObserveGridView
+                        android:id="@+id/dialog_right_menu_grid"
+                        android:layout_marginStart="@dimen/dp_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:verticalSpacing="@dimen/dp_6"
+                        android:numColumns="3"
+                        android:scrollbars="none"
+                        android:listSelector="#00000000"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="#666666"
+                    android:text="价格区间（元）"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_30"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_19"
+                    android:layout_marginBottom="@dimen/dp_10">
+
+                    <EditText
+                        android:id="@+id/dialog_right_menu_low"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_22"
+                        android:layout_weight="1"
+                        android:background="@drawable/dialog_right_menu_money_background"
+                        android:inputType="number"
+                        android:digits="0123456789"
+                        android:gravity="center"
+                        android:textSize="@dimen/sp_12"
+                        android:textColorHint="#d2d2d2"
+                        android:textColor="#666666"
+                        android:hint="最低价"
+                        tools:ignore="HardcodedText"
+                        android:textCursorDrawable="@drawable/my_cursor"
+                        android:cursorVisible="true" />
+
+                    <View
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="#cccccc"
+                        android:layout_marginLeft="@dimen/dp_9"
+                        android:layout_marginRight="@dimen/dp_9"/>
+
+                    <EditText
+                        android:id="@+id/dialog_right_menu_high"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_22"
+                        android:layout_weight="1"
+                        android:background="@drawable/dialog_right_menu_money_background"
+                        android:inputType="number"
+                        android:digits="0123456789"
+                        android:gravity="center"
+                        android:textSize="@dimen/sp_12"
+                        android:textColorHint="#d2d2d2"
+                        android:textColor="#666666"
+                        android:hint="最高价"
+                        tools:ignore="HardcodedText"
+                        android:textCursorDrawable="@drawable/my_cursor"
+                        android:cursorVisible="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:gravity="right"
+            tools:ignore="RtlHardcoded">
+
+            <LinearLayout
+                android:id="@+id/dialog_right_menu_reset"
+                android:layout_width="@dimen/dp_87"
+                android:layout_height="@dimen/dp_34"
+                android:background="@drawable/commodity_share"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:lineSpacingMultiplier="0.9"
+                    android:textSize="@dimen/sp_13"
+                    android:textColor="@color/white"
+                    android:text="重置"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dialog_right_menu_confirm"
+                android:layout_width="@dimen/dp_87"
+                android:layout_height="@dimen/dp_34"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/commodity_btn_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:lineSpacingMultiplier="0.9"
+                    android:textSize="@dimen/sp_13"
+                    android:textColor="@color/white"
+                    android:text="确定"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

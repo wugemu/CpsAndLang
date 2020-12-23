@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <include
+        android:visibility="gone"
+        android:id="@+id/layout_todaysale_product"
+        layout="@layout/adapter_home_product2"/>
+    <include
+        android:visibility="gone"
+        android:id="@+id/layout_homehot_title"
+        layout="@layout/include_homehot_title"/>
+    <include
+        android:visibility="gone"
+        android:id="@+id/layout_good_recycle"
+        layout="@layout/recycle_staggeredgood_item"/>
+    <include layout="@layout/lang_common_bottom"
+        android:visibility="gone"
+        android:id="@+id/layout_common_bottom"
+        />
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="left_back_icon" format="reference" />
+    <attr name="title_background" format="reference|color" />
+    <attr name="title_text_size" format="dimension" />
+    <attr name="title_text_color" format="reference|color" />
+    <attr name="status_bar_color" format="color" />
+    <attr name="loading_icon" format="reference" />
+    <attr name="image_def" format="reference" />
+    <attr name="lang_error" format="reference" />
+    <attr name="lang_nonet" format="reference" />
+    <attr name="lang_nonet_tip" format="reference" />
+    <attr name="lang_nonet_reload_bg" format="reference" />
+    <attr name="lang_nonet_reload_txt_style" format="reference" />
+    <attr name="lang_nonet_reload_width" format="dimension" />
+    <attr name="lang_nonet_reload_height" format="dimension" />
+    <attr name="lang_error_tip" format="reference" />
+    <attr name="lang_error_reload_bg" format="reference" />
+    <attr name="lang_error_reload_txt_style" format="reference" />
+    <attr name="lang_error_reload_width" format="dimension" />
+    <attr name="lang_error_reload_height" format="dimension" />
+    <attr name="lang_top_line" format="reference" />
+    <declare-styleable name="RoundedImageView">
+        <attr name="type" format="string" />
+        <attr name="conner" format="dimension" />
+    </declare-styleable>
+</resources>

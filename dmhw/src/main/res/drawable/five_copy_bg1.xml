@@ -1,0 +1,10 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 设置边缘四周颜色   以及边缘线的宽度 -->
+
+     <corners android:radius="@dimen/dp_11"/>
+    <gradient
+        android:startColor="#FFEDC6"
+        android:endColor="#F3DB9B"
+        android:angle="0"
+        />
+</shape>

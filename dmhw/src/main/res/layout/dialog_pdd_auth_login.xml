@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/Transparent00000000"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_root01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:background="@drawable/personal_grid_bg"
+        >
+
+        <TextView
+            android:id="@+id/tlogin_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="申请拼多多授权"
+            android:textColor="@color/color_333333"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_30"
+            android:textSize="@dimen/sp_18"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_30"
+            android:background="@drawable/wxauth_bg_style"
+
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_17"
+                android:layout_marginBottom="@dimen/dp_17"
+                >
+                <ImageView
+                    android:id="@+id/tlogin_img"
+                    android:layout_width="@dimen/dp_65"
+                    android:layout_height="@dimen/dp_65"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:src="@mipmap/ic_launcher"
+                    />
+                <ImageView
+                    android:id="@+id/wx_quth_arr"
+                    android:layout_width="@dimen/dp_39"
+                    android:layout_height="@dimen/dp_23"
+                    android:src="@mipmap/wx_auth_arrow"
+                    android:layout_gravity="center_vertical"
+                    />
+                <ImageView
+                    android:id="@+id/wx_img"
+                    android:layout_width="@dimen/dp_65"
+                    android:layout_height="@dimen/dp_65"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:src="@mipmap/pdd_auth_img"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/dp_45"
+            android:layout_marginEnd="@dimen/dp_45"
+            android:layout_marginTop="@dimen/dp_20"
+            >
+
+            <TextView
+                android:id="@+id/tlogin_txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="拼多多账号授权后，自己下单和分享商品都能获得佣金哦！"
+                android:lineSpacingExtra="@dimen/dp_5"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/sp_13">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tlogin_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:gravity="center"
+            android:background="@mipmap/wx_auth_btn"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_60">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/white"
+                android:text="前往拼多多授权"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

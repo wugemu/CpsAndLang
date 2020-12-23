@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="16dp"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_product_coupon"
+    android:gravity="center_vertical"
+    >
+    
+    <TextView
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_left"
+        android:layout_marginLeft="3dp"
+        android:text="券"
+        android:textSize="10sp"
+        android:textColor="@color/colorRedMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/view_dashline"
+        android:layout_toRightOf="@+id/tv_left"
+        android:layout_width="6dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/dash_line_orange"
+        android:layerType="software"
+        />
+
+
+
+    <View
+        android:layout_alignLeft="@+id/view_dashline"
+        android:layout_alignRight="@+id/view_dashline"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/banyuan"
+        android:layout_alignParentBottom="true"
+        />
+    <View
+        android:layout_alignLeft="@+id/view_dashline"
+        android:layout_alignRight="@+id/view_dashline"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/banyuan2"
+        />
+
+    <TextView
+        android:layout_toRightOf="@+id/view_dashline"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_coupon"
+        android:textSize="10sp"
+        android:textColor="@color/colorRedMain"
+        android:singleLine="true"
+        />
+</RelativeLayout>

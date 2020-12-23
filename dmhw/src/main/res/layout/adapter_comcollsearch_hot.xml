@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/adapter_search_hot_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:background="@drawable/adapter_search_hot_background"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10"
+        >
+
+        <TextView
+            android:id="@+id/adapter_search_hot_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_13"
+            android:maxEms="15"
+            android:singleLine="true"
+            tools:text="测试测试测试测试"
+            android:ellipsize="end"
+            />
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/adapter_hot_image"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_12"
+        android:scaleType="fitXY"
+        android:src="@mipmap/hot_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        />
+</RelativeLayout>

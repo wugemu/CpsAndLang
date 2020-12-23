@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_paytype_item"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <ImageView
+            android:id="@+id/iv_paytype"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@mipmap/wx" />
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_paytype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_paytype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="微信支付"
+                android:textColor="@color/colorBlackText"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_paytype_tip"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推荐微信支付用户使用"
+                android:textColor="@color/colorBlackText2"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <RadioButton
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb_wxcheck"
+            android:layout_marginRight="20dp"
+            android:button="@drawable/check_def"
+            android:checked="false"/>
+    </RelativeLayout>
+</LinearLayout>

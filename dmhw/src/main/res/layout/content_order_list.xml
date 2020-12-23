@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.lxkj.dmhw.activity.self.order.OrderListActivity"
+    tools:showIn="@layout/activity_order_list"
+    android:background="@color/colorWhite"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/bg_rect_f5_15dp"
+        android:id="@+id/ll_search"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@mipmap/search"
+            />
+        <TextView
+            android:id="@+id/tv_search_hint"
+            android:layout_marginLeft="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:text="搜索我的订单"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlackHint"
+            />
+
+    </LinearLayout>
+    <com.ahtrun.mytablayout.CustomeTablayout
+        android:layout_below="@+id/ll_search"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ct_order_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+    <include layout="@layout/lang_common_nonet"/>
+    <include layout="@layout/lang_common_loading"/>
+</RelativeLayout>

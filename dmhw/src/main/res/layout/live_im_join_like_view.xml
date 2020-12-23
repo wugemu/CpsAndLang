@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/im_layout_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/room_im_left_bg"
+        android:paddingRight="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        >
+        <TextView
+            android:id="@+id/live_im_comes_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12"
+            android:singleLine="true"
+            android:maxEms="6"
+            android:ellipsize="end"
+            tools:text="NN俱乐部"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="8dp"
+            android:paddingTop="2dp"
+            android:textColor="#ffffff" />
+        <TextView
+            android:id="@+id/who_like_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="喜欢了这个商品"
+            android:textSize="@dimen/sp_12"
+            android:paddingBottom="2dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="8dp"
+            android:paddingTop="2dp"
+            android:textColor="#F5C06E" />
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_18"
+            android:src="@mipmap/room_like_icon"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

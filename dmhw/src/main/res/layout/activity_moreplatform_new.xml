@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f4"
+        >
+
+        <ImageView
+            android:id="@+id/more_pl_iv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_181"
+            android:scaleType="centerCrop"
+            android:background="@color/black"
+            />
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_24" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_8">
+
+                    <ImageView
+                        android:id="@+id/jd_back"
+                        android:layout_width="@dimen/dp_9"
+                        android:layout_height="@dimen/dp_18"
+                        android:layout_margin="@dimen/dp_9"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/btn_back_default"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/white" />
+                    <ImageView
+                        android:id="@+id/wei_back"
+                        android:layout_width="@dimen/dp_17"
+                        android:layout_height="@dimen/dp_23"
+                        android:layout_margin="@dimen/dp_9"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/wei_back_icon"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/pl_jd_img"
+                    android:layout_width="@dimen/dp_99"
+                    android:layout_height="@dimen/dp_20"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/more_pl_jd"
+                    android:layout_centerInParent="true"
+                    />
+                <ImageView
+                    android:id="@+id/pl_pdd_img"
+                    android:layout_width="@dimen/dp_62"
+                    android:layout_height="@dimen/dp_20"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/more_pl_pdd"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    />
+                <ImageView
+                    android:id="@+id/pl_wei_img"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_20"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/more_pl_wei"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    />
+                <ImageView
+                    android:id="@+id/pl_sn_img"
+                    android:layout_width="@dimen/dp_97"
+                    android:layout_height="@dimen/dp_23"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/more_pl_sn"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    />
+                <TextView
+                    android:id="@+id/pl_kl_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="考拉海购"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    />
+                <LinearLayout
+                    android:id="@+id/pl_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_5"
+                    >
+                <ImageView
+                    android:id="@+id/jd_search"
+                    android:layout_width="@dimen/dp_18"
+                    android:layout_height="18dp"
+                    android:layout_marginEnd="@dimen/dp_12"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/more_pl_search"
+                    />
+                    <ImageView
+                        android:id="@+id/wei_search"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="18dp"
+                        android:layout_marginEnd="@dimen/dp_12"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/wei_search_icon"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <com.lxkj.dmhw.defined.PtrClassicRefreshLayout
+        android:id="@+id/load_more_ptr_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="@dimen/dp_15"
+        >
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/Coordinator_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top"
+            >
+
+        <android.support.design.widget.AppBarLayout
+        android:id="@+id/AppBar_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Transparent00000000"
+        app:elevation="0dp"
+        app:layout_behavior="com.lxkj.dmhw.defined.AppBarLayoutBehaviorNew"
+        >
+            <com.lxkj.dmhw.view.RoundLayoutNew
+                android:id="@+id/header_new_banner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_149"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                app:layout_scrollFlags="scroll"
+                >
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    android:id="@+id/header_more_pl_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:canLoop="true"/>
+            </com.lxkj.dmhw.view.RoundLayoutNew>
+            <LinearLayout
+                android:id="@+id/fragment_more_pl_magic_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_10"
+                >
+                <net.lucode.hackware.magicindicator.MagicIndicator
+                    android:id="@+id/fragment_more_pl_magic"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:background="@null"
+                    />
+            </LinearLayout>
+            </android.support.design.widget.AppBarLayout>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/fragment_more_pl_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f4f4f4"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                />
+        </android.support.design.widget.CoordinatorLayout>
+
+        </com.lxkj.dmhw.defined.PtrClassicRefreshLayout>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

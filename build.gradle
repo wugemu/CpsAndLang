@@ -1,0 +1,48 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+    }
+
+
+
+    dependencies {
+        //noinspection GradleDependency
+//        classpath 'com.android.tools.build:gradle:4.0.0'
+        classpath 'com.android.tools.build:gradle:3.3.1'
+        //noinspection GradleDependency
+        classpath 'com.tencent.bugly:symtabfileuploader:latest.release'
+
+        //信用卡SDK
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
+
+        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-rc2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        //android studio3.5版本以后添加www开头才能下载github上的依赖库
+        //android studio3.5版本以后添加www开头才能下载github上的依赖库
+//        maven { url "https://www.jitpack.io" }
+        maven { url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
+        maven { url "http://repo.baichuan-android.taobao.com/content/repositories/BaichuanRepo-staged/" }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        maven { url "http://mvn.gt.getui.com/nexus/content/repositories/releases/" }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven { url "http://47.97.184.214:8081/nexus/content/groups/public" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

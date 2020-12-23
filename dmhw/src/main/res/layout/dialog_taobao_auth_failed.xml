@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/Transparent00000000"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_root01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:background="@drawable/personal_grid_bg"
+        >
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="@dimen/dp_42"
+            android:layout_marginEnd="@dimen/dp_42"
+            android:layout_marginTop="@dimen/dp_50"
+            >
+            <ImageView
+                android:id="@+id/tlogin_failed_img"
+                android:layout_width="@dimen/dp_71"
+                android:layout_height="@dimen/dp_66"
+                android:src="@mipmap/auth_failed"
+                />
+            <TextView
+                android:id="@+id/tlogin_failed_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="授权失败"
+                android:layout_marginTop="@dimen/dp_30"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_13">
+            </TextView>
+            <TextView
+                android:id="@+id/tlogin_failed_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_18"
+                tools:text="该淘宝账号已授权其他账号，请更换淘宝账号重试，如仍有问题，请联系客服处理！"
+                android:lineSpacingExtra="@dimen/dp_5"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/sp_13">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tlogin_failed_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:gravity="center"
+            android:background="@mipmap/wx_auth_btn"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginEnd="@dimen/dp_25"
+            android:layout_marginBottom="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_60">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/white"
+                android:text="知道了"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

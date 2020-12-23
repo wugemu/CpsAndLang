@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f4f4f4"
+    >
+
+        <com.lxkj.dmhw.view.ScaleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:widthToHeight="0.75"
+            android:background="@mipmap/four_fragment_top_bg"
+            >
+
+        </com.lxkj.dmhw.view.ScaleLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <View
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_24"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="@dimen/dp_9"
+                android:layout_height="@dimen/dp_18"
+                android:layout_margin="@dimen/dp_9"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/btn_back_default"
+                android:tint="@color/white"
+                />
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="大牌精选"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp_18"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginEnd="@dimen/dp_15"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_84"
+                android:background="@drawable/brand_detaildesc_bg"
+                android:layout_marginTop="@dimen/dp_45"
+                android:paddingTop="@dimen/dp_18"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                tools:ignore="ScrollViewSize">
+
+            <TextView
+                android:id="@+id/brand_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/sp_13"
+                android:lineSpacingExtra="@dimen/dp_2"
+                tools:text="测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试" />
+
+            </LinearLayout>
+            <LinearLayout
+            android:id="@+id/brand_detail_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+            <RelativeLayout
+                android:layout_width="@dimen/dp_55"
+                android:layout_height="@dimen/dp_55"
+                android:background="@drawable/brand_detailicon_bg"
+                >
+            <ImageView
+                    android:id="@+id/bigbrand_detail_image"
+                    android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_32"
+                    tools:src="@mipmap/personal_default_img"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerInside"/>
+            </RelativeLayout>
+                <TextView
+                    android:id="@+id/brand_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:paddingBottom="@dimen/dp_3"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/sp_18"
+                    tools:text="港式蛋糕" />
+        </LinearLayout>
+        </RelativeLayout>
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/load_more_ptr_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ptr_duration_to_close="300"
+            app:ptr_duration_to_close_header="2000"
+            app:ptr_keep_header_when_refresh="true"
+            app:ptr_pull_to_fresh="false"
+            app:ptr_ratio_of_header_height_to_refresh="1.2"
+            app:ptr_resistance="1.7">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/brand_detail_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+    </LinearLayout>
+</RelativeLayout>

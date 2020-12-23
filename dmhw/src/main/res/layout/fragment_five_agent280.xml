@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f2f2">
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/load_more_ptr_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        cube_ptr:ptr_duration_to_close="300"
+        cube_ptr:ptr_duration_to_close_header="2000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+        cube_ptr:ptr_resistance="1.7"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.lxkj.dmhw.view.ScaleLayout
+            android:id="@+id/personal_bg_iv_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_290"
+            cube_ptr:widthToHeight="0.639"
+            >
+        <ImageView
+            android:id="@+id/personal_bg_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/personal_bg280"
+            android:scaleType="centerCrop"
+            />
+        </com.lxkj.dmhw.view.ScaleLayout>
+        <com.lxkj.dmhw.view.ScaleLayout
+            android:id="@+id/personal_bg_iv_unloginlayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_290"
+            cube_ptr:widthToHeight="0.56"
+            >
+            <ImageView
+                android:id="@+id/personal_bg_unlogin_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/personal_bg280"
+                android:scaleType="centerCrop"
+                />
+        </com.lxkj.dmhw.view.ScaleLayout>
+            <com.lxkj.dmhw.defined.ObserveScrollView
+                android:id="@+id/fragment_five_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:descendantFocusability="blocksDescendants">
+                    <View
+                        android:id="@+id/status_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_20"/>
+                  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="@dimen/dp_40">
+
+                      <LinearLayout
+                          android:id="@+id/fragment_five_news_layout"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentEnd="true"
+                          android:layout_marginEnd="@dimen/dp_12"
+                          android:layout_centerVertical="true"
+                          android:gravity="center_vertical"
+                          android:orientation="horizontal"
+                          >
+                          <RelativeLayout
+                              android:layout_width="@dimen/dp_25"
+                              android:layout_height="wrap_content"
+                              android:layout_marginEnd="@dimen/dp_10"
+                              >
+
+                              <ImageView
+                                  android:id="@+id/fragment_five_news"
+                                  android:layout_width="@dimen/dp_30"
+                                  android:layout_height="@dimen/dp_30"
+                                  android:src="@mipmap/personal_setting_black280"
+                                  tools:ignore="ContentDescription"
+                                  />
+
+                              <View
+                                  android:id="@+id/fragment_five_unread"
+                                  android:layout_width="@dimen/dp_8"
+                                  android:layout_height="@dimen/dp_8"
+                                  android:background="@mipmap/unread280"
+                                  android:layout_alignParentEnd="true"
+                                  android:layout_marginEnd="@dimen/dp_2"
+                                  android:visibility="gone"
+                                  />
+
+                          </RelativeLayout>
+                          <ImageView
+                              android:id="@+id/fragment_five_setting"
+                              android:layout_width="@dimen/dp_30"
+                              android:layout_height="@dimen/dp_30"
+                              android:src="@mipmap/setting"
+                              />
+                      </LinearLayout>
+
+
+
+
+                  </RelativeLayout>
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/fragment_five_top_unlogin"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:layout_marginEnd="@dimen/dp_12"-->
+<!--                            android:layout_marginTop="@dimen/dp_30"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            >-->
+<!--                        <ImageView-->
+<!--                            android:id="@+id/fragment_five_unloginnews"-->
+<!--                            android:layout_width="@dimen/dp_20"-->
+<!--                            android:layout_height="@dimen/dp_20"-->
+<!--                            android:layout_marginEnd="@dimen/dp_12"-->
+<!--                            android:src="@mipmap/personal_setting_black280"-->
+<!--                            tools:ignore="ContentDescription" />-->
+<!--                        <ImageView-->
+<!--                            android:id="@+id/fragment_five_unloginsetting"-->
+<!--                            android:layout_width="@dimen/dp_20"-->
+<!--                            android:layout_height="@dimen/dp_20"-->
+<!--                            android:src="@mipmap/setting"-->
+<!--                            tools:ignore="ContentDescription"-->
+<!--                            />-->
+<!--                        </LinearLayout>-->
+                        <LinearLayout
+                            android:id="@+id/fragment_five_tourist_login"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:visibility="gone"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="@dimen/dp_53"
+                                android:layout_height="@dimen/dp_53"
+                                android:layout_marginStart="@dimen/dp_20"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                android:gravity="center"
+                                android:background="@null">
+
+                                <ImageView
+                                    android:id="@+id/fragment_five_tourist_avatar"
+                                    android:layout_width="@dimen/dp_52"
+                                    android:layout_height="@dimen/dp_52"
+                                    android:src="@mipmap/personal_default_img"
+                                    android:scaleType="centerCrop"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
+                            <TextView
+                                android:id="@+id/click_login_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp_17"
+                                android:textColor="@color/white"
+                                android:text="点击登录"
+                                tools:ignore="HardcodedText" />
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/sp_12"
+                                    android:textColor="#FFD8E1"
+                                    android:text="登录后体验更多功能"
+                                android:layout_marginTop="@dimen/dp_2"
+                                    tools:ignore="HardcodedText" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/fragment_five_agent_user_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+
+                        <LinearLayout
+                            android:id="@+id/fragment_five_agent_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_30"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/fragment_five_image_bg"
+                                android:layout_width="@dimen/dp_53"
+                                android:layout_height="@dimen/dp_53"
+                                android:layout_marginStart="@dimen/dp_20"
+                                android:layout_marginEnd="@dimen/dp_11"
+                                android:gravity="center"
+                                android:background="@null"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/fragment_five_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@mipmap/personal_default_img"
+                                    android:scaleType="centerCrop"/>
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginTop="@dimen/dp_3"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/fragment_five_name"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:maxEms="6"
+                                            android:singleLine="true"
+                                            android:textColor="#FFFFFF"
+                                            android:textSize="@dimen/sp_15"
+                                            tools:text="15880296139" />
+
+                                        <LinearLayout
+                                            android:layout_gravity="center_vertical"
+                                            android:id="@+id/vip_layout"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="@dimen/dp_18"
+                                            android:orientation="horizontal"
+                                            android:gravity="center"
+                                            android:paddingStart="@dimen/dp_6"
+                                            android:paddingEnd="@dimen/dp_6">
+
+                                            <ImageView
+                                                android:id="@+id/fragment_five_agent_type_image"
+                                                android:layout_width="@dimen/dp_40"
+                                                android:layout_height="@dimen/dp_14"
+                                                android:src="@mipmap/icon_vip" />
+
+                                            <TextView
+                                                android:visibility="gone"
+                                                android:id="@+id/fragment_five_agent_type_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="@dimen/dp_2"
+                                                android:text="VIP会员"
+                                                android:textColor="#432E10"
+                                                android:textSize="@dimen/sp_11" />
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/invite_code_layout"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/dp_21"
+                                        android:layout_marginTop="@dimen/dp_7"
+                                        >
+                                    <RelativeLayout
+                                        android:id="@+id/invite_code_layout01"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/dp_21"
+                                        android:orientation="horizontal"
+                                        android:paddingEnd="@dimen/dp_10"
+                                         >
+                                        <LinearLayout
+                                            android:id="@+id/invite_code_layout_child"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:id="@+id/yaoqingma"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="邀请码："
+                                                android:textColor="#999999"
+                                                android:textSize="@dimen/sp_14"
+                                                tools:ignore="HardcodedText" />
+
+                                            <TextView
+                                                android:id="@+id/fragment_five_invitation"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textColor="#999999"
+                                                android:textSize="@dimen/sp_14"
+                                                tools:text="111111" />
+
+                                            <ImageView
+                                                android:id="@+id/fragment_five_copy"
+                                                android:layout_width="@dimen/dp_5"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginStart="@dimen/dp_7"
+                                                android:src="@mipmap/invitecode_arrow"
+                                                android:visibility="gone" />
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+                                        <ImageView
+                                            android:layout_centerVertical="true"
+                                        android:id="@+id/copy_txt"
+                                        android:layout_width="13dp"
+                                        android:layout_height="13dp"
+                                        android:layout_toEndOf="@+id/invite_code_layout01"
+                                        android:gravity="center"
+                                            android:src="@mipmap/icon_copy"
+                                        />
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                        <RelativeLayout
+                            android:id="@+id/fragment_five_tourist_vip_up_layout_pp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/fragment_five_agent_user_layout"
+                            >
+                            <com.lxkj.dmhw.view.ArcBackgroundView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_115"
+                                app:ArcBackgroundViewEndColor="#f4f4f4"
+                                app:ArcBackgroundViewStartColor="#f4f4f4"
+                                app:ArcBackgroundViewTopHeight="45dp"
+                                android:layout_alignParentBottom="true"
+                                />
+                            <LinearLayout
+                            android:id="@+id/fragment_five_tourist_vip_up_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="bottom|center_vertical"
+                            >
+                            <LinearLayout
+                                android:id="@+id/fragment_five_tourist_vip_up"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_38"
+                                android:layout_marginStart="@dimen/dp_20"
+                                android:layout_marginEnd="@dimen/dp_20"
+                                android:paddingStart="@dimen/dp_10"
+                                android:paddingEnd="@dimen/dp_10"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/bg_rect_jb_gold_top"
+                                >
+
+
+
+                                <ImageView
+                                    android:id="@+id/fragment_five_tourist_vip_up_one"
+                                    android:layout_width="@dimen/dp_20"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:src="@mipmap/shopmenber"
+                                    />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    tools:ignore="RtlHardcoded">
+
+                                    <TextView
+                                        android:id="@+id/fragment_five_tourist_vip_up_two"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#4A392A"
+                                        android:textSize="@dimen/sp_13"
+                                        android:text="升级专享更多特权"
+                                        android:layout_marginStart="@dimen/dp_8"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerVertical="true"
+                                        tools:ignore="HardcodedText" />
+
+                                    <Button
+                                        android:id="@+id/up_shop_menber"
+                                        android:layout_width="@dimen/dp_67"
+                                        android:layout_height="@dimen/dp_25"
+                                        android:background="@drawable/bg_rect_strock_black"
+                                        android:textSize="@dimen/sp_10"
+                                       android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:text="升级店主"
+                                        android:textColor="#4A392A"
+                                        />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+                            <RelativeLayout
+                                android:id="@+id/rank_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                android:paddingTop="@dimen/dp_12"
+                                android:paddingBottom="@dimen/dp_12"
+                                android:background="@drawable/personal_grid_bg"
+                                >
+                                <ImageView
+                                    android:id="@+id/rank_iv"
+                                    android:layout_width="@dimen/dp_75"
+                                    android:layout_height="@dimen/dp_18"
+                                    android:scaleType="fitXY"
+                                    android:layout_marginStart="@dimen/dp_0_5"
+                                    android:src="@mipmap/rank_shop"
+                                    android:visibility="gone"
+                                    />
+                                <LinearLayout
+                                    android:id="@+id/withdraw_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical"
+                                    >
+                                    <LinearLayout
+                                        android:id="@+id/withdraw_money_layout"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        >
+                                        <TextView
+                                            android:id="@+id/fragment_can_draw"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="@dimen/sp_12"
+                                            android:textColor="#B58630"
+                                            android:layout_gravity="center_vertical"
+                                            android:text="可提现金额"
+                                            tools:ignore="HardcodedText" />
+
+                                        <ImageView
+                                            android:id="@+id/fragment_five_arrow"
+                                            android:layout_width="@dimen/dp_5"
+                                            android:layout_height="@dimen/dp_9"
+                                            android:layout_marginStart="@dimen/dp_5"
+                                            android:layout_gravity="center_vertical"
+                                            android:tint="#B58630"
+                                            android:src="@mipmap/fragment_five_arrow"/>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/dp_5"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:includeFontPadding="false"
+                                            android:lineSpacingMultiplier="0.9"
+                                            android:textSize="@dimen/sp_24"
+                                            android:textColor="#6a3002"
+                                            android:textStyle="bold"
+                                            android:text="@string/money"
+                                            tools:ignore="SmallSp"
+                                            android:visibility="gone"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/fragment_five_agent_title_money_total"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:includeFontPadding="false"
+                                            android:lineSpacingMultiplier="0.9"
+                                            android:textSize="@dimen/sp_28"
+                                            android:textColor="#432E10"
+                                            tools:text="100999"/>
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:layout_below="@+id/withdraw_layout"
+                                    android:layout_marginTop="@dimen/dp_23"
+                                    android:weightSum="3">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:orientation="vertical"
+                                        android:layout_weight="1">
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:layout_gravity="center_horizontal"
+                                            >
+                                        <TextView
+                                            android:id="@+id/yugu01"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:includeFontPadding="false"
+                                            android:lineSpacingMultiplier="0.9"
+                                            android:layout_marginTop="@dimen/dp_5"
+                                            android:textSize="@dimen/sp_11"
+                                            android:textColor="#B58630"
+                                            android:text="今日预估"
+                                            tools:ignore="HardcodedText,SmallSp" />
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dp_5"
+                                            android:layout_gravity="center_horizontal"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:includeFontPadding="false"
+                                                android:lineSpacingMultiplier="0.9"
+                                                android:textSize="@dimen/sp_16"
+                                                android:textColor="@color/white"
+                                                android:textStyle="bold"
+                                                android:text="@string/money"
+                                                tools:ignore="SmallSp"
+                                                android:visibility="gone"
+                                                />
+
+                                            <com.lxkj.dmhw.view.AutoScaleTextView
+                                                android:id="@+id/fragment_five_agent_today_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:includeFontPadding="false"
+                                                android:lineSpacingMultiplier="0.9"
+                                                android:gravity="center_vertical"
+                                                app:minTextSize="@dimen/sp_10"
+                                                android:lines="1"
+                                                android:textSize="@dimen/sp_20"
+                                                android:textColor="#432E10"
+                                                tools:text="1000000000"/>
+
+                                        </LinearLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="@dimen/dp_1"
+                                        android:layout_height="@dimen/dp_18"
+                                        android:background="#6a3002"
+                                        android:visibility="gone"
+                                        />
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_horizontal"
+                                        android:orientation="vertical"
+                                        android:paddingEnd="@dimen/dp_10"
+                                        android:paddingStart="@dimen/dp_10"
+                                        android:layout_weight="1">
+                                        <TextView
+                                            android:id="@+id/yugu02"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:includeFontPadding="false"
+                                            android:lineSpacingMultiplier="0.9"
+                                            android:layout_marginTop="@dimen/dp_5"
+                                            android:textSize="@dimen/sp_11"
+                                            android:textColor="#B58630"
+                                            android:text="本月预估"
+                                            tools:ignore="HardcodedText" />
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dp_5"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:includeFontPadding="false"
+                                                android:lineSpacingMultiplier="0.9"
+                                                android:textSize="@dimen/sp_16"
+                                                android:textColor="@color/white"
+                                                android:textStyle="bold"
+                                                android:text="@string/money"
+                                                tools:ignore="SmallSp"
+                                                android:visibility="gone"
+                                                />
+
+                                            <com.lxkj.dmhw.view.AutoScaleTextView
+                                                android:id="@+id/fragment_five_agent_current_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:includeFontPadding="false"
+                                                android:lineSpacingMultiplier="0.9"
+                                                android:gravity="center_vertical"
+                                                app:minTextSize="@dimen/sp_10"
+                                                android:textSize="@dimen/sp_20"
+                                                android:lines="1"
+                                                android:textColor="#432E10"
+                                                tools:text="100000000"/>
+
+                                        </LinearLayout>
+
+
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="@dimen/dp_1"
+                                        android:layout_height="@dimen/dp_20"
+                                        android:background="#6a3002"
+                                        android:visibility="gone"
+                                        />
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right"
+                                        android:orientation="vertical"
+                                        android:layout_weight="1">
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:layout_gravity="center_horizontal"
+                                            >
+                                        <TextView
+                                            android:id="@+id/yugu03"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:includeFontPadding="false"
+                                            android:lineSpacingMultiplier="0.9"
+                                            android:layout_marginTop="@dimen/dp_5"
+                                            android:layout_gravity="center_horizontal"
+                                            android:textSize="@dimen/sp_11"
+                                            android:textColor="#B58630"
+                                            android:text="上月预估"
+                                            tools:ignore="HardcodedText" />
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dp_5"
+                                            android:layout_gravity="center_horizontal"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:includeFontPadding="false"
+                                                android:lineSpacingMultiplier="0.9"
+                                                android:textSize="@dimen/sp_16"
+                                                android:textColor="@color/white"
+                                                android:textStyle="bold"
+                                                android:text="@string/money"
+                                                tools:ignore="SmallSp"
+                                                android:visibility="gone"
+                                                />
+
+                                            <com.lxkj.dmhw.view.AutoScaleTextView
+                                                android:id="@+id/fragment_five_agent_last_text"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:includeFontPadding="false"
+                                                android:lineSpacingMultiplier="0.9"
+                                                android:gravity="center_vertical"
+                                                android:lines="1"
+                                                app:minTextSize="@dimen/sp_10"
+                                                android:textSize="@dimen/sp_20"
+                                                android:textColor="#432E10"
+                                                tools:text="1000000000"/>
+
+                                        </LinearLayout>
+                                        </LinearLayout>
+
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:id="@+id/change_gb1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#f4f2f2"
+                            android:layout_below="@+id/fragment_five_tourist_vip_up_layout_pp"
+                            >
+                        <LinearLayout
+                            android:id="@+id/app_icon_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:orientation="vertical"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <com.lxkj.dmhw.view.ArcBackgroundView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_50"
+                                    app:ArcBackgroundViewEndColor="#f4f4f4"
+                                    app:ArcBackgroundViewStartColor="#f4f4f4"
+                                    app:ArcBackgroundViewTopHeight="25dp"
+                                    android:layout_alignBottom="@+id/icon_list_firstlayout"
+                                    />
+                            <LinearLayout
+                                android:id="@+id/icon_list_firstlayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                android:paddingTop="@dimen/dp_3"
+                                android:paddingBottom="@dimen/dp_3"
+                                android:background="@drawable/personal_grid_bg">
+
+                                <com.lxkj.dmhw.defined.ObserveGridView
+                                    android:id="@+id/fragment_five_agent_grid_one"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dp_15"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:layout_marginBottom="@dimen/dp_10"
+                                    android:horizontalSpacing="@dimen/dp_35"
+                                    android:listSelector="#00000000"
+                                    android:numColumns="4"
+                                    android:scrollbars="none"
+                                    android:verticalSpacing="@dimen/dp_20" />
+
+
+                            </LinearLayout>
+                            </RelativeLayout>
+                            <LinearLayout
+                                android:id="@+id/change_gb2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                >
+                                <com.lxkj.dmhw.view.ScaleLayout
+                                    android:id="@+id/header_fragment_one_new_banner_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dp_10"
+                                    android:layout_marginEnd="@dimen/dp_10"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    app:widthToHeight="0.194"
+                                    >
+                                    <com.bigkoo.convenientbanner.ConvenientBanner
+                                        android:id="@+id/my_fragment_one_new_vertical_banner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        app:animDuration="300"
+                                        app:gap="3000"
+                                        />
+                                </com.lxkj.dmhw.view.ScaleLayout>
+
+                                <com.lxkj.dmhw.defined.ObserveGridView
+                                    android:id="@+id/fragment_grid_four"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:verticalSpacing="@dimen/dp_20"
+                                    android:horizontalSpacing="@dimen/dp_10"
+                                    android:layout_marginStart="@dimen/dp_10"
+                                    android:layout_marginEnd="@dimen/dp_10"
+                                    android:listSelector="#00000000"
+                                    android:scrollbars="none"
+                                    android:numColumns="2"/>
+
+                            <LinearLayout
+                                android:id="@+id/icon_list_secondlayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                android:background="@drawable/personal_grid_bg">
+
+                                <TextView
+                                    android:id="@+id/tuiguang"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_17"
+                                    android:layout_marginBottom="@dimen/dp_10"
+                                    android:layout_marginStart="@dimen/dp_13"
+                                    android:layout_marginEnd="@dimen/dp_20"
+                                    android:textSize="@dimen/sp_14"
+                                    android:textColor="#333333"
+                                    android:text="会员专享"
+                                    tools:ignore="SmallSp"
+                                    />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_0_5"
+                                    android:layout_marginStart="@dimen/dp_18"
+                                    android:layout_marginEnd="@dimen/dp_14"
+                                    android:layout_marginBottom="@dimen/dp_10"
+                                    android:background="#EBEBEB"
+                                    android:visibility="gone"
+                                    />
+
+                                <com.lxkj.dmhw.defined.ObserveGridView
+                                    android:id="@+id/fragment_five_agent_grid_two"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:layout_marginBottom="@dimen/dp_20"
+                                    android:verticalSpacing="@dimen/dp_20"
+                                    android:listSelector="#00000000"
+                                    android:scrollbars="none"
+                                    android:numColumns="4"
+                                    android:visibility="gone"
+                                    />
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/fragment_five_agent_list_two"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dp_5"
+                                    android:scrollbars="none"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:layout_marginBottom="@dimen/dp_10"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                android:background="@drawable/personal_grid_bg">
+
+                                <TextView
+                                    android:id="@+id/service_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_17"
+                                    android:layout_marginBottom="@dimen/dp_10"
+                                    android:layout_marginStart="@dimen/dp_13"
+                                    android:textSize="@dimen/sp_14"
+                                    android:textColor="#333333"
+                                    android:text="常用工具"
+                                    tools:ignore="SmallSp"
+                                    />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_0_5"
+                                    android:layout_marginStart="@dimen/dp_18"
+                                    android:layout_marginEnd="@dimen/dp_12"
+                                    android:layout_marginBottom="@dimen/dp_10"
+                                    android:background="#EBEBEB"
+                                    android:visibility="gone"
+                                    />
+
+                                <com.lxkj.dmhw.defined.ObserveGridView
+                                    android:id="@+id/fragment_five_agent_grid_three"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_15"
+                                    android:layout_marginBottom="@dimen/dp_20"
+                                    android:verticalSpacing="@dimen/dp_25"
+                                    android:horizontalSpacing="@dimen/dp_49"
+                                    android:layout_marginStart="@dimen/dp_21"
+                                    android:listSelector="#00000000"
+                                    android:scrollbars="none"
+                                    android:numColumns="4"/>
+
+                            </LinearLayout>
+
+                            <com.lxkj.dmhw.defined.ObserveWebView
+                                android:id="@+id/fragment_five_agent_web"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                android:scrollbars="none"
+                                android:visibility="gone"
+                                />
+                            </LinearLayout>
+                        </LinearLayout>
+                        </LinearLayout>
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/fragment_five_news_layout"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:layout_marginEnd="@dimen/dp_12"-->
+<!--                            android:layout_marginTop="@dimen/dp_40"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            >-->
+<!--                        <RelativeLayout-->
+<!--                            android:layout_width="@dimen/dp_25"-->
+<!--                            android:layout_height="@dimen/dp_25"-->
+<!--                            android:layout_marginEnd="@dimen/dp_10"-->
+<!--                            >-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/fragment_five_news"-->
+<!--                                android:layout_width="@dimen/dp_20"-->
+<!--                                android:layout_height="@dimen/dp_20"-->
+<!--                                android:src="@mipmap/personal_setting_black280"-->
+<!--                                tools:ignore="ContentDescription" />-->
+
+<!--                            <View-->
+<!--                                android:id="@+id/fragment_five_unread"-->
+<!--                                android:layout_width="@dimen/dp_10"-->
+<!--                                android:layout_height="@dimen/dp_10"-->
+<!--                                android:background="@mipmap/unread280"-->
+<!--                                android:layout_alignParentEnd="true"-->
+<!--                                android:visibility="gone"-->
+<!--                                 />-->
+
+<!--                        </RelativeLayout>-->
+<!--                            <ImageView-->
+<!--                                android:id="@+id/fragment_five_setting"-->
+<!--                                android:layout_width="@dimen/dp_20"-->
+<!--                                android:layout_height="@dimen/dp_20"-->
+<!--                                android:src="@mipmap/setting"-->
+<!--                               />-->
+
+<!--                        </LinearLayout>-->
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </com.lxkj.dmhw.defined.ObserveScrollView>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        <ImageView
+        android:id="@+id/fragment_five_title_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:scaleType="fitStart"
+        android:background="@color/white"
+        android:layout_alignBottom="@id/fragment_five_title"
+        />
+
+            <LinearLayout
+                android:id="@+id/fragment_five_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <View
+                    android:id="@+id/status_bar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_20"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    >
+                    <LinearLayout
+                        android:id="@+id/location_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                       android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dp_12"
+                        android:visibility="gone"
+                       >
+
+                        <ImageView
+                            android:id="@+id/fragment_five_agent_title_avatar"
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="@dimen/dp_30"
+                            android:src="@mipmap/personal_default_img"
+                            />
+                        <TextView
+                            android:id="@+id/fragment_five_agent_title_text_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/location_layout"
+                            android:textSize="@dimen/sp_15"
+                            android:textColor="#343434"
+                            android:layout_marginStart="@dimen/dp_5"
+                            tools:text="张三"
+                            tools:ignore="HardcodedText"
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/fragment_five_news_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="@dimen/dp_12"
+                        tools:ignore="RtlHardcoded"
+                       android:layout_centerVertical="true"
+                        android:visibility="gone"
+                        >
+
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/dp_25"
+                            android:layout_height="@dimen/dp_20"
+                            android:layout_marginEnd="@dimen/dp_12"
+                            >
+
+                            <ImageView
+                                android:id="@+id/fragment_five_news1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/message_top"
+                                tools:ignore="ContentDescription"
+                                />
+
+                            <View
+                                android:id="@+id/fragment_five_unread1"
+                                android:layout_width="@dimen/dp_8"
+                                android:layout_height="@dimen/dp_8"
+                                android:layout_alignParentEnd="true"
+                                android:background="@mipmap/unread280"
+                                android:visibility="gone"
+                                />
+
+                        </RelativeLayout>
+                        <ImageView
+                            android:id="@+id/fragment_five_agent_setting1"
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            android:src="@mipmap/setting_top"
+                            tools:ignore="ContentDescription"
+                            />
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+           <View
+               android:id="@+id/view_split"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/dp_1"
+               android:background="#EBE7E8"
+               android:alpha="0"
+               android:layout_below="@+id/fragment_five_title"
+               />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+
+</RelativeLayout>

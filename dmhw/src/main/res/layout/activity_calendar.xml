@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CalendarActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F2F2F2"
+        >
+    <View
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_24"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="@dimen/dp_9"
+                android:layout_height="@dimen/dp_18"
+                android:layout_margin="@dimen/dp_9"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/btn_back_default" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="查询明细"
+            android:textColor="#313131"
+            android:textSize="@dimen/sp_18"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_19"
+        android:paddingBottom="@dimen/dp_19"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/calendar_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_12"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:button="@color/transparent"
+                android:gravity="center"
+                android:background="@drawable/calendar_radio_button_style"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/calendar_radio_text_color"
+                android:text="本日"
+                tools:ignore="HardcodedText" />
+
+            <RadioButton
+                android:id="@+id/calendar_week"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:button="@color/transparent"
+                android:gravity="center"
+                android:background="@drawable/calendar_radio_button_style"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/calendar_radio_text_color"
+                android:text="近1周"
+                tools:ignore="HardcodedText" />
+
+            <RadioButton
+                android:id="@+id/calendar_month_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:button="@color/transparent"
+                android:gravity="center"
+                android:background="@drawable/calendar_radio_button_style"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/calendar_radio_text_color"
+                android:layout_marginRight="@dimen/dp_10"
+                android:text="近1月"
+                tools:ignore="HardcodedText" />
+
+            <RadioButton
+                android:id="@+id/calendar_month_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:button="@color/transparent"
+                android:gravity="center"
+                android:background="@drawable/calendar_radio_button_style"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/calendar_radio_text_color"
+                android:text="近3月"
+                tools:ignore="HardcodedText" />
+
+            <RadioButton
+                android:id="@+id/calendar_month_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:button="@color/transparent"
+                android:background="@drawable/calendar_radio_button_style"
+                android:textSize="@dimen/sp_15"
+                android:gravity="center"
+                android:textColor="@color/calendar_radio_text_color"
+                android:text="近6月"
+                tools:ignore="HardcodedText" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_48"
+        >
+        <LinearLayout
+            android:id="@+id/calendar_start_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:textColor="#666666"
+                android:text="起始时间"
+                tools:ignore="HardcodedText" />
+
+
+
+            <TextView
+                android:id="@+id/calendar_start_btn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_17"
+                android:textColor="#333333"
+                android:layout_marginTop="@dimen/dp_8"
+                tools:text="2018-01-01"
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/color_666666"
+            android:text="至"
+            android:layout_gravity="center_vertical"
+            />
+        <LinearLayout
+            android:id="@+id/calendar_end_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:textColor="#666666"
+                android:text="结束时间"
+                tools:ignore="HardcodedText" />
+
+
+            <TextView
+                android:id="@+id/calendar_end_btn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_17"
+                android:layout_marginTop="@dimen/dp_8"
+                android:textColor="#333333"
+                tools:text="2018-01-01"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/calendar_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_33"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_50"
+        android:background="#000000"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_17"
+            android:textColor="@color/white"
+            android:text="确定"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</LinearLayout>

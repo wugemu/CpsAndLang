@@ -1,0 +1,995 @@
+package com.example.test.andlang.http;
+
+import android.app.Activity;
+import android.app.DownloadManager;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.database.ContentObserver;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Handler;
+import android.os.Looper;
+import android.text.TextUtils;
+import android.util.Log;
+import android.webkit.MimeTypeMap;
+
+import com.example.test.andlang.andlangutil.BaseLangApplication;
+import com.example.test.andlang.andlangutil.LangImageUpInterface;
+import com.example.test.andlang.localcache.CacheResultListener;
+import com.example.test.andlang.log.AppCrashHandler;
+import com.example.test.andlang.util.BaseLangUtil;
+import com.example.test.andlang.util.Constants;
+import com.example.test.andlang.util.LogUtil;
+import com.example.test.andlang.util.MMKVUtil;
+import com.example.test.andlang.util.NetSpeedUtil;
+import com.example.test.andlang.util.PicSelUtil;
+import com.example.test.andlang.util.ToastUtil;
+import com.tencent.mmkv.MMKV;
+
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.Proxy;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.Cache;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Dispatcher;
+import okhttp3.FormBody;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
+import okhttp3.logging.HttpLoggingInterceptor;
+
+/**
+ * Created by 1 on 2016/1/18.
+ */
+public class HttpU {
+    private boolean openLog=false;//true设置使用网络日志 false不使用
+    private boolean openDns=HttpConfig.openDns;//true设置使用自定义DNS false不使用
+
+    public static final String COOKIE = "token";
+
+    private static HttpU mInstance;
+    private final Handler handler;
+    private OkHttpClient mOkHttpClient;
+    private static final int TIME_OUT = 30 * 1000; // 超时时间
+    private static final String CHARSET = "utf-8"; // 设置编码
+    private static final MediaType MEDIA_TYPE_PNG = MediaType.parse("image/*");
+
+    private HttpU() {
+        mOkHttpClient = newOkHttpClient();
+        handler = new Handler(Looper.getMainLooper());
+    }
+
+
+
+    public static HttpU getInstance() {
+        if (mInstance == null) {
+            synchronized (HttpU.class) {
+                if (mInstance == null) {
+                    mInstance = new HttpU();
+                }
+            }
+        }
+        return mInstance;
+    }
+
+    public OkHttpClient newOkHttpClient(){
+        HttpLoggingInterceptor logInterceptor = new HttpLoggingInterceptor(new HttpLogger());
+        logInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+
+        Dispatcher dispatcher=new Dispatcher(ExecutorServiceUtil.getInstence().getExecutorService());
+        dispatcher.setMaxRequests(80);//默认值64 当前运行的请求数必须小于maxRequests，否则就加入等待队列中
+        dispatcher.setMaxRequestsPerHost(20);//默认值为5 当前请求的host的请求数必须小于maxRequestsPerHost,否则就先加入等待队列中
+        if(openLog) {
+            return new OkHttpClient.Builder().dispatcher(dispatcher).readTimeout(20, TimeUnit.SECONDS)// 设置读取超时时间
+                    .writeTimeout(20, TimeUnit.SECONDS)// 设置写的超时时间
+                    .connectTimeout(10, TimeUnit.SECONDS)// 设置连接超时时间
+                    .addNetworkInterceptor(logInterceptor)//添加网络请求日志
+                    .build();
+        }else if(BaseLangUtil.isHaveSDPer()){
+            //开启本地存储权限后使用缓存机制
+            //新建一个cache，指定目录为外部目录下的okhttp_cache目录，大小为100M
+            Cache cache = new Cache(PicSelUtil.getCacheDir(), 100 * 1024 * 1024);
+
+            if(openDns) {
+                return new OkHttpClient.Builder().dispatcher(dispatcher).readTimeout(20, TimeUnit.SECONDS)// 设置读取超时时间
+                        .writeTimeout(20, TimeUnit.SECONDS)// 设置写的超时时间
+                        .connectTimeout(10, TimeUnit.SECONDS)// 设置连接超时时间
+                        .cache(cache)//缓存设置
+                        .addInterceptor(new RequestCacheI())//请求网络拦截
+                        .dns(new HttpDns())
+                        .build();
+            }else {
+                return new OkHttpClient.Builder().dispatcher(dispatcher).readTimeout(20, TimeUnit.SECONDS)// 设置读取超时时间
+                        .writeTimeout(20, TimeUnit.SECONDS)// 设置写的超时时间
+                        .connectTimeout(10, TimeUnit.SECONDS)// 设置连接超时时间
+                        .cache(cache)//缓存设置
+                        .addInterceptor(new RequestCacheI())//请求网络拦截
+                        .build();
+            }
+        }else {
+            //新建一个cache，指定目录为外部目录下的okhttp_cache目录，大小为100M
+            if(openDns) {
+                return new OkHttpClient.Builder().dispatcher(dispatcher).readTimeout(20, TimeUnit.SECONDS)// 设置读取超时时间
+                        .writeTimeout(20, TimeUnit.SECONDS)// 设置写的超时时间
+                        .connectTimeout(10, TimeUnit.SECONDS)// 设置连接超时时间
+                        .addInterceptor(new RequestCacheI())//请求网络拦截
+                        .dns(new HttpDns())
+                        .build();
+            }else {
+                return new OkHttpClient.Builder().dispatcher(dispatcher).readTimeout(20, TimeUnit.SECONDS)// 设置读取超时时间
+                        .writeTimeout(20, TimeUnit.SECONDS)// 设置写的超时时间
+                        .connectTimeout(10, TimeUnit.SECONDS)// 设置连接超时时间
+                        .addInterceptor(new RequestCacheI())//请求网络拦截
+                        .build();
+            }
+        }
+    }
+
+    /**
+     * 网络请求方法
+     *
+     * @param context
+     * @param url
+     * @param params
+     * @param tag
+     * @param callback
+     */
+    public void post(final Context context, final String url, Map<String, Object> params, Object tag, final HttpCallback callback) {
+
+        if (context==null){
+            callback.onAfter();
+            return;
+        }
+        //token校验参数
+        if (params == null) {
+            params = new HashMap<String, Object>();
+        }
+        FormBody.Builder formBuilder = new FormBody.Builder();
+        if (params.size() > 0) {
+            Iterator iter = params.entrySet().iterator();
+            while (iter.hasNext()) {
+                Map.Entry entry = (Map.Entry) iter.next();
+                if (entry != null) {
+                    if (entry.getKey() != null && entry.getValue() != null) {
+                        formBuilder.add(entry.getKey().toString(), entry.getValue().toString());
+                    }
+                }
+            }
+
+        }
+        FormBody formBody = formBuilder.build();
+        String cookie = MMKVUtil.getString(COOKIE);
+//        if (cookie != null && !"".equals(cookie)) {
+//            try {
+//                cookie = Des3.decode(cookie);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+        Request.Builder requestBuilder = new Request.Builder();
+        if (cookie != null) {
+            requestBuilder.addHeader("CPSTOKEN", cookie);
+        }
+        final Request request = requestBuilder.url(url).post(formBody).tag(url).build();
+
+        if(BaseLangUtil.isApkInDebug()) {
+            LogUtil.d("post请求报文Host：" + url);
+            LogUtil.d("post请求报文cookie：" + cookie);
+            LogUtil.d("post请求报文body：" + params);
+        }
+
+        callback.onBefore(request);
+
+        Call call = mOkHttpClient.newCall(request);
+
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, final IOException e) {
+
+                onMyFailure(callback,request,e, false);
+            }
+
+            @Override
+            public void onResponse(Call call, final Response response) throws IOException {
+                onMyResponse(response,context,url,callback,request,false,false);
+            }
+        });
+    }
+
+    /**
+     * 网络请求方法
+     *
+     * @param context
+     * @param url
+     * @param callback
+     *
+     */
+    public void get(final Context context, String url, Map<String, Object> params, final boolean useLocalCache, final HttpCallback callback) {
+        if (context==null){
+            callback.onAfter();
+            return;
+        }
+        //token校验参数
+        if (params == null) {
+            params = new HashMap<String, Object>();
+        }
+
+        String paramStr="";
+        if (params != null && params.size() > 0) {
+            Iterator iter = params.entrySet().iterator();
+            while (iter.hasNext()) {
+                Map.Entry entry = (Map.Entry) iter.next();
+                if (entry != null) {
+                    if (entry.getKey() != null && entry.getValue() != null) {
+                        paramStr+=entry.getKey()+"="+entry.getValue()+"&";
+                    }
+                }
+            }
+        }
+        if(!BaseLangUtil.isEmpty(paramStr)){
+            paramStr=paramStr.substring(0,paramStr.length()-1);
+            if (!url.contains("?")) {
+                url += "?" + paramStr;
+            } else {
+                url += "&" + paramStr;
+            }
+        }
+        final String reqUrl=url;
+        if(useLocalCache){
+            //使用本地缓存
+            CacheUtil.handleCache(context, Constants.INDEX_CACHE_DATA+reqUrl, new CacheResultListener() {
+                @Override
+                public void cacheResult(boolean isCache, String cache) {
+                    if (isCache) {
+                        //本地有缓存
+                        callback.onCacheData(cache);
+                        LogUtil.e("0.0", "从本地缓存获取数据:"+reqUrl);
+                        LogUtil.e("0.0", "从本地缓存获取数据报文:"+cache);
+                    }
+                }
+            });
+        }
+
+        String cookie = MMKVUtil.getString(COOKIE);
+//        if (cookie != null && !"".equals(cookie)) {
+//            try {
+//                cookie = Des3.decode(cookie);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+        Request.Builder requestBuilder = new Request.Builder();
+        if (cookie != null) {
+            requestBuilder.addHeader("CPSTOKEN", cookie);
+        }
+        requestBuilder.addHeader(Constants.INDEX_CACHE_DATA,String.valueOf(useLocalCache));
+
+        if(BaseLangUtil.isApkInDebug()) {
+            AppCrashHandler crashHandler = AppCrashHandler.getInstance();
+            if (crashHandler != null) {
+                crashHandler.saveLogInfo2File("get请求报文Host：" + reqUrl);
+                crashHandler.saveLogInfo2File("get请求报文cookie：" + cookie);
+                crashHandler.saveLogInfo2File("get请求报文body：" + params);
+            }
+        }
+
+        final Request request = requestBuilder.url(reqUrl).build();
+        callback.onBefore(request);
+
+        Call call = mOkHttpClient.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, final IOException e) {
+                if(HttpConfig.NetSpeedListener) {
+                    NetSpeedUtil.stopSampling();
+                }
+                onMyFailure(callback,request,e,CacheUtil.isCacheData(context,Constants.INDEX_CACHE_DATA+reqUrl));
+            }
+
+            @Override
+            public void onResponse(Call call, final Response response) throws IOException {
+                onMyResponse(response,context,reqUrl,callback,request,useLocalCache,CacheUtil.isCacheData(context,Constants.INDEX_CACHE_DATA+reqUrl));
+            }
+        });
+    }
+
+    public void uploadImage(Context context, File file, String serverUrl, LangImageUpInterface upInterface) {
+        uploadImage(context, file, serverUrl, null,upInterface);
+    }
+
+
+
+    public void uploadImage(Context context, File file, String serverUrl, String type,LangImageUpInterface upInterface) {
+        // file=new File(Environment.getExternalStorageDirectory(),
+        // IMAGE_FILE_NAME);
+        String BOUNDARY = UUID.randomUUID().toString(); // 边界标识 随机生成
+        String PREFIX = "--", LINE_END = "\r\n";
+        String CONTENT_TYPE = "multipart/form-data"; // 内容类型
+
+        try {
+            if (!BaseLangUtil.isEmpty(type)) {
+                if (serverUrl.contains("?")) {
+                    serverUrl += "&type=" + type;
+                } else {
+                    serverUrl += "?type=" + type;
+                }
+            }
+            URL url = new URL(serverUrl);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setReadTimeout(TIME_OUT);
+            conn.setConnectTimeout(TIME_OUT);
+            conn.setDoInput(true); // 允许输入流
+            conn.setDoOutput(true); // 允许输出流
+            conn.setUseCaches(false); // 不允许使用缓存
+            conn.setRequestMethod("POST"); // 请求方式
+            conn.setRequestProperty("Charset", CHARSET); // 设置编码
+            conn.setRequestProperty("connection", "keep-alive");
+            conn.setRequestProperty("Content-Type", CONTENT_TYPE + ";boundary="
+                    + BOUNDARY);
+//            if(!BBCUtil.isEmpty(type)){
+//                conn.setRequestProperty("credentialsType", type);
+//            }
+            if (file != null) {
+                /**
+                 * 当文件不为空，把文件包装并且上传
+                 */
+                OutputStream outputSteam = conn.getOutputStream();
+                DataOutputStream dos = new DataOutputStream(outputSteam);
+                StringBuffer sb = new StringBuffer();
+                sb.append(PREFIX);
+                sb.append(BOUNDARY);
+                sb.append(LINE_END);
+                /**
+                 * 这里重点注意： name里面的值为服务器端需要key 只有这个key 才可以得到对应的文件
+                 * filename是文件的名字，包含后缀名的 比如:abc.png
+                 */
+
+                sb.append("Content-Disposition: form-data; name=\"pic\"; filename=\""
+                        + file.getName() + "\"" + LINE_END);
+                sb.append("Content-Type: application/octet-stream; charset="
+                        + CHARSET + LINE_END);
+                sb.append(LINE_END);
+                dos.write(sb.toString().getBytes());
+
+                file.getAbsoluteFile().getAbsolutePath();
+                InputStream is = new FileInputStream(file);
+                long length = file.length();
+                int percent = 0;
+//                Message msg;
+                byte[] bytes = new byte[1024];
+                int len = 0;
+                int total = 0;
+                while ((len = is.read(bytes)) != -1) {
+                    dos.write(bytes, 0, len);
+                    total += len;
+                    percent = (int) (total * 100 / length);
+//                    msg = new Message();
+//                    msg.what = 1;
+//                    msg.arg1 = percent;
+//                    handler.sendMessage(msg);
+                }
+                is.close();
+                dos.write(LINE_END.getBytes());
+                byte[] end_data = (PREFIX + BOUNDARY + PREFIX + LINE_END)
+                        .getBytes();
+                dos.write(end_data);
+                dos.flush();
+                dos.close();
+                /**
+                 * 获取响应码 200=成功 当响应成功，获取响应的流
+                 */
+                int res = conn.getResponseCode();
+
+                if (res == 200) {
+
+                    conn.getResponseMessage();
+                    StringBuilder resultData = new StringBuilder("");
+                    InputStreamReader isr = new InputStreamReader(
+                            conn.getInputStream());
+                    // 使用缓冲一行行的读入，加速InputStreamReader的速度
+                    BufferedReader buffer = new BufferedReader(isr);
+                    String inputLine = null;
+                    while ((inputLine = buffer.readLine()) != null) {
+                        resultData.append(inputLine);
+                        resultData.append("\n");
+                    }
+                    buffer.close();
+                    isr.close();
+                    conn.disconnect();
+                    String result = resultData.toString();
+
+                    LogUtil.d("返回报文body：" + result);
+
+                    List<String> strList = conn.getHeaderFields().get("Set-Cookie");
+                    if (strList != null) {
+                        for (String str : strList) {
+                            LogUtil.d("返回报文cookie：" + str);
+                        }
+                    }
+
+                    conn.disconnect();
+                    if(upInterface!=null){
+                        upInterface.success(result);
+                    }
+                }
+
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public String uploadImage(Context context, File file, String serverUrl) {
+        // file=new File(Environment.getExternalStorageDirectory(),
+        // IMAGE_FILE_NAME);
+        String BOUNDARY = UUID.randomUUID().toString(); // 边界标识 随机生成
+        String PREFIX = "--", LINE_END = "\r\n";
+        String CONTENT_TYPE = "multipart/form-data"; // 内容类型
+
+        try {
+
+            URL url = new URL(serverUrl);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setReadTimeout(TIME_OUT);
+            conn.setConnectTimeout(TIME_OUT);
+            conn.setDoInput(true); // 允许输入流
+            conn.setDoOutput(true); // 允许输出流
+            conn.setUseCaches(false); // 不允许使用缓存
+            conn.setRequestMethod("POST"); // 请求方式
+            conn.setRequestProperty("Charset", CHARSET); // 设置编码
+            conn.setRequestProperty("connection", "keep-alive");
+            conn.setRequestProperty("Content-Type", CONTENT_TYPE + ";boundary="
+                    + BOUNDARY);
+
+            if (file != null) {
+                /**
+                 * 当文件不为空，把文件包装并且上传
+                 */
+                OutputStream outputSteam = conn.getOutputStream();
+                DataOutputStream dos = new DataOutputStream(outputSteam);
+                StringBuffer sb = new StringBuffer();
+                sb.append(PREFIX);
+                sb.append(BOUNDARY);
+                sb.append(LINE_END);
+                /**
+                 * 这里重点注意： name里面的值为服务器端需要key 只有这个key 才可以得到对应的文件
+                 * filename是文件的名字，包含后缀名的 比如:abc.png
+                 */
+
+                sb.append("Content-Disposition: form-data; name=\""+HttpConfig.imgUpDefName+"\"; filename=\""
+                        + file.getName() + "\"" + LINE_END);
+                sb.append("Content-Type: application/octet-stream; charset="
+                        + CHARSET + LINE_END);
+                sb.append(LINE_END);
+                dos.write(sb.toString().getBytes());
+
+                file.getAbsoluteFile().getAbsolutePath();
+                InputStream is = new FileInputStream(file);
+                long length = file.length();
+                int percent = 0;
+//                Message msg;
+                byte[] bytes = new byte[1024];
+                int len = 0;
+                int total = 0;
+                while ((len = is.read(bytes)) != -1) {
+                    dos.write(bytes, 0, len);
+                    total += len;
+                    percent = (int) (total * 100 / length);
+//                    msg = new Message();
+//                    msg.what = 1;
+//                    msg.arg1 = percent;
+//                    handler.sendMessage(msg);
+                }
+                is.close();
+                dos.write(LINE_END.getBytes());
+                byte[] end_data = (PREFIX + BOUNDARY + PREFIX + LINE_END)
+                        .getBytes();
+                dos.write(end_data);
+                dos.flush();
+                dos.close();
+                /**
+                 * 获取响应码 200=成功 当响应成功，获取响应的流
+                 */
+                int res = conn.getResponseCode();
+
+                if (res == 200) {
+
+                    conn.getResponseMessage();
+                    StringBuilder resultData = new StringBuilder("");
+                    InputStreamReader isr = new InputStreamReader(
+                            conn.getInputStream());
+                    // 使用缓冲一行行的读入，加速InputStreamReader的速度
+                    BufferedReader buffer = new BufferedReader(isr);
+                    String inputLine = null;
+                    while ((inputLine = buffer.readLine()) != null) {
+                        resultData.append(inputLine);
+                        resultData.append("\n");
+                    }
+                    buffer.close();
+                    isr.close();
+                    conn.disconnect();
+                    String result = resultData.toString();
+                    return result;
+                }
+
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
+
+    }
+
+
+
+    // 批量上传图片公有方法
+    public void uploadImgAndParameter(final Context context, Map<String, Object> map,
+                                      String url, final HttpCallback callback) {
+
+        // mImgUrls为存放图片的url集合
+        MultipartBody.Builder builder = new MultipartBody.Builder()
+                .setType(MultipartBody.FORM);
+
+        if (null != map) {
+            for (Map.Entry<String, Object> entry : map.entrySet()) {
+                if (entry.getValue() != null) {
+                    if("images".equals(entry.getKey())){
+                        List<File> list= (List<File>) entry.getValue();
+                        for (int i=0;i<list.size();i++){
+                            builder.addFormDataPart("image"+i, list.get(i).getName(),
+                                    RequestBody.create(MEDIA_TYPE_PNG, list.get(i)));
+                        }
+                    }else{
+                        builder.addFormDataPart(entry.getKey(), entry
+                                .getValue().toString());
+                    }
+                }
+
+            }
+        }
+
+        // 创建RequestBody
+        RequestBody body = builder.build();
+        final Request request = new Request.Builder()
+                .url(url)// 地址
+                .post(body)// 添加请求体
+                .build();
+        callback.onBefore(request);
+
+        Call call = mOkHttpClient.newCall(request);
+
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, final IOException e) {
+                Log.i("","");
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        callback.onError(request, e,-1,false);
+                        callback.onAfter();
+                    }
+                });
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                try {
+                    final String result = response.body().string();
+                    String cookie = response.headers().get("Set-Cookie");
+                    LogUtil.d("返回报文cookie：" + cookie);
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            callback.onResponse(result,false,false,"");
+                            callback.onAfter();
+                        }
+                    });
+
+                } catch (final Exception e) {
+                    e.printStackTrace();
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            callback.onError(request, e,-1,false);
+                            callback.onAfter();
+                        }
+                    });
+                }
+
+            }
+
+        });
+    }
+
+    public Bitmap downImage(String url){
+        //获取okHttp对象get请求
+        try {
+            //获取请求对象
+            Request request = new Request.Builder().url(url).build();
+            //获取响应体
+            ResponseBody body = mOkHttpClient.newCall(request).execute().body();
+            //获取流
+            InputStream in = body.byteStream();
+            //转化为bitmap
+            Bitmap bitmap = BitmapFactory.decodeStream(in);
+
+            return bitmap;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public void downVideo(Context mContext,String url){
+        //获取okHttp对象get请求
+        try {
+            String filename=url.substring(url.lastIndexOf("/")+1);
+
+            //创建下载任务
+            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+            request.setAllowedOverRoaming(true);//漫游网络是否可以下载
+
+            //设置文件类型，可以在下载结束后自动打开该文件
+            MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
+            String mimeString = mimeTypeMap.getMimeTypeFromExtension(MimeTypeMap.getFileExtensionFromUrl(url));
+            request.setMimeType(mimeString);
+
+            //在通知栏中显示，默认就是显示的
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
+            request.setVisibleInDownloadsUi(true);
+
+            //sdcard的目录下的download文件夹，必须设置
+            request.setDestinationInExternalPublicDir("/"+HttpConfig.tmpImageDir+"/", filename);
+
+            //将下载请求加入下载队列
+            DownloadManager downloadManager = (DownloadManager) mContext.getSystemService(Context.DOWNLOAD_SERVICE);
+            //加入下载队列后会给该任务返回一个long型的id，
+            //通过该id可以取消任务，重启任务等等，看上面源码中框起来的方法
+            downloadManager.enqueue(request);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public long downAPK(Context mContext,String url,String filename,ContentObserver contentObserver){
+        //获取okHttp对象get请求
+        try {
+            //创建下载任务
+            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+            if(contentObserver!=null) {
+                mContext.getContentResolver().registerContentObserver(Uri.parse("content://downloads/my_downloads"), false, contentObserver);
+            }
+            request.setAllowedOverRoaming(true);//漫游网络是否可以下载
+
+            //设置文件类型，可以在下载结束后自动打开该文件
+            MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
+            String mimeString = mimeTypeMap.getMimeTypeFromExtension(MimeTypeMap.getFileExtensionFromUrl(url));
+            request.setMimeType(mimeString);
+
+            //在通知栏中显示，默认就是显示的
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
+            request.setVisibleInDownloadsUi(true);
+
+            //sdcard的目录下的download文件夹，必须设置
+            request.setDestinationInExternalPublicDir("/"+HttpConfig.tmpImageDir+"/", filename);
+
+            //将下载请求加入下载队列
+            DownloadManager downloadManager = (DownloadManager) mContext.getSystemService(Context.DOWNLOAD_SERVICE);
+            //加入下载队列后会给该任务返回一个long型的id，
+            //通过该id可以取消任务，重启任务等等，看上面源码中框起来的方法
+            if (downloadManager != null) {
+                long downloadId=downloadManager.enqueue(request);
+                return downloadId;
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public void downloadFile(final String url,final File saveFile,final HttpCallback callback){
+
+        Request request = new Request.Builder().url(url).build();
+        Call call = mOkHttpClient.newCall(request);
+        if(HttpConfig.NetSpeedListener) {
+            NetSpeedUtil.startSampling();
+        }
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                if(HttpConfig.NetSpeedListener) {
+                    NetSpeedUtil.stopSampling();
+                }
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                InputStream is = null;
+                byte[] buf = new byte[2048];
+                int len = 0;
+                FileOutputStream fos = null;
+                try {
+                    is = response.body().byteStream();
+                    fos = new FileOutputStream(saveFile);
+                    while ((len = is.read(buf)) != -1) {
+                        fos.write(buf, 0, len);
+                    }
+                    fos.flush();
+                    // 下载完成
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            callback.onResponse("",false,false,"");
+                        }
+                    });
+                } catch (Exception e) {
+
+                } finally {
+                    if(HttpConfig.NetSpeedListener) {
+                        NetSpeedUtil.stopSampling();
+                    }
+                    try {
+                        if (is != null)
+                            is.close();
+                    } catch (IOException e) {
+                    }
+                    try {
+                        if (fos != null)
+                            fos.close();
+                    } catch (IOException e) {
+
+                    }
+                }
+            }
+        });
+    }
+
+
+    public void onMyFailure(final HttpCallback callback,final Request request,final Exception e,final boolean haveLocalCache){
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                callback.onError(request, e,-1,haveLocalCache);
+                LogUtil.e("onError"+e);
+                callback.onAfter();
+            }
+        });
+    }
+
+    public void onMyResponse(final Response response, final Context context, final String url, final HttpCallback callback, final Request request, final boolean useLocalCache, final boolean haveLocalCache){
+        try {
+            final String result = response.body().string();
+//            List<String> cookies = response.headers("Set-Cookie");
+//            String cookie = null;
+//            for (String str : cookies) {
+//                if (str.contains(HttpConfig.cookieName+"=")) {
+//                    int start = str.indexOf(HttpConfig.cookieName+"=");
+//                    int end = str.indexOf(";");
+//                    cookie = Des3.encode(str.substring(start, end));
+//                    MMKVUtil.putString(COOKIE, cookie);
+//                }
+//            }
+
+
+            if(BaseLangUtil.isApkInDebug()) {
+                LogUtil.d("返回报文Host：" + url);
+                LogUtil.d("返回报文body：" + result);
+            }
+
+            try {
+                JSONObject jsonObject = new JSONObject(result);
+                final int code=jsonObject.getInt("code");
+
+
+                //测试
+//                if(url.contains("https://www.sudian178.com/sdapp/goods/activity/setActivityGoodsFocus")){
+//                    //服务器异常
+//                    handler.post(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            handler.post(new Runnable() {
+//                                @Override
+//                                public void run() {
+//                                    callback.errorCode(401);
+//                                    callback.onAfter();
+//                                }
+//                            });
+//                        }
+//                    });
+//                    return;
+//                }
+
+
+                if(code==200){
+                    try {
+                        if (jsonObject.getLong("nowTime") > 0) {
+                            BaseLangApplication.NOW_TIME = jsonObject.getLong("nowTime");
+                        }
+                        final String msg = jsonObject.getString("message");
+                        if (!BaseLangUtil.isEmpty(msg)&&context!=null) {
+                            //有message toast
+                            handler.post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    ToastUtil.show(context, msg);
+                                }
+                            });
+                        }
+
+                    }catch (Exception e) {
+
+                    }
+                    //正常返回
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            callback.onResponse(result,useLocalCache,haveLocalCache,Constants.INDEX_CACHE_DATA + url);
+                            callback.onAfter();
+                            if(useLocalCache) {
+                                CacheUtil.cacheData(context, Constants.INDEX_CACHE_DATA + url, result);
+                            }
+                        }
+                    });
+                }else if(HttpConfig.isErrorCode(code)){
+                    //401 //未登录状态
+                    //20001 商品数据不存在
+                    //200002 通用数据不存在
+                    //4901 版本更新检查code
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            callback.errorCode(code,result);
+                            callback.onAfter();
+                        }
+                    });
+                }else{
+                    //不是定义好的异常code
+                    final String msg = jsonObject.getString("message");
+                    if (!BaseLangUtil.isEmpty(msg)) {
+                        //有message toast
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                if(context!=null) {
+                                    ToastUtil.show(context, msg);
+                                }
+                                callback.errorCode(code,result);
+                                callback.onAfter();
+                            }
+                        });
+                    }else {
+                        //服务器异常
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                callback.onError(request, null,code,haveLocalCache);
+                                callback.errorCode(code,result);
+                                callback.onAfter();
+                            }
+                        });
+                    }
+                }
+            } catch (final Exception e) {
+                //code 不存在
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        callback.onError(request, e,-1,haveLocalCache);
+                        callback.onAfter();
+                    }
+                });
+            }
+
+        } catch (final Exception e) {
+            e.printStackTrace();
+            handler.post(new Runnable() {
+                @Override
+                public void run() {
+                    callback.onError(request, e,-1,haveLocalCache);
+                    callback.onAfter();
+                }
+            });
+        }
+    }
+
+    //图片下载保存至本地 广播通知相册
+    public void download9Picture(final Context context,final String url) {
+        String fileName;
+        try {
+            fileName=EncryptUtil.md5(url);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            fileName=System.currentTimeMillis()+"";
+        }
+        String endStr=".jpg";
+        if(url.contains(".png")||url.contains(".PNG")){
+            endStr=".png";
+        }
+        final File saveFile = PicSelUtil.getImageFile(fileName + endStr);
+        Request request = new Request.Builder().url(url).build();
+        Call call = mOkHttpClient.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                InputStream is = null;
+                byte[] buf = new byte[2048];
+                int len = 0;
+                FileOutputStream fos = null;
+                try {
+                    is = response.body().byteStream();
+                    fos = new FileOutputStream(saveFile);
+                    while ((len = is.read(buf)) != -1) {
+                        fos.write(buf, 0, len);
+                    }
+                    fos.flush();
+                    // 下载完成
+                    if (saveFile != null) {
+                        context.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.EMPTY.fromFile(saveFile)));
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    try {
+                        if (is != null)
+                            is.close();
+                    } catch (IOException e) {
+                    }
+                    try {
+                        if (fos != null)
+                            fos.close();
+                    } catch (IOException e) {
+                    }
+                }
+            }
+
+        });
+    }
+
+}

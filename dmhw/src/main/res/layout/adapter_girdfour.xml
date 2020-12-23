@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adapter_promotion_layout"
+    android:orientation="horizontal"
+    android:background="@drawable/personal_grid_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingEnd="@dimen/dp_15"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            >
+        <TextView
+            android:id="@+id/adapter_promotion_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_14"
+            android:textColor="#333333"
+            android:text="提现"
+            tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/adapter_promotion_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_3"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_12"
+                android:textColor="#666666"
+                android:text="提现"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/adapter_promotion_image"
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_42"
+            android:scaleType="fitXY"
+            android:src="@mipmap/fragment_five_agent_money"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+</LinearLayout>

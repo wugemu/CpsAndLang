@@ -1,0 +1,227 @@
+package com.luck.picture.lib.adapter;
+
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.PointF;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Bundle;
+import android.support.v4.view.PagerAdapter;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.Priority;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.luck.picture.lib.PictureExternalPreviewActivity;
+import com.luck.picture.lib.PictureVideoPlayActivity;
+import com.luck.picture.lib.R;
+import com.luck.picture.lib.config.PictureConfig;
+import com.luck.picture.lib.config.PictureMimeType;
+import com.luck.picture.lib.entity.LocalMedia;
+import com.luck.picture.lib.photoview.OnViewTapListener;
+import com.luck.picture.lib.photoview.PhotoView;
+import com.luck.picture.lib.tools.ScreenUtils;
+import com.luck.picture.lib.widget.longimage.ImageSource;
+import com.luck.picture.lib.widget.longimage.ImageViewState;
+import com.luck.picture.lib.widget.longimage.SubsamplingScaleImageView;
+
+import java.io.File;
+import java.util.List;
+
+/**
+ * @author：luck
+ * @data：2018/1/27 下午7:50
+ * @描述:图片预览
+ */
+
+public class SimpleFragmentAdapter extends PagerAdapter {
+    private List<LocalMedia> images;
+    private Context mContext;
+    private OnCallBackActivity onBackPressed;
+
+    public interface OnCallBackActivity {
+        /**
+         * 关闭预览Activity
+         */
+        void onActivityBackPressed();
+    }
+
+    public SimpleFragmentAdapter(List<LocalMedia> images, Context context,
+                                 OnCallBackActivity onBackPressed) {
+        super();
+        this.images = images;
+        this.mContext = context;
+        this.onBackPressed = onBackPressed;
+    }
+
+    @Override
+    public int getCount() {
+        if (images != null) {
+            return images.size();
+        }
+        return 0;
+    }
+
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        (container).removeView((View) object);
+    }
+
+    @Override
+    public boolean isViewFromObject(View view, Object object) {
+        return view == object;
+    }
+
+    @Override
+    public Object instantiateItem(ViewGroup container, int position) {
+        final View contentView = LayoutInflater.from(container.getContext())
+                .inflate(R.layout.picture_image_preview, container, false);
+        // 常规图控件
+        final PhotoView imageView = (PhotoView) contentView.findViewById(R.id.preview_image);
+        // 长图控件
+        final SubsamplingScaleImageView longImg = (SubsamplingScaleImageView) contentView.findViewById(R.id.longImg);
+
+        ImageView iv_play = (ImageView) contentView.findViewById(R.id.iv_play);
+        LocalMedia media = images.get(position);
+        if (media != null) {
+            final String pictureType = media.getPictureType();
+            boolean eqVideo = pictureType.startsWith(PictureConfig.VIDEO);
+            iv_play.setVisibility(eqVideo ? View.VISIBLE : View.GONE);
+            final String path;
+            if (media.isCut() && !media.isCompressed()) {
+                // 裁剪过
+                path = media.getCutPath();
+            } else if (media.isCompressed() || (media.isCut() && media.isCompressed())) {
+                // 压缩过,或者裁剪同时压缩过,以最终压缩过图片为准
+                path = media.getCompressPath();
+            } else {
+                path = media.getPath();
+            }
+            final boolean isGif = PictureMimeType.isGif(pictureType);
+            int mediaMimeType = PictureMimeType.isPictureType(pictureType);
+
+
+            // 压缩过的gif就不是gif了
+            if (isGif && !media.isCompressed()) {
+                Glide.with(contentView.getContext())
+                        .load(path)
+                        .asGif()
+                        .diskCacheStrategy(DiskCacheStrategy.NONE)
+                        .into(imageView);
+            } else {
+
+                if(mediaMimeType == PictureMimeType.ofVideo()){
+                    File file=new File(path);
+                    Uri uri=Uri.fromFile(file);
+                    Glide.with(contentView.getContext())
+                            .load(uri)
+//                            .diskCacheStrategy(DiskCacheStrategy.ALL)//视频展示图不能使用
+                            .into(imageView);
+                }else {
+                    Glide.with(contentView.getContext())
+                            .load(path)
+                            .asBitmap()
+                            .diskCacheStrategy(DiskCacheStrategy.ALL)
+                            .into(new SimpleTarget<Bitmap>(480, 800) {
+
+                                @Override
+                                public void onLoadStarted(Drawable placeholder) {
+                                    // 开始加载图片
+
+                                }
+
+                                @Override
+                                public void onLoadFailed(Exception e, Drawable errorDrawable) {
+
+                                }
+
+                                @Override
+                                public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+                                    boolean eqLongImg = PictureMimeType.isLongImg(mContext,resource.getWidth(),resource.getHeight());
+                                    imageView.setVisibility(eqLongImg && !isGif ? View.GONE : View.VISIBLE);
+                                    longImg.setVisibility(eqLongImg && !isGif ? View.VISIBLE : View.GONE);
+                                    if (eqLongImg) {
+                                        displayLongPic(resource, longImg);
+                                    } else {
+                                        int width = ScreenUtils.getScreenWidth(mContext);
+                                        int sHeight= ScreenUtils.getScreenHeight(mContext);
+                                        int titlebarHeight=(int) mContext.getResources().getDimension(R.dimen.titlebar_top);
+                                        double imgS=resource.getHeight()*1.0/resource.getWidth();
+                                        double screenS=(sHeight-titlebarHeight)*1.0/width;
+                                        if(imgS>screenS) {
+                                            //图片比例和屏幕比例  图片宽度不够 图片宽度扩大
+                                            int height = width / resource.getWidth() * resource.getHeight();
+                                            if((sHeight-titlebarHeight)>height){
+                                                //图片宽度够了 图片高度不够 扩大图片高度
+                                                height=sHeight-titlebarHeight;
+                                            }
+                                            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(width, height);
+                                            imageView.setLayoutParams(params);
+                                            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+                                        }else {
+                                            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(width, sHeight-titlebarHeight);
+                                            imageView.setLayoutParams(params);
+                                            imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+                                        }
+                                        imageView.setImageBitmap(resource);
+                                    }
+                                }
+                            });
+                }
+            }
+            imageView.setOnViewTapListener(new OnViewTapListener() {
+                @Override
+                public void onViewTap(View view, float x, float y) {
+                    if (onBackPressed != null) {
+                        onBackPressed.onActivityBackPressed();
+                    }
+                }
+            });
+            longImg.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (onBackPressed != null) {
+                        onBackPressed.onActivityBackPressed();
+                    }
+                }
+            });
+            iv_play.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("video_path", path);
+                    intent.putExtras(bundle);
+                    intent.setClass(mContext, PictureVideoPlayActivity.class);
+                    mContext.startActivity(intent);
+                }
+            });
+        }
+        (container).addView(contentView, 0);
+        return contentView;
+    }
+
+    /**
+     * 加载长图
+     *
+     * @param bmp
+     * @param longImg
+     */
+    private void displayLongPic(Bitmap bmp, SubsamplingScaleImageView longImg) {
+        longImg.setQuickScaleEnabled(true);
+        longImg.setZoomEnabled(true);
+        longImg.setPanEnabled(true);
+        longImg.setDoubleTapZoomDuration(100);
+        longImg.setMinimumScaleType(SubsamplingScaleImageView.SCALE_TYPE_CENTER_CROP);
+        longImg.setDoubleTapZoomDpi(SubsamplingScaleImageView.ZOOM_FOCUS_CENTER);
+        longImg.setImage(ImageSource.cachedBitmap(bmp), new ImageViewState(0, new PointF(0, 0), 0));
+    }
+}

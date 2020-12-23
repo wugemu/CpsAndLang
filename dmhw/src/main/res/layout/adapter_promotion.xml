@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adapter_promotion_layout"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/adapter_promotion_image"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_28"
+            android:scaleType="fitXY"
+            android:src="@mipmap/fragment_five_agent_money"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/adapter_promotion_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.9"
+            android:layout_marginTop="@dimen/dp_8"
+            android:singleLine="true"
+            android:textSize="@dimen/sp_12"
+            android:textColor="#666666"
+            android:text="提现"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="@dimen/dp_8"
+        android:layout_height="@dimen/dp_10"
+        android:visibility="gone"
+        />
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ScreenActivity">
+
+    <ImageView
+        android:id="@+id/screen_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        />
+    <RelativeLayout
+        android:id="@+id/dmj_image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/screen_image"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/dp_126"
+            android:layout_height="@dimen/dp_36"
+            android:adjustViewBounds="true"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/start_bottom_iv"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/screen_clear"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_25"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:gravity="center"
+        android:background="@drawable/screen_clear">
+
+        <TextView
+            android:id="@+id/screen_clear_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            tools:text="5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:layout_marginStart="@dimen/dp_5"
+            android:text="跳过"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/exam_other_bg"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_18"
+                    android:layout_centerVertical="true"
+                    >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:lineSpacingMultiplier="0.9"
+                                    android:text="推广总收益"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="@dimen/sp_12"
+                                    android:textStyle="bold"
+                                    tools:ignore="HardcodedText" />
+
+                                <TextView
+                                    android:id="@+id/profit_rank"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/sp_24"
+                                    tools:text="0.00" />
+
+                        </LinearLayout>
+                        
+                  <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="@dimen/dp_38"
+                      android:orientation="horizontal"
+                      android:layout_alignParentRight="true"
+                      android:paddingStart="@dimen/dp_10"
+                      android:layout_centerVertical="true"
+                      android:background="@drawable/rank_bg"
+                      >
+                   <ImageView
+                       android:id="@+id/rankimg"
+                       android:layout_width="@dimen/dp_23"
+                       android:layout_height="@dimen/dp_23"
+                       android:src="@mipmap/exam_rank_00"
+                       android:layout_gravity="center_vertical"
+                       android:layout_marginEnd="@dimen/dp_10"
+                       />
+                          <TextView
+                              android:id="@+id/rank"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="center_vertical"
+                              android:layout_marginEnd="@dimen/dp_10"
+                              android:text="普通会员"
+                              android:textColor="#FFFFFF"
+                              android:textSize="@dimen/sp_13"
+                              android:textStyle="bold"
+                              tools:ignore="HardcodedText" />
+
+                  </LinearLayout>
+
+                        
+                        
+                </RelativeLayout>
+
+
+        </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_rank_exam_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="#00000000"
+            />
+
+</LinearLayout>

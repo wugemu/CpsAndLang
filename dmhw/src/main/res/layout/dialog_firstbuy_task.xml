@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dialogTransparent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_336"
+        android:layout_height="@dimen/dp_265"
+        android:background="@mipmap/task_firstbuy_icon"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+           >
+
+            <LinearLayout
+                android:id="@+id/self_buy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_20"
+                android:visibility="gone"
+                >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_21"
+                        android:textColor="#AC2408"
+                        android:text="恭喜获得!"
+                        tools:ignore="HardcodedText" />
+
+                     <RelativeLayout
+                         android:layout_width="wrap_content"
+                         android:layout_height="@dimen/dp_50"
+                         android:orientation="horizontal"
+                         android:layout_marginTop="@dimen/dp_17"
+                         >
+                    <TextView
+                        android:id="@+id/give_bi_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_48"
+                        android:textColor="#8C1D06"
+                        android:text="5.00"
+                        android:layout_alignParentBottom="true"
+                        android:includeFontPadding="false"
+                        tools:ignore="HardcodedText" />
+                         <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:textSize="@dimen/sp_24"
+                             android:textColor="#8C1D06"
+                             android:text="元"
+                             android:layout_alignParentBottom="true"
+                             android:layout_marginStart="@dimen/dp_5"
+                             android:layout_marginBottom="@dimen/dp_1"
+                             android:layout_toRightOf="@+id/give_bi_txt"
+                             tools:ignore="HardcodedText" />
+                     </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/friend_buy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_10"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dp_5"
+                    >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_18"
+                    android:textColor="#AC2408"
+                    android:text="已有 "
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_18"
+                    android:textColor="#210701"
+                    android:text="5"
+                    tools:ignore="HardcodedText" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_18"
+                        android:textColor="#AC2408"
+                        android:text=" 位好友首购成功!"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_18"
+                    android:textColor="#AC2408"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:text="可获得:"
+                    tools:ignore="HardcodedText" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_50"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dp_10"
+                    >
+                    <TextView
+                        android:id="@+id/give_bi_txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_48"
+                        android:textColor="#8C1D06"
+                        tools:text="25"
+                        android:layout_alignParentBottom="true"
+                        android:includeFontPadding="false"
+                        tools:ignore="HardcodedText" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_24"
+                        android:textColor="#8C1D06"
+                        android:text="元"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:layout_marginBottom="@dimen/dp_1"
+                        android:layout_toRightOf="@+id/give_bi_txt1"
+                        tools:ignore="HardcodedText" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/dialog_register_goto"
+            android:layout_width="@dimen/dp_189"
+            android:layout_height="@dimen/dp_39"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_55"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_48"
+            android:background="@mipmap/task_firstbuy_btn_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_16"
+                android:textColor="#CE2906"
+                android:text="点击查看"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/dialog_sign_clean"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/close_adv"/>
+</LinearLayout>

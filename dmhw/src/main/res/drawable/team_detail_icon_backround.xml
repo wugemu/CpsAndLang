@@ -1,0 +1,9 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <!-- 高度40 -->
+    <size android:height="@dimen/dp_60" android:width="@dimen/dp_60"/>
+    <!-- 圆角弧度 20 -->
+    <corners android:radius="@dimen/dp_200"/>
+    <solid android:color="@color/color_EE2325"/>
+</shape>

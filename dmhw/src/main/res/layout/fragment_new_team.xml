@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f2f2f2"
+        android:layout_marginTop="@dimen/dp_6"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/fragment_team_title_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_13"
+            android:paddingBottom="@dimen/dp_13"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/top_split_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#666666"
+                android:text="加入时间"
+                android:layout_gravity="center_vertical"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/fragment_team_title_one_image"
+                android:layout_width="@dimen/dp_7"
+                android:layout_height="@dimen/dp_11"
+                android:layout_marginStart="@dimen/dp_5"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/fragment_team_bottom"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_13"
+            android:paddingBottom="@dimen/dp_13"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#666666"
+                android:text="成员昵称"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fragment_team_title_two"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_13"
+            android:paddingBottom="@dimen/dp_13"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+               android:id="@+id/top_split_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#666666"
+                android:text="会员数"
+                android:layout_gravity="center_vertical"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/fragment_team_title_two_image"
+                android:layout_width="@dimen/dp_7"
+                android:layout_height="@dimen/dp_11"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
+                android:src="@mipmap/fragment_team_default"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_team_title_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_13"
+            android:paddingBottom="@dimen/dp_13"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/top_split_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#666666"
+                android:text="本月预估"
+                android:layout_gravity="center_vertical"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/fragment_team_title_three_image"
+                android:layout_width="@dimen/dp_7"
+                android:layout_height="@dimen/dp_11"
+                android:layout_marginStart="@dimen/dp_5"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/fragment_team_default"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_team_search"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_13"
+            android:paddingBottom="@dimen/dp_13"
+            android:gravity="right"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/search_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="#666666"
+                android:text="筛选"
+                android:layout_gravity="center_vertical"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/fragment_team_title_search"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/team_search_icon"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_team_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="#00000000"/>
+
+</LinearLayout>

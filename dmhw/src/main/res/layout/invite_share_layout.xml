@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1080px"
+    android:layout_height="1920px"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/invite_img_layout"
+    android:background="@color/black">
+    <ImageView
+        android:id="@+id/invite_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_centerHorizontal="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="@dimen/dp_30"
+      >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15px"
+        android:background="@drawable/invite_qrcode_bg"
+        >
+        <ImageView
+            android:id="@+id/invite_share_qr"
+            android:layout_width="300px"
+            android:layout_height="300px"
+           />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_5"
+        >
+        <TextView
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="2px"
+            android:background="#ffffff"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/dp_5"
+            />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="邀请码"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:layout_gravity="center_vertical"
+        />
+        <TextView
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="2px"
+            android:background="#ffffff"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+
+      <RelativeLayout
+          android:layout_width="250px"
+          android:layout_height="wrap_content"
+          android:background="@drawable/invite_code_bg"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="@dimen/dp_5"
+          android:paddingTop="@dimen/dp_5"
+          android:paddingBottom="@dimen/dp_5"
+          >
+          <TextView
+              android:id="@+id/invite_code"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              tools:text="688886"
+              android:textSize="@dimen/sp_12"
+              android:textColor="@color/color_333333"
+              android:layout_centerInParent="true"
+              />
+
+      </RelativeLayout>
+
+  </LinearLayout>
+   
+
+</RelativeLayout>

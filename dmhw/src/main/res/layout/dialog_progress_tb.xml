@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/webLayout"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_150"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        >
+        <WebView
+            android:id="@+id/tbAuthWeb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="@dimen/dp_104"
+        android:layout_height="@dimen/dp_104"
+        android:background="@mipmap/page_load_bg"
+        android:layout_centerInParent="true"
+        >
+        <LinearLayout
+            android:id="@+id/gifimage_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_centerHorizontal="true"
+            >
+
+            <ImageView
+                android:id="@+id/gifimage"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:id="@+id/loadingtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_12"
+                android:textColor="#ffffff"
+                android:layout_gravity="center_horizontal"
+                tools:text="请稍候..."/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

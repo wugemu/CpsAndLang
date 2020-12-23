@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:openxu="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/comcoll_part01_layout"
+        >
+
+        <com.lxkj.dmhw.view.ArcBackgroundView
+            android:id="@+id/comcoll_arcback"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            app:ArcBackgroundViewEndColor="#f4f4f4"
+            app:ArcBackgroundViewStartColor="#f4f4f4"
+            app:ArcBackgroundViewTopHeight="45dp"
+            android:layout_alignBottom="@+id/comcoll_part01"
+            />
+    <!--轮播图-->
+    <com.lxkj.dmhw.view.ScaleLayout
+        android:id="@+id/comcoll_part01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:widthToHeight="0.373"
+        >
+        <com.lxkj.dmhw.view.RoundLayoutNew
+            android:id="@+id/header_comcoll_banner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/header_comcoll_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:canLoop="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_10">
+
+                <LinearLayout
+                    android:id="@+id/indicator_view_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </com.lxkj.dmhw.view.RoundLayoutNew>
+    </com.lxkj.dmhw.view.ScaleLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f4f4f4"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+     <!--轮播图下面部分-->
+    <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:background="@drawable/personal_grid_bg01"
+           android:paddingTop="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+           >
+
+        <com.lxkj.dmhw.defined.ObserveGridView
+            android:id="@+id/comcoll_gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:verticalSpacing="@dimen/dp_21"
+            android:listSelector="#00000000"
+            android:scrollbars="none"
+            android:numColumns="3"/>
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/dp_0_5"
+               android:background="#dddddd"
+               />
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/dp_50"
+               android:layout_marginStart="@dimen/dp_12"
+               android:layout_marginEnd="@dimen/dp_2"
+               >
+
+               <ImageView
+                   android:id="@+id/question_iv_bg"
+                   android:layout_width="@dimen/dp_57"
+                   android:layout_height="@dimen/dp_13"
+                   android:src="@mipmap/comcoll_ques"
+                   android:layout_centerVertical="true"
+                   android:scaleType="fitXY"
+                   />
+
+               <com.lxkj.dmhw.view.LimitScrollerView
+                   android:id="@+id/limitScroll"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="@dimen/dp_10"
+                   android:layout_marginEnd="@dimen/dp_40"
+                   android:layout_toEndOf="@+id/question_iv_bg"
+                   android:layout_centerVertical="true"
+                   openxu:durationTime="1000"
+                   openxu:limit="1"
+                   openxu:periodTime="4000" />
+                <RelativeLayout
+                    android:id="@+id/arr_iv_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:paddingStart="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingBottom="@dimen/dp_5"
+                    >
+               <ImageView
+                   android:id="@+id/arr_iv"
+                   android:layout_width="@dimen/dp_8"
+                   android:layout_height="@dimen/dp_12"
+                   android:src="@mipmap/comcoll_arrow"
+                   android:scaleType="fitXY"
+                   />
+                </RelativeLayout>
+           </RelativeLayout>
+
+
+
+       </LinearLayout>
+
+     <!--新手视频-->
+    <RelativeLayout
+           android:id="@+id/newhand_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+            >
+          <TextView
+              android:id="@+id/newhand_title"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="新手视频"
+              android:textSize="@dimen/sp_16"
+              android:textColor="@color/color_333333"
+              />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更多"
+                    android:textSize="@dimen/sp_13"
+                    android:textColor="@color/color_999999"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    />
+
+            <ImageView
+                android:id="@+id/newhand_arr_iv"
+                android:layout_width="@dimen/dp_6"
+                android:layout_height="@dimen/dp_11"
+                android:src="@mipmap/comcoll_arrow"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"
+                />
+            </LinearLayout>
+        </RelativeLayout>
+    <com.lxkj.dmhw.view.StrongerRecyclelView
+            android:id="@+id/comcoll_newhand_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:listSelector="#00000000"
+            android:layout_marginTop="@dimen/dp_10"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/hotcourse_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            >
+            <TextView
+                android:id="@+id/hotcourse_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="热门课程"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/color_333333"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更多"
+                    android:textSize="@dimen/sp_13"
+                    android:textColor="@color/color_999999"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_6"
+                    android:layout_height="@dimen/dp_11"
+                    android:src="@mipmap/comcoll_arrow"
+                    android:scaleType="fitXY"
+                    android:layout_centerVertical="true"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

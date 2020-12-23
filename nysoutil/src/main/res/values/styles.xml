@@ -1,0 +1,124 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/lang_colorWhite</item>
+        <item name="colorPrimaryDark">@color/lang_colorWhite</item>
+        <item name="colorAccent">@color/lang_colorWhite</item>
+    </style>
+
+
+
+    <style name="dialog_lhp" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+
+    <style name="dialog_lhp2" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+
+    <style name="dialog_lhp3" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+
+        <item name="android:background">@color/lang_colortransparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <!--<item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>-->
+    </style>
+
+
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+
+    <style name="AppTheme.LangNoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--返回键图标-->
+        <item name="left_back_icon">@mipmap/back2</item>
+        <!--标题栏背景-->
+        <item name="title_background">@color/lang_colorWhite</item>
+        <!--标题文字大小-->
+        <item name="title_text_size">@dimen/title_size</item>
+        <!--标题文字颜色-->
+        <item name="title_text_color">@color/lang_colorBlack</item>
+        <!--状态栏颜色-->
+        <item name="status_bar_color">@color/lang_colorWhite</item>
+        <!--loading图标-->
+        <item name="loading_icon">@mipmap/icon_21goloading</item>
+        <!--image def-->
+        <item name="image_def">@mipmap/image_def</item>
+        <!--网络开小差图-->
+        <item name="lang_error">@mipmap/lang_error</item>
+        <!--网络不顺畅图-->
+        <item name="lang_nonet">@mipmap/lang_nonet</item>
+        <!--网络开小差提示文案-->
+        <item name="lang_error_tip">@string/tip_error</item>
+        <!--网络不顺畅提示文案-->
+        <item name="lang_nonet_tip">@string/tip_no_network</item>
+        <!--网络不顺畅重新加载按钮背景-->
+        <item name="lang_nonet_reload_bg">@drawable/bg_rect_reload</item>
+        <!--网络不顺畅重新加载按钮文字样式-->
+        <item name="lang_nonet_reload_txt_style">@style/nonetTxtStyle</item>
+        <!--网络开小差重新加载按钮背景-->
+        <item name="lang_error_reload_bg">@drawable/bg_rect_reload</item>
+        <!--网络开小差重新加载按钮文字样式-->
+        <item name="lang_error_reload_txt_style">@style/errorTxtStyle</item>
+        <!--网络不顺畅重新加载按钮宽度-->
+        <item name="lang_nonet_reload_width">@dimen/lang_nonet_reload_width</item>
+        <!--网络不顺畅重新加载按钮高度-->
+        <item name="lang_nonet_reload_height">@dimen/lang_nonet_reload_height</item>
+        <!--网络开小差重新加载按钮宽度-->
+        <item name="lang_error_reload_width">@dimen/lang_nonet_reload_width</item>
+        <!--网络开小差重新加载按钮高度-->
+        <item name="lang_error_reload_height">@dimen/lang_nonet_reload_height</item>
+        <!--标题栏底部横线颜色-->
+        <item name="lang_top_line">@color/lang_greyline</item>
+
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="nonetTxtStyle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/reload_txt</item>
+    </style>
+    <style name="errorTxtStyle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/reload_txt</item>
+    </style>
+
+</resources>

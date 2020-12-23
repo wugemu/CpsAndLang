@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="fragment_one_status_bar" type="id"/>
+    <item name="fragment_one_serarch_layout" type="id"/>
+    <item name="fragment_one_magic_layout" type="id"/>
+    <item name="fragment_one_content_layout" type="id"/>
+    <item name="fragment_one_new_list" type="id"/>
+    <item name="bg_one" type="id"/>
+    <item name="coloranimationview" type="id"/>
+
+
+</resources>

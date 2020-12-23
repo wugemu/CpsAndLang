@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:id="@+id/adapter_share_image_layout"
+    >
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_89"
+        android:layout_height="@dimen/dp_89"
+        >
+
+        <ImageView
+            android:id="@+id/adapter_share_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/adapter_share_check"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_2"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/share_check_selected"/>
+
+    <RelativeLayout
+        android:id="@+id/share_qr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_20"
+        android:background="@drawable/share_item_bg"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        >
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="二维码推广图"
+           android:textSize="@dimen/sp_11"
+           android:textColor="#ffffff"
+           android:textStyle="bold"
+           android:layout_centerInParent="true"
+           />
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context="com.lxkj.dmhw.fragment.self.GoodNewFragment">
+
+    <ImageView
+        android:id="@+id/iv_goodnew_top"
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/default_for_pic"/>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/tv_goodnew_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="品牌升级|取时光，酿不凡，老藤好酒选堡歌家族！"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/tv_goodnew_dec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="堡歌家族不仅将以全新的品牌面貌与大家相见，更有重磅明星代言出圈，品牌联名大礼上线，燃爆全场！"
+        android:textColor="#888888"
+        android:textSize="14sp"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lxkj.dmhw.activity.self.order.OrderFragment">
+    <com.lxkj.dmhw.widget.swipe.RefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/m_refersh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <com.lxkj.dmhw.widget.MyListView
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lv_order"
+            android:divider="@null"
+            android:scrollbars="none"
+            android:background="@color/colorWhite" />
+    </com.lxkj.dmhw.widget.swipe.RefreshLayout>
+    <include layout="@layout/lang_common_nodata"/>
+</RelativeLayout>

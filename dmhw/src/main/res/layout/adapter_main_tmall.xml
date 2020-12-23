@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/adapter_voucher_layout"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100">
+
+            <ImageView
+                android:id="@+id/adapter_tmall_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/goodsbg"
+                android:scaleType="centerCrop"/>
+            
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/adapter_tmall_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="0.9"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textSize="@dimen/sp_11"
+            android:textColor="#363636"
+            tools:text="测试测试测试测试测试"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_9"
+            android:gravity="bottom">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.9"
+                android:textSize="@dimen/sp_11"
+                android:textColor="#DB160A"
+                android:text="券后价:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.9"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:textSize="@dimen/sp_11"
+                android:textColor="#DB160A"
+                android:text="@string/money"/>
+
+            <TextView
+                android:id="@+id/adapter_after_voucher_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.9"
+                android:textSize="@dimen/sp_11"
+                android:textColor="#DB160A"
+                android:textStyle="bold"
+                tools:text="3.8"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_9"
+            android:background="@drawable/tmall_discount_bg"
+            android:paddingLeft="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_2"
+            android:paddingBottom="@dimen/dp_2"
+            android:gravity="bottom">
+            <TextView
+                android:id="@+id/adapter_voucher_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.9"
+                android:textSize="@dimen/sp_11"
+                android:textColor="#CC2D2E"
+                tools:text="3.8"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingMultiplier="0.9"
+                android:textSize="@dimen/sp_11"
+                android:textColor="#CC2D2E"
+                android:text="元券"/>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

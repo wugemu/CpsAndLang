@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 变化率 -->
+    <gradient
+        android:endColor="#FF5E65"
+        android:startColor="#F63131"
+        android:angle="180"
+        />
+    <corners
+        android:radius="@dimen/dp_16"
+        />
+
+</shape>

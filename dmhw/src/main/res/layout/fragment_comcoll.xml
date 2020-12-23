@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4">
+
+    <!--头部背景start-->
+    <RelativeLayout
+        android:id="@+id/bg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/colorarg_bg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_138"
+            android:src="@mipmap/four_fragment_top_bg"
+            android:scaleType="centerCrop"
+            />
+    </RelativeLayout>
+    <!--头部背景end-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <View
+            android:visibility="gone"
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_24"/>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/dp_63"
+                android:layout_height="@dimen/dp_20"
+               android:layout_centerInParent="true"
+                android:src="@mipmap/comcoll_title"
+                />
+            <RelativeLayout
+                android:id="@+id/search_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/dp_14"
+                android:paddingStart="@dimen/dp_5"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_22"
+                    android:layout_height="@dimen/dp_22"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/comcoll_sear_icon" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/history_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_8"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/search_layout"
+                >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_22"
+                    android:layout_height="@dimen/dp_22"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/history_logo" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    <com.lxkj.dmhw.defined.PtrClassicRefreshLayout
+        android:id="@+id/load_more_ptr_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_10"
+        >
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_comcoll_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="#00000000"/>
+    </com.lxkj.dmhw.defined.PtrClassicRefreshLayout>
+    </LinearLayout>
+</RelativeLayout>
