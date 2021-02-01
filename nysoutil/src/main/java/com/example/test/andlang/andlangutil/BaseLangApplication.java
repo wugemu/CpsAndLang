@@ -296,6 +296,10 @@ public class BaseLangApplication extends Application {
         return mApp;
     }
 
+    public static void setmApp(Application mApp) {
+        BaseLangApplication.mApp = mApp;
+    }
+
     public synchronized PreferencesUtil getSpUtil() {
         if (mSpUtil == null)
             mSpUtil = new PreferencesUtil(this, PreferencesUtil.PREFERENCES_DEFAULT);
