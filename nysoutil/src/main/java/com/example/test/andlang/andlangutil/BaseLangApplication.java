@@ -55,7 +55,7 @@ public class BaseLangApplication extends Application {
     public static long NOW_TIME; // 当前服务器时间
     public static String logDir;
     public static String tmpCacheName;//图片临时文件夹
-    private static BaseLangApplication mApp;
+    private static Application mApp;
     private PreferencesUtil mSpUtil;
     public static String imageDefUrl;//带背景的默认图url
     @Override
@@ -292,7 +292,7 @@ public class BaseLangApplication extends Application {
         });
     }
 
-    public static BaseLangApplication getInstance() {
+    public static Application getInstance() {
         return mApp;
     }
 
