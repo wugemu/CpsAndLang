@@ -158,7 +158,7 @@ public class LangTestActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = BaseLangApplication.getInstance().getPackageManager()
                         .getLaunchIntentForPackage(BaseLangApplication.getInstance().getPackageName());
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 BaseLangApplication.getInstance().startActivity(intent);
             }
         },500);
