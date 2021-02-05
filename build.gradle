@@ -24,6 +24,7 @@ buildscript {
 
         classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-rc2'
 
+        //打包上传jitpack
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
 
     }
