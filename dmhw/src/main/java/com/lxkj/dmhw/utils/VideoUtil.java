@@ -207,12 +207,13 @@ public class VideoUtil {
     }
 
     public static boolean ifBillVip(Context context) {
-        int ifBillVip = BaseLangApplication.getInstance().getSpUtil().getInt(context, "ifBillVip");
-        if (ifBillVip > 1) {
-            return true;
-        } else {
-            return false;
-        }
+//        int ifBillVip = BaseLangApplication.getInstance().getSpUtil().getInt(context, "ifBillVip");
+//        if (ifBillVip > 1) {
+//            return true;
+//        } else {
+//            return false;
+//        }
+        return false;
     }
 
     /**

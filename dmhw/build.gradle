@@ -340,9 +340,9 @@ dependencies {
     //广点通广告
     implementation (name: 'GDTSDK.unionNoPlugin.4.270.1140', ext: 'aar')
 
-//    implementation project(':andlang_sd')
-    implementation 'com.github.wugemu:CpsAndLang:V1.0.1'
-
+    implementation project(':andlang_sd')
+//    implementation 'com.github.wugemu:CpsAndLang:V1.0.1'
+dm
     implementation project(':mytablayout')
     implementation project(':FlycoBanner_Lib')
     implementation project(':picture_library')
