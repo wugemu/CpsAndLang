@@ -80,7 +80,7 @@ public abstract class BaseLangActivity<T extends BaseLangPresenter> extends AppC
 
 
         //测试配置
-        if(BaseLangUtil.isApkInDebug()){
+        if(BaseLangUtil.isApkInDebug()&&BaseLangApplication.ifOpenShake){
             //debug 摇一摇
             if(ActivityUtil.getInstance().isFirstActivity()) {
                 //只创建和注册一次

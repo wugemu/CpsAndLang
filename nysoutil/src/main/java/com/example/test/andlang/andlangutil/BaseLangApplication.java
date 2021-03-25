@@ -58,6 +58,7 @@ public class BaseLangApplication extends Application {
     private static Application mApp;
     private PreferencesUtil mSpUtil;
     public static String imageDefUrl;//带背景的默认图url
+    public static boolean ifOpenShake;//是否启动摇一摇功能
     @Override
     public void onCreate() {
         super.onCreate();
