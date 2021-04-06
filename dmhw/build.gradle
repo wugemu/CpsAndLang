@@ -6,7 +6,7 @@ android {
     buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.nn.shop"
-        minSdkVersion 23
+        minSdkVersion 22
         //升级到android9.0
         targetSdkVersion 28
         versionCode 100
