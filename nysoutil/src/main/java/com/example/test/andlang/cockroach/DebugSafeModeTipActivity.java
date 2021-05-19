@@ -57,9 +57,9 @@ public class DebugSafeModeTipActivity extends AppCompatActivity {
 
     /**  设置状态栏高度  */
     protected void setStatusBar(int flag,int colorId) {
-        View mStatusBar=ButterKnife.findById(this,R.id.m_statusBar);
-        LinearLayout llBack = ButterKnife.findById(this,R.id.lang_ll_back);
-        ImageView lang_iv_back=ButterKnife.findById(this,R.id.lang_iv_back);
+        View mStatusBar=findViewById(R.id.m_statusBar);
+        LinearLayout llBack = findViewById(R.id.lang_ll_back);
+        ImageView lang_iv_back=findViewById(R.id.lang_iv_back);
         if(flag==1){
             if(mStatusBar != null) {
                 StatusBarUtils.translateStatusBar(this);

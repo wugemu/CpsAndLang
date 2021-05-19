@@ -59,7 +59,7 @@ public class CartActivity extends BaseActivity {
     }
 
     public void setStatusBar(int flag, int colorId) {
-        View mStatusBar = ButterKnife.findById(this, R.id.m_statusBar);
+        View mStatusBar = findViewById( R.id.m_statusBar);
         if (flag == 1) {
             if (mStatusBar != null) {
                 StatusBarUtils.translateStatusBar(this);

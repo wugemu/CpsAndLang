@@ -121,7 +121,7 @@ public abstract class BaseLangActivity<T extends BaseLangPresenter> extends AppC
         }
     }
     public void setTitleBackground(int res){
-        RelativeLayout rlTop=ButterKnife.findById(this,R.id.rl_top);
+        RelativeLayout rlTop=findViewById(R.id.rl_top);
         if (rlTop!=null){
             rlTop.setBackgroundResource(res);
         }
@@ -131,9 +131,9 @@ public abstract class BaseLangActivity<T extends BaseLangPresenter> extends AppC
     }
     public void initTitleBar(boolean isCanBack,String title){
         setStatusBar(1,BaseLangUtil.getResFromAttr(this,R.attr.status_bar_color));
-        LinearLayout llBack = ButterKnife.findById(this,R.id.lang_ll_back);
-        ImageView lang_iv_back=ButterKnife.findById(this,R.id.lang_iv_back);
-        TextView tvTitle = ButterKnife.findById(this,R.id.lang_tv_title);
+        LinearLayout llBack = findViewById(R.id.lang_ll_back);
+        ImageView lang_iv_back=findViewById(R.id.lang_iv_back);
+        TextView tvTitle = findViewById(R.id.lang_tv_title);
         if(tvTitle!=null&& title!=null){
             tvTitle.setText(title);
 //            tvTitle.setTextColor(Color.argb( 255, 41, 41, 41));
@@ -155,22 +155,22 @@ public abstract class BaseLangActivity<T extends BaseLangPresenter> extends AppC
         }
     }
     public void setWhiteBackIcon(){
-        ImageView lang_iv_back=ButterKnife.findById(this,R.id.lang_iv_back);
+        ImageView lang_iv_back=findViewById(R.id.lang_iv_back);
         lang_iv_back.setImageResource(R.mipmap.back);
     }
 
     public void setTitleColor(int color){
-        TextView tvTitle = ButterKnife.findById(this,R.id.lang_tv_title);
+        TextView tvTitle = findViewById(R.id.lang_tv_title);
         tvTitle.setTextColor(color);
     }
     public void initTitleBar(boolean isCanBack,boolean haveClose,String title,boolean noChangeStatus){
         if(!noChangeStatus) {
             setStatusBar(1,BaseLangUtil.getResFromAttr(this,R.attr.status_bar_color));
         }
-        LinearLayout llBack = ButterKnife.findById(this,R.id.lang_ll_back);
-        ImageView lang_iv_back=ButterKnife.findById(this,R.id.lang_iv_back);
-        TextView tvTitle = ButterKnife.findById(this,R.id.lang_tv_title);
-        TextView lang_tv_close=ButterKnife.findById(this,R.id.lang_tv_close);
+        LinearLayout llBack = findViewById(R.id.lang_ll_back);
+        ImageView lang_iv_back=findViewById(R.id.lang_iv_back);
+        TextView tvTitle = findViewById(R.id.lang_tv_title);
+        TextView lang_tv_close=findViewById(R.id.lang_tv_close);
         if(tvTitle!=null&& title!=null){
             tvTitle.setText(title);
 //            tvTitle.setTextColor(Color.argb( 255, 41, 41, 41));
@@ -206,7 +206,7 @@ public abstract class BaseLangActivity<T extends BaseLangPresenter> extends AppC
     }
     public void initTitleBar(boolean isCanBack, String title, int imageId, View.OnClickListener listener){
         initTitleBar(isCanBack,title);
-        ImageView ivEdit = ButterKnife.findById(this,R.id.lang_iv_right);
+        ImageView ivEdit = findViewById(R.id.lang_iv_right);
         if(ivEdit!=null){
             ivEdit.setVisibility(View.VISIBLE);
             ivEdit.setImageResource(imageId);
@@ -219,7 +219,7 @@ public abstract class BaseLangActivity<T extends BaseLangPresenter> extends AppC
     public void initTitleBar(boolean isCanBack, String title, String rightTitle, View.OnClickListener listener){
 
         initTitleBar(isCanBack,title);
-        TextView tvEdit = ButterKnife.findById(this,R.id.lang_tv_right);
+        TextView tvEdit = findViewById(R.id.lang_tv_right);
         if(tvEdit!=null&& !BaseLangUtil.isEmpty(rightTitle)){
             tvEdit.setVisibility(View.VISIBLE);
             tvEdit.setText(rightTitle);
@@ -231,7 +231,7 @@ public abstract class BaseLangActivity<T extends BaseLangPresenter> extends AppC
     }
 
     public void setTitle(String title){
-        TextView tvTitle = ButterKnife.findById(this,R.id.lang_tv_title);
+        TextView tvTitle = findViewById(R.id.lang_tv_title);
         if(tvTitle!=null&& !BaseLangUtil.isEmpty(title)){
             tvTitle.setText(title);
             tvTitle.setAlpha(1.0f);
@@ -239,7 +239,7 @@ public abstract class BaseLangActivity<T extends BaseLangPresenter> extends AppC
     }
 
     public void setRightImg(int resId, View.OnClickListener listener){
-        ImageView ivEdit = ButterKnife.findById(this,R.id.lang_iv_right);
+        ImageView ivEdit = findViewById(R.id.lang_iv_right);
         if (ivEdit!=null&&resId!=0){
             ivEdit.setImageResource(resId);
             ivEdit.setVisibility(View.VISIBLE);
@@ -248,13 +248,13 @@ public abstract class BaseLangActivity<T extends BaseLangPresenter> extends AppC
     }
 
     public void initLoading(){
-        rlLoading=ButterKnife.findById(this,R.id.rl_loading);
-        ivLoading=ButterKnife.findById(this,R.id.iv_loading);
+        rlLoading=findViewById(R.id.rl_loading);
+        ivLoading=findViewById(R.id.iv_loading);
     }
 
     /**  设置状态栏高度  */
     protected void setStatusBar(int flag,int colorId) {
-        View mStatusBar=ButterKnife.findById(this,R.id.m_statusBar);
+        View mStatusBar=findViewById(R.id.m_statusBar);
         if(flag==1){
             if(mStatusBar != null) {
                 StatusBarUtils.translateStatusBar(this);
@@ -331,10 +331,10 @@ public abstract class BaseLangActivity<T extends BaseLangPresenter> extends AppC
 
     //网络请求异常显示默认布局
     public void showNoNet(boolean isHaveCode){
-        RelativeLayout rl_nonet=ButterKnife.findById(this,R.id.rl_nonet);
-        TextView tv_net_reload=ButterKnife.findById(this,R.id.tv_net_reload);
-        ImageView iv_net_data=ButterKnife.findById(this,R.id.iv_net_data);
-        TextView tv_net_data=ButterKnife.findById(this,R.id.tv_net_data);
+        RelativeLayout rl_nonet=findViewById(R.id.rl_nonet);
+        TextView tv_net_reload=findViewById(R.id.tv_net_reload);
+        ImageView iv_net_data=findViewById(R.id.iv_net_data);
+        TextView tv_net_data=findViewById(R.id.tv_net_data);
         if(rl_nonet!=null){
             rl_nonet.setBackgroundColor(Color.WHITE);
             rl_nonet.setVisibility(View.VISIBLE);
@@ -384,7 +384,7 @@ public abstract class BaseLangActivity<T extends BaseLangPresenter> extends AppC
         dismissWaitDialog();
     }
     public void dismissNoNet(){
-        RelativeLayout rl_nonet=ButterKnife.findById(this,R.id.rl_nonet);
+        RelativeLayout rl_nonet=findViewById(R.id.rl_nonet);
         if(rl_nonet!=null) {
             rl_nonet.setVisibility(View.GONE);
         }

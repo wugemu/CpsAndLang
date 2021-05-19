@@ -96,8 +96,8 @@ public abstract class BaseLangFragment<T extends BaseLangPresenter> extends Frag
     }
 
     public void initLoading(){
-        rlLoading=ButterKnife.findById(rootview,R.id.rl_loading);
-        ivLoading=ButterKnife.findById(rootview,R.id.iv_loading);
+        rlLoading=rootview.findViewById(R.id.rl_loading);
+        ivLoading=rootview.findViewById(R.id.iv_loading);
     }
 
     /**
