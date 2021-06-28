@@ -58,7 +58,7 @@
         \n4.您可以查询、更正和删除您的个人信息，我们也提供账号注销的渠道。
     </string>
     <string name="str_user_protol01">在您使用NN俱乐部APP前认真阅读《服务协议》和《隐私政策》的全部内容，帮您了解我们收集、使用、存储和保护您的个人信息等情况，以及您享有的相关权利</string>
-    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="str_delaccount_content">请在下方输入“我已知注销后果并确定注销NN俱乐部账号”后点击下一步</string>
     <string name="str_delaccount_checkcontent">我已知注销后果并确定注销NN俱乐部账号</string>
     <string name="str_pdd_expalin">本提示以拼多多比价订单调整新规相关，如规避低佣风险。具体详见《拼多多新规说明》</string>

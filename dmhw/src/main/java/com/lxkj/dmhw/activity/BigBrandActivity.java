@@ -5,9 +5,9 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.ViewPager;
 import android.text.TextPaint;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -18,7 +18,6 @@ import com.lxkj.dmhw.Variable;
 import com.lxkj.dmhw.adapter.FragmentAdapter;
 import com.lxkj.dmhw.bean.BigBrand;
 import com.lxkj.dmhw.defined.BaseActivity;
-import com.lxkj.dmhw.defined.ScaleTransitionPagerTitleView;
 import com.lxkj.dmhw.defined.ScaleTransitionPagerTitleViewNew;
 import com.lxkj.dmhw.fragment.BigBrandFragment;
 import com.lxkj.dmhw.logic.HttpCommon;
@@ -33,13 +32,10 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNav
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.LinePagerIndicator;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.SimplePagerTitleView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

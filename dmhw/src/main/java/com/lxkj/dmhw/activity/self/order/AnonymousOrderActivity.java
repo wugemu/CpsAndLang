@@ -4,9 +4,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,7 +22,6 @@ import com.lxkj.dmhw.logic.Constants;
 import com.lxkj.dmhw.model.OrderModel;
 import com.lxkj.dmhw.presenter.OrderPresenter;
 import com.lxkj.dmhw.utils.BBCUtil;
-import com.lxkj.dmhw.utils.SDJumpUtil;
 
 import java.util.Date;
 import java.util.Observable;

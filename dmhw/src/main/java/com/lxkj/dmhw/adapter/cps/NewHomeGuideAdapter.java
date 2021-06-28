@@ -1,26 +1,21 @@
 package com.lxkj.dmhw.adapter.cps;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Color;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.test.andlang.util.ActivityUtil;
-import com.example.test.andlang.util.imageload.ImageLoadUtils;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.bean.self.ActivityBean;
 import com.lxkj.dmhw.utils.BBCUtil;
 import com.lxkj.dmhw.utils.Utils;
-import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
 import java.util.List;

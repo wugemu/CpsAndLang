@@ -1,10 +1,9 @@
 package com.lxkj.dmhw.activity;
 
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -15,10 +14,7 @@ import com.lxkj.dmhw.bean.DMBDetail;
 import com.lxkj.dmhw.defined.BaseActivity;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.adapter.ScoreAdapter;
-import com.lxkj.dmhw.bean.ScoreOverview;
-import com.lxkj.dmhw.dialog.ScoreDialog;
 import com.lxkj.dmhw.logic.HttpCommon;
-import com.lxkj.dmhw.logic.InternalMessage;
 import com.lxkj.dmhw.logic.LogicActions;
 import com.lxkj.dmhw.logic.NetworkRequest;
 import com.lxkj.dmhw.utils.MyLayoutManager;
@@ -26,8 +22,6 @@ import com.lxkj.dmhw.utils.MyLayoutManager;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

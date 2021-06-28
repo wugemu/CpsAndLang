@@ -1,20 +1,17 @@
 package com.lxkj.dmhw.fragment;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lxkj.dmhw.R;
-import com.lxkj.dmhw.Variable;
 import com.lxkj.dmhw.activity.CommodityActivity290;
 import com.lxkj.dmhw.adapter.FootPrintListAdapter;
 import com.lxkj.dmhw.bean.CommodityList;
@@ -28,9 +25,6 @@ import java.util.HashMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * 足迹 淘宝

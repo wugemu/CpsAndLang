@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 
+import com.example.test.andlang.util.LogUtil;
 import com.lxkj.dmhw.MyApplication;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.Variable;
@@ -101,7 +102,7 @@ public abstract class BaseFragment extends SupportFragment {
             onEvent();
             onCustomized();
         } catch (Exception e) {
-            Logger.e(e, "");
+            LogUtil.e("0.0", e.toString());
         }
         return view;
     }

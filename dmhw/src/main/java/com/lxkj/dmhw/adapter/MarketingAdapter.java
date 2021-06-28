@@ -2,25 +2,16 @@ package com.lxkj.dmhw.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Vibrator;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.bumptech.glide.request.transition.Transition;
+import android.widget.TextView;
+
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lxkj.dmhw.R;
-import com.lxkj.dmhw.Variable;
-import com.lxkj.dmhw.activity.ImageActivity;
 import com.lxkj.dmhw.activity.LoginActivity;
-import com.lxkj.dmhw.activity.VideoActivity;
-import com.lxkj.dmhw.bean.MainBottomListItem;
 import com.lxkj.dmhw.bean.Marketing;
 import com.lxkj.dmhw.bean.ShareParams;
 import com.lxkj.dmhw.data.DateStorage;

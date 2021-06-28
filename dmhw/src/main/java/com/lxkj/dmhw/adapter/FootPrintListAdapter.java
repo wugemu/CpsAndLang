@@ -1,7 +1,7 @@
 package com.lxkj.dmhw.adapter;
 
 import android.app.Activity;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextPaint;
 import android.widget.LinearLayout;
 import android.widget.TextView;

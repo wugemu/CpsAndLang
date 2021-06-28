@@ -1,10 +1,10 @@
 package com.lxkj.dmhw.view;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.HorizontalScrollView;
+
 //左右滑动和上下滑动冲突
 public class StrongerRecyclelView extends RecyclerView {
 

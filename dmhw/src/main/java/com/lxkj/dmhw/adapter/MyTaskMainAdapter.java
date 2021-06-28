@@ -1,22 +1,14 @@
 package com.lxkj.dmhw.adapter;
 
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
+import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.bean.SearchAll;
-import com.lxkj.dmhw.bean.UserInfo;
-import com.lxkj.dmhw.data.DateStorage;
-import com.lxkj.dmhw.utils.Utils;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 
 public class MyTaskMainAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

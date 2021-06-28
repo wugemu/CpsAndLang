@@ -1,33 +1,19 @@
 package com.lxkj.dmhw.activity;
 
-import android.app.Dialog;
-import android.content.ActivityNotFoundException;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.Variable;
-import com.lxkj.dmhw.adapter.TotalDataAdapter;
-import com.lxkj.dmhw.bean.MyTeamTodayInfo;
-import com.lxkj.dmhw.bean.MyTeamTotalInfo;
 import com.lxkj.dmhw.bean.NewsExam;
-import com.lxkj.dmhw.bean.SearchAll;
-import com.lxkj.dmhw.bean.TeamUpdataInfo;
 import com.lxkj.dmhw.defined.BaseActivity;
 import com.lxkj.dmhw.dialog.NewsExamDialog;
 import com.lxkj.dmhw.logic.HttpCommon;
@@ -37,11 +23,6 @@ import com.lxkj.dmhw.logic.NetworkRequest;
 import com.lxkj.dmhw.utils.ToastUtil;
 import com.lxkj.dmhw.utils.Utils;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

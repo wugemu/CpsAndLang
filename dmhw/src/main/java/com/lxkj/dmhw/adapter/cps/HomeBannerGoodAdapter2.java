@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Handler;
-import android.os.Message;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,16 +16,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.test.andlang.util.ActivityUtil;
-import com.example.test.andlang.util.ToastUtil;
-import com.example.test.andlang.util.imageload.GlideUtil;
-import com.example.test.andlang.util.imageload.ImageLoadUtils;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.activity.self.ProductInfoActivity;
 import com.lxkj.dmhw.bean.self.ActivityGoodBean;
 import com.lxkj.dmhw.bean.self.GoodBean;
 import com.lxkj.dmhw.utils.BBCUtil;
 import com.lxkj.dmhw.utils.Utils;
-import com.umeng.analytics.MobclickAgent;
 
 import java.util.List;
 

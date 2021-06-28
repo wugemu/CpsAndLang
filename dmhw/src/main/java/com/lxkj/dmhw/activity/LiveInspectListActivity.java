@@ -4,14 +4,13 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.Variable;
-import com.lxkj.dmhw.adapter.MainRoomAdapter;
 import com.lxkj.dmhw.adapter.MainRoomListAdapter;
 import com.lxkj.dmhw.bean.RoomList;
 import com.lxkj.dmhw.defined.BaseActivity;
@@ -24,8 +23,6 @@ import com.lxkj.dmhw.utils.MyLayoutManager;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

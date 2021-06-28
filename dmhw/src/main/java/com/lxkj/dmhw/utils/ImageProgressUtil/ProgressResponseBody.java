@@ -1,6 +1,6 @@
 package com.lxkj.dmhw.utils.ImageProgressUtil;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import java.io.IOException;
 

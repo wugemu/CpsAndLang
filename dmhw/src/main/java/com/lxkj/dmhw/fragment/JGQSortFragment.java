@@ -2,38 +2,24 @@ package com.lxkj.dmhw.fragment;
 
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import com.alibaba.fastjson.JSON;
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.adapter.JGQSortAdapter;
-import com.lxkj.dmhw.adapter.TeamAdapter;
-import com.lxkj.dmhw.bean.AgentList;
 import com.lxkj.dmhw.bean.HomePage;
-import com.lxkj.dmhw.bean.WithdrawalsList;
 import com.lxkj.dmhw.defined.BaseFragment;
-import com.lxkj.dmhw.logic.HttpCommon;
-import com.lxkj.dmhw.logic.LogicActions;
-import com.lxkj.dmhw.logic.NetworkRequest;
 import com.lxkj.dmhw.utils.GridSpacingItemDecoration;
 import com.lxkj.dmhw.utils.MyLayoutManager;
 import com.lxkj.dmhw.utils.Utils;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * 新金刚区页面

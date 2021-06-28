@@ -2,7 +2,7 @@ package com.lxkj.dmhw.defined;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;

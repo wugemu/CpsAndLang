@@ -11,7 +11,7 @@
     android:paddingBottom="@dimen/dp_5"
     android:background="@drawable/bg_rect_white_7dp">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:id="@+id/rv_home_guide"
         android:layout_height="wrap_content"/>

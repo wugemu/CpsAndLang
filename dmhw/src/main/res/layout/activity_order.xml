@@ -210,7 +210,7 @@
 
     </LinearLayout>
 
-    <android.support.v4.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/order_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

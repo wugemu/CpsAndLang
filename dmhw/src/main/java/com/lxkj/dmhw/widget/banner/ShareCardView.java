@@ -1,15 +1,11 @@
 package com.lxkj.dmhw.widget.banner;
 
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
-import android.support.v4.view.PagerAdapter;
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
+import androidx.viewpager.widget.PagerAdapter;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -20,11 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.test.andlang.util.imageload.GlideUtil;
-import com.example.test.andlang.util.imageload.ImageLoadUtils;
-import com.example.test.andlang.widget.RoundedImageView;
 import com.lxkj.dmhw.R;
-import com.lxkj.dmhw.bean.HomePage;
 import com.lxkj.dmhw.bean.self.ActivityBean;
 import com.lxkj.dmhw.utils.Utils;
 

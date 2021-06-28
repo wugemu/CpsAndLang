@@ -1,31 +1,23 @@
 package com.lxkj.dmhw.adapter.cps;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.HorizontalScrollView;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.example.test.andlang.andlangutil.BaseLangAdapter;
-import com.example.test.andlang.andlangutil.BaseLangViewHolder;
-import com.example.test.andlang.util.ActivityUtil;
-import com.example.test.andlang.util.imageload.ImageLoadUtils;
 import com.example.test.andlang.widget.RoundedImageView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.extras.recyclerview.PullToRefreshRecyclerView;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.bean.self.ActivityGoodBean;
-import com.lxkj.dmhw.bean.self.GoodBean;
 import com.lxkj.dmhw.utils.BBCUtil;
 import com.lxkj.dmhw.utils.Utils;
 import com.lxkj.dmhw.widget.LoadingMoreFootLayout2;
-import com.umeng.analytics.MobclickAgent;
 
 import java.util.List;
 

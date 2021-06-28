@@ -1,17 +1,14 @@
 package com.lxkj.dmhw.fragment;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +28,6 @@ import com.lxkj.dmhw.activity.AliAuthWebViewActivity;
 import com.lxkj.dmhw.activity.CommodityActivity290;
 import com.lxkj.dmhw.activity.LoginActivity;
 import com.lxkj.dmhw.activity.MainActivity;
-import com.lxkj.dmhw.activity.MorePlatformNewActivity;
 import com.lxkj.dmhw.activity.NewActivity;
 import com.lxkj.dmhw.activity.ShareActivity330;
 import com.lxkj.dmhw.adapter.RecommendAdapter;
@@ -57,8 +53,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import in.srain.cube.views.ptr.PtrClassicFrameLayout;

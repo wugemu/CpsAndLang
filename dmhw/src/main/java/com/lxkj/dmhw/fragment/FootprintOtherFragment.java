@@ -1,27 +1,21 @@
 package com.lxkj.dmhw.fragment;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSON;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lxkj.dmhw.R;
-import com.lxkj.dmhw.Variable;
-import com.lxkj.dmhw.activity.CommodityActivity290;
 import com.lxkj.dmhw.activity.CommodityActivityPJW;
-import com.lxkj.dmhw.adapter.FootPrintListAdapter;
 import com.lxkj.dmhw.adapter.FootPrintOtherAdapter;
 import com.lxkj.dmhw.bean.CommodityDetails290;
-import com.lxkj.dmhw.bean.CommodityList;
 import com.lxkj.dmhw.bean.CpsType;
 import com.lxkj.dmhw.defined.BaseFragment;
 import com.lxkj.dmhw.logic.HttpCommon;
@@ -30,13 +24,9 @@ import com.lxkj.dmhw.logic.NetworkRequest;
 import com.lxkj.dmhw.utils.MyLayoutManager;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * 足迹 拼京唯等

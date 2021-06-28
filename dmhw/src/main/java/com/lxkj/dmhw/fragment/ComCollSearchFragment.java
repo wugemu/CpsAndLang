@@ -4,12 +4,11 @@ package com.lxkj.dmhw.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.RecyclerView;
-import android.text.Editable;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.text.InputFilter;
 import android.text.Spanned;
 import android.text.TextPaint;
-import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,8 +36,6 @@ import com.lxkj.dmhw.utils.Utils;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

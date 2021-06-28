@@ -1,24 +1,19 @@
 package com.lxkj.dmhw.activity;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.Message;
-import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextPaint;
 import android.text.TextUtils;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
@@ -31,11 +26,7 @@ import com.alibaba.baichuan.android.trade.callback.AlibcTradeCallback;
 import com.alibaba.baichuan.trade.biz.context.AlibcTradeResult;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
-import com.alibaba.wireless.security.open.middletier.fc.IFCActionCallback;
 import com.bigkoo.convenientbanner.ConvenientBanner;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.bumptech.glide.request.transition.Transition;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.Variable;
@@ -44,7 +35,6 @@ import com.lxkj.dmhw.adapter.CommodityAdapter290;
 import com.lxkj.dmhw.adapter.ShareCheck;
 import com.lxkj.dmhw.bean.Alibc;
 import com.lxkj.dmhw.bean.CommodityDetails290;
-import com.lxkj.dmhw.bean.CommodityRatio;
 import com.lxkj.dmhw.bean.Coupon;
 import com.lxkj.dmhw.bean.CpsType;
 import com.lxkj.dmhw.bean.H5Link;
@@ -54,7 +44,6 @@ import com.lxkj.dmhw.bean.UserInfo;
 import com.lxkj.dmhw.data.DateStorage;
 import com.lxkj.dmhw.defined.BaseActivity;
 import com.lxkj.dmhw.defined.ObserveScrollView;
-import com.lxkj.dmhw.dialog.AlipayDialog;
 import com.lxkj.dmhw.dialog.BiJiaDialog;
 import com.lxkj.dmhw.dialog.CouponLinkDialog;
 import com.lxkj.dmhw.dialog.TaobaoAuthLoginDialog;
@@ -81,10 +70,7 @@ import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import jp.wasabeef.glide.transformations.internal.FastBlur;
 
 /**
  * 商品详情页

@@ -2,14 +2,11 @@ package com.lxkj.dmhw.adapter;
 
 import android.app.Activity;
 import android.graphics.Color;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.LinearLayout;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lxkj.dmhw.R;
-import com.lxkj.dmhw.bean.MarketSort;
 import com.lxkj.dmhw.bean.RecommendSort;
 import com.orhanobut.logger.Logger;
 

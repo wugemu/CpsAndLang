@@ -2,12 +2,11 @@ package com.lxkj.dmhw.fragment;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
-import android.view.DragEvent;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,13 +28,9 @@ import com.lxkj.dmhw.logic.NetworkRequest;
 import com.lxkj.dmhw.utils.MyLayoutManager;
 import com.lxkj.dmhw.utils.Utils;
 import com.lxkj.dmhw.view.StrongerHorizontalScrollView;
-import com.tencent.mm.opensdk.utils.Log;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import in.srain.cube.views.ptr.PtrDefaultHandler;

@@ -1,20 +1,13 @@
 package com.lxkj.dmhw.adapter;
 
 import android.content.Context;
-import android.graphics.Paint;
-import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
-import android.view.ViewTreeObserver;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
-import com.android.sdklibrary.presenter.util.Util;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.bean.ComCollegeData;
-import com.lxkj.dmhw.bean.MainBottomListItem;
 import com.lxkj.dmhw.utils.Utils;
 import com.orhanobut.logger.Logger;
 

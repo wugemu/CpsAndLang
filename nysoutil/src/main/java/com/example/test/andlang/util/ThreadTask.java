@@ -3,8 +3,8 @@ package com.example.test.andlang.util;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.annotation.MainThread;
-import android.support.annotation.WorkerThread;
+import androidx.annotation.MainThread;
+import androidx.annotation.WorkerThread;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

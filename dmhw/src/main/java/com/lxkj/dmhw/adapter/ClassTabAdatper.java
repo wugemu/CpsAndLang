@@ -1,21 +1,17 @@
 package com.lxkj.dmhw.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
-import android.support.design.widget.TabLayout;
+import com.google.android.material.tabs.TabLayout;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.ahtrun.mytablayout.ProxyDrawable;
 import com.ahtrun.mytablayout.ProxyDrawable2;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.bean.HaoWuClass;
-import com.lxkj.dmhw.utils.BBCUtil;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 

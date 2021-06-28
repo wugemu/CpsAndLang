@@ -2,7 +2,7 @@ package com.example.test.andlang.util;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 
 /**
  * Created by think on 2016-07-06.

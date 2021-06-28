@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
@@ -14,7 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.test.andlang.util.LogUtil;
 import com.example.test.andlang.util.TimeCalculate;
 import com.example.test.andlang.util.imageload.ImageLoadUtils;
 import com.lxkj.dmhw.R;

@@ -1,20 +1,15 @@
 package com.lxkj.dmhw.adapter;
 
 import android.app.Activity;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.widget.LinearLayout;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.bean.BigBrand;
-import com.lxkj.dmhw.bean.CommodityList;
-import com.lxkj.dmhw.bean.UserInfo;
-import com.lxkj.dmhw.data.DateStorage;
 import com.lxkj.dmhw.utils.Utils;
 import com.orhanobut.logger.Logger;
-
-import java.util.Objects;
 
 
 public class BrandListAdapter extends BaseQuickAdapter<BigBrand, BaseViewHolder> {

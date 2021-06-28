@@ -1,8 +1,8 @@
 package com.lxkj.dmhw.widget;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import android.util.AttributeSet;
 
 public class MyStaggeredGridLayoutManager extends StaggeredGridLayoutManager {

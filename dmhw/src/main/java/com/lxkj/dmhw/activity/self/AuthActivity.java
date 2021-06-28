@@ -7,8 +7,8 @@ import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -38,7 +38,6 @@ import com.lxkj.dmhw.logic.Constants;
 import com.lxkj.dmhw.model.MineModel;
 import com.lxkj.dmhw.presenter.MinePresenter;
 import com.lxkj.dmhw.utils.BBCUtil;
-import com.lxkj.dmhw.utils.SDJumpUtil;
 import com.lxkj.dmhw.widget.dialog.SelectPicPopupWindow;
 
 import java.io.File;

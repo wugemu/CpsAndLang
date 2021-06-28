@@ -1,9 +1,8 @@
 package com.lxkj.dmhw.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextPaint;
 import android.view.View;
 import android.widget.TextView;
@@ -12,7 +11,6 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.activity.BigBrandDetailActivity;
-import com.lxkj.dmhw.bean.BigBrand;
 import com.lxkj.dmhw.bean.BigBrandList;
 import com.lxkj.dmhw.utils.MyLayoutManager;
 import com.lxkj.dmhw.utils.Utils;

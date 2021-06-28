@@ -1,8 +1,8 @@
 package com.lxkj.dmhw.adapter;
 
 import android.app.Activity;
-import android.graphics.Color;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextPaint;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -17,9 +17,6 @@ import com.lxkj.dmhw.bean.Coupon;
 import com.lxkj.dmhw.bean.CpsType;
 import com.lxkj.dmhw.bean.UserInfo;
 import com.lxkj.dmhw.data.DateStorage;
-import com.lxkj.dmhw.defined.SmoothCheckBox;
-import com.lxkj.dmhw.logic.InternalMessage;
-import com.lxkj.dmhw.logic.LogicActions;
 import com.lxkj.dmhw.utils.Utils;
 import com.orhanobut.logger.Logger;
 

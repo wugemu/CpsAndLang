@@ -1,49 +1,30 @@
 package com.lxkj.dmhw.activity;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.lxkj.dmhw.BuildConfig;
+import android.view.View;
+import android.widget.LinearLayout;
+
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.Variable;
-import com.lxkj.dmhw.adapter.CommodityAdapter290;
-import com.lxkj.dmhw.adapter.MarketListAdapter;
 import com.lxkj.dmhw.adapter.MyAdapter290;
-import com.lxkj.dmhw.bean.AppInfo;
 import com.lxkj.dmhw.bean.MainBottomListItem;
-import com.lxkj.dmhw.bean.Version;
-import com.lxkj.dmhw.data.DateStorage;
 import com.lxkj.dmhw.defined.BaseActivity;
-import com.lxkj.dmhw.dialog.VersionDialog;
 import com.lxkj.dmhw.logic.HttpCommon;
 import com.lxkj.dmhw.logic.LogicActions;
 import com.lxkj.dmhw.logic.NetworkRequest;
-import com.lxkj.dmhw.utils.GridSpacingItemDecoration;
 import com.lxkj.dmhw.utils.MyItemDecoration;
 import com.lxkj.dmhw.utils.MyLayoutManager;
 import com.lxkj.dmhw.utils.NetStateUtils;
-import com.lxkj.dmhw.utils.ToastUtil;
 import com.lxkj.dmhw.utils.Utils;
-import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Objects;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

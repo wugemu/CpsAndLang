@@ -4,10 +4,10 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.ViewPager;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,14 +15,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lxkj.dmhw.R;
-import com.lxkj.dmhw.activity.MainActivity;
 import com.lxkj.dmhw.adapter.FragmentAdapter;
 import com.lxkj.dmhw.bean.RecommendSort;
 import com.lxkj.dmhw.defined.BaseFragment;
 import com.lxkj.dmhw.logic.HttpCommon;
 import com.lxkj.dmhw.logic.LogicActions;
 import com.lxkj.dmhw.logic.NetworkRequest;
-import com.lxkj.dmhw.utils.MyLayoutManager;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.ViewPagerHelper;
@@ -35,8 +33,6 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.Common
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

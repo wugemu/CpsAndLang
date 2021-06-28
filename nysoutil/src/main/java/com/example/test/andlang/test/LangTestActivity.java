@@ -3,8 +3,8 @@ package com.example.test.andlang.test;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -26,9 +26,7 @@ import com.example.test.andlang.util.ToastUtil;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Observable;
 
-import butterknife.BindView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnItemClick;

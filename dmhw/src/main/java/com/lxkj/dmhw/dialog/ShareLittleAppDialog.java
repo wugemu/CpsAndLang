@@ -2,24 +2,15 @@ package com.lxkj.dmhw.dialog;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Build;
-import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.bumptech.glide.request.transition.Transition;
 import com.lxkj.dmhw.R;
-import com.lxkj.dmhw.data.DateStorage;
-import com.lxkj.dmhw.logic.InternalMessage;
-import com.lxkj.dmhw.logic.LogicActions;
-import com.lxkj.dmhw.utils.Utils;
-import com.orhanobut.logger.Logger;
 
 /**
  * 小程序分享弹窗

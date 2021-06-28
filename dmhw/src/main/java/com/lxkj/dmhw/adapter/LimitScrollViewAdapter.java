@@ -1,18 +1,12 @@
 package com.lxkj.dmhw.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.bean.ComCollegeData;
-import com.lxkj.dmhw.bean.Headlines;
-import com.lxkj.dmhw.utils.MyLayoutManager;
-import com.lxkj.dmhw.utils.ToastUtil;
-import com.lxkj.dmhw.utils.Utils;
 import com.lxkj.dmhw.view.LimitScrollerView;
 
 import java.util.List;

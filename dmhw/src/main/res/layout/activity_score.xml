@@ -52,7 +52,7 @@
         android:layout_height="@dimen/dp_0_5"
         android:background="#f2f2f2"/>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/score_recycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"

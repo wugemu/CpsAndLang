@@ -2,8 +2,8 @@ package com.lxkj.dmhw.dialog;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,8 +20,6 @@ import com.lxkj.dmhw.bean.WeChatAbout;
 import com.lxkj.dmhw.utils.ToastUtil;
 import com.lxkj.dmhw.utils.Utils;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

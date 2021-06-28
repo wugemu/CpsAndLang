@@ -2,16 +2,12 @@ package com.example.test.andlang.andlangutil;
 
 import android.app.Activity;
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.util.Log;
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -20,10 +16,8 @@ import com.example.test.andlang.util.LogUtil;
 import com.example.test.andlang.util.imageload.GlideUtil;
 import com.umeng.analytics.MobclickAgent;
 
-import java.util.Observable;
 import java.util.Observer;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**

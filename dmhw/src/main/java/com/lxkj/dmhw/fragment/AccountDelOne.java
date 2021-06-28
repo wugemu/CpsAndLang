@@ -5,12 +5,11 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,20 +18,14 @@ import com.lxkj.dmhw.Variable;
 import com.lxkj.dmhw.activity.AccountDeleteActivity;
 import com.lxkj.dmhw.activity.WebViewActivity;
 import com.lxkj.dmhw.adapter.AccountDelAdapter;
-import com.lxkj.dmhw.adapter.CollectionAdapter;
 import com.lxkj.dmhw.bean.AccountDel;
 import com.lxkj.dmhw.defined.BaseFragment;
 import com.lxkj.dmhw.defined.SmoothCheckBox;
-import com.lxkj.dmhw.dialog.ApplyDialog;
 import com.lxkj.dmhw.logic.HttpCommon;
 import com.lxkj.dmhw.logic.LogicActions;
 import com.lxkj.dmhw.logic.NetworkRequest;
 import com.lxkj.dmhw.utils.MyLayoutManager;
 
-import java.util.HashMap;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

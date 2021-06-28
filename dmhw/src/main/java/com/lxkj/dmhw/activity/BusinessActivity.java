@@ -1,51 +1,31 @@
 package com.lxkj.dmhw.activity;
 
-import android.app.Dialog;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
-import com.bigkoo.pickerview.listener.CustomListener;
 import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
 import com.bigkoo.pickerview.view.OptionsPickerView;
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.lxkj.dmhw.BuildConfig;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.Variable;
-import com.lxkj.dmhw.adapter.MarketListAdapter;
-import com.lxkj.dmhw.bean.AppInfo;
-import com.lxkj.dmhw.bean.Version;
 import com.lxkj.dmhw.defined.BaseActivity;
-import com.lxkj.dmhw.dialog.VersionDialog;
 import com.lxkj.dmhw.logic.HttpCommon;
 import com.lxkj.dmhw.logic.LogicActions;
 import com.lxkj.dmhw.logic.NetworkRequest;
-import com.lxkj.dmhw.utils.MyLayoutManager;
 import com.lxkj.dmhw.utils.ToastUtil;
-import com.lxkj.dmhw.utils.Utils;
-import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

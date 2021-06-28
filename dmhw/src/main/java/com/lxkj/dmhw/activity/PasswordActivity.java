@@ -3,8 +3,8 @@ package com.lxkj.dmhw.activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import android.view.View;
 
 import com.lxkj.dmhw.defined.BaseActivity;
@@ -12,8 +12,6 @@ import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.fragment.PasswordFragment;
 
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

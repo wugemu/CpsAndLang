@@ -4,7 +4,7 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.util.AttributeSet;
 
-public class RiseNumberTextView extends android.support.v7.widget.AppCompatTextView implements RiseNumberBase{
+public class RiseNumberTextView extends androidx.appcompat.widget.AppCompatTextView implements RiseNumberBase{
     private static final int STOPPED = 0;
 
     private static final int RUNNING = 1;

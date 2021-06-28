@@ -1,8 +1,7 @@
 package com.lxkj.dmhw.activity;
 
-import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -12,7 +11,6 @@ import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.adapter.IncomeAdapter;
 import com.lxkj.dmhw.bean.IncomeData;
 import com.lxkj.dmhw.model.CashModel;
-import com.lxkj.dmhw.myinterface.ConfirmOKI;
 import com.lxkj.dmhw.presenter.CashPresenter;
 import com.lxkj.dmhw.utils.BBCUtil;
 import com.lxkj.dmhw.widget.dialog.Confirm3Dialog;
@@ -20,7 +18,6 @@ import com.lxkj.dmhw.widget.dialog.Confirm3Dialog;
 import java.util.Observable;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**

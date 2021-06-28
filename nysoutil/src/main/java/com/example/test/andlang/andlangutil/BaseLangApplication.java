@@ -1,28 +1,24 @@
 package com.example.test.andlang.andlangutil;
 
-import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.multidex.MultiDex;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.multidex.MultiDex;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.widget.ImageView;
 
-import com.example.test.andlang.R;
 import com.example.test.andlang.cockroach.CrashLog;
 import com.example.test.andlang.cockroach.DebugSafeModeTipActivity;
 import com.example.test.andlang.log.AppCrashHandler;
-import com.example.test.andlang.util.ActivityUtil;
 import com.example.test.andlang.util.BaseLangUtil;
 import com.example.test.andlang.util.LogUtil;
 import com.example.test.andlang.util.MMKVUtil;
@@ -42,7 +38,6 @@ import com.umeng.analytics.MobclickAgent;
 import com.wanjian.cockroach.Cockroach;
 import com.wanjian.cockroach.ExceptionHandler;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 

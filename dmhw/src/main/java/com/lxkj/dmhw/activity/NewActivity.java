@@ -3,9 +3,9 @@ package com.lxkj.dmhw.activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -14,19 +14,13 @@ import com.lxkj.dmhw.bean.LoginToken;
 import com.lxkj.dmhw.data.DateStorage;
 import com.lxkj.dmhw.defined.BaseActivity;
 import com.lxkj.dmhw.R;
-import com.lxkj.dmhw.fragment.MorePlFragment;
 import com.lxkj.dmhw.fragment.MorePlThemeFragment;
 import com.lxkj.dmhw.fragment.NewFragment;
 import com.lxkj.dmhw.logic.HttpCommon;
-import com.lxkj.dmhw.logic.InternalMessage;
 import com.lxkj.dmhw.logic.LogicActions;
 import com.lxkj.dmhw.logic.NetworkRequest;
 
 
-import java.util.HashMap;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

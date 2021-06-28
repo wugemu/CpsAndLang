@@ -6,12 +6,12 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.RecyclerView;
+import com.google.android.material.appbar.AppBarLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.ViewPager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -23,7 +23,6 @@ import com.lxkj.dmhw.adapter.BannerMainAdapter;
 import com.lxkj.dmhw.adapter.FragmentAdapter;
 import com.lxkj.dmhw.bean.JDBanner;
 import com.lxkj.dmhw.bean.JDSort;
-import com.lxkj.dmhw.defined.ArcPagerIndicator;
 import com.lxkj.dmhw.defined.BaseActivity;
 import com.lxkj.dmhw.defined.PtrClassicRefreshLayout;
 import com.lxkj.dmhw.defined.ScaleTransitionPagerTitleView;
@@ -46,8 +45,6 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.Simple
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

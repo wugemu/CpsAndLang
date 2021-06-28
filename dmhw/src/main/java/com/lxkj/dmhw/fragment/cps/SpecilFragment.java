@@ -6,14 +6,14 @@ import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.annotation.NonNull;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import com.google.android.material.appbar.AppBarLayout;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.ViewPager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextPaint;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,21 +26,15 @@ import android.widget.TextView;
 import com.heytap.mcssdk.utils.LogUtil;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.Variable;
-import com.lxkj.dmhw.adapter.FourFragmentAdapter340;
 import com.lxkj.dmhw.adapter.FragmentAdapter;
 import com.lxkj.dmhw.adapter.cps.SpecilAdapter;
 import com.lxkj.dmhw.bean.HomePage;
-import com.lxkj.dmhw.bean.RankingType;
 import com.lxkj.dmhw.defined.BaseFragment;
-import com.lxkj.dmhw.defined.PtrClassicRefreshLayout;
-import com.lxkj.dmhw.defined.ScaleTransitionPagerTitleView;
-import com.lxkj.dmhw.fragment.FourFragment_One;
 import com.lxkj.dmhw.fragment.MainBottomFragment;
 import com.lxkj.dmhw.logic.HttpCommon;
 import com.lxkj.dmhw.logic.LogicActions;
 import com.lxkj.dmhw.logic.NetworkRequest;
 import com.lxkj.dmhw.utils.MyLayoutManager;
-import com.lxkj.dmhw.utils.NetStateUtils;
 import com.lxkj.dmhw.utils.Utils;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
@@ -49,15 +43,10 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigat
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNavigatorAdapter;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.LinePagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.CommonPagerTitleView;
-import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.SimplePagerTitleView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

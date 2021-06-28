@@ -1,14 +1,13 @@
 package com.lxkj.dmhw.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,29 +15,21 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.lxkj.dmhw.R;
-import com.lxkj.dmhw.Variable;
-import com.lxkj.dmhw.activity.AliAuthWebViewActivity;
 import com.lxkj.dmhw.adapter.FragmentAdapter;
 import com.lxkj.dmhw.adapter.MarketTypeAdapter;
 import com.lxkj.dmhw.adapter.MarketingAdapter;
 import com.lxkj.dmhw.bean.MarketSort;
 import com.lxkj.dmhw.bean.Marketing;
 import com.lxkj.dmhw.defined.BaseFragment;
-import com.lxkj.dmhw.dialog.OneKeyShareDialog;
 import com.lxkj.dmhw.logic.HttpCommon;
 import com.lxkj.dmhw.logic.LogicActions;
 import com.lxkj.dmhw.logic.NetworkRequest;
 import com.lxkj.dmhw.utils.MyLayoutManager;
-import com.lxkj.dmhw.utils.ToastUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

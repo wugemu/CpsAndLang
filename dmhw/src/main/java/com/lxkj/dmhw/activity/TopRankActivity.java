@@ -1,20 +1,17 @@
 package com.lxkj.dmhw.activity;
 
-import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.example.test.andlang.andlangutil.BaseLangActivity;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.adapter.TopRankAdapter;
-import com.lxkj.dmhw.widget.banner.ShareCardView;
 
 import java.util.Observable;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * top榜

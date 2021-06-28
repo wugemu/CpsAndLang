@@ -1,7 +1,6 @@
 package com.lxkj.dmhw.activity;
 
-import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -13,7 +12,6 @@ import com.lxkj.dmhw.R;
 import java.util.Observable;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**

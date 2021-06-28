@@ -1,9 +1,8 @@
 package com.lxkj.dmhw.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,19 +12,13 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSON;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lxkj.dmhw.R;
-import com.lxkj.dmhw.activity.NewsExamDetailActivity;
-import com.lxkj.dmhw.adapter.NewsExamAdapter;
 import com.lxkj.dmhw.adapter.NewsExamOtherAdapter;
-import com.lxkj.dmhw.bean.NewsExam;
 import com.lxkj.dmhw.bean.NewsExamOther;
 import com.lxkj.dmhw.defined.LazyFragment;
-import com.lxkj.dmhw.dialog.NewsExamDialog;
 import com.lxkj.dmhw.logic.HttpCommon;
 import com.lxkj.dmhw.logic.LogicActions;
 import com.lxkj.dmhw.logic.NetworkRequest;
 import com.lxkj.dmhw.utils.MyLayoutManager;
-import com.lxkj.dmhw.utils.RiseNumberTextView;
-import com.lxkj.dmhw.utils.Utils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,8 +27,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

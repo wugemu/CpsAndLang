@@ -107,13 +107,13 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //noinspection GradleCompatible
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:recyclerview-v7:28.0.0'
-    implementation 'com.android.support:cardview-v7:28.0.0'
-    implementation 'com.android.support:support-v4:28.0.0'
-    implementation 'com.android.support:support-fragment:28.0.0@aar'
-    implementation 'com.android.support:design:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.fragment:fragment:1.0.0@aar'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     //GalleryFinal相册
     implementation 'cn.finalteam:galleryfinal:1.4.8.7'
@@ -136,8 +136,8 @@ dependencies {
     implementation 'com.tencent:mmkv:1.0.12'
 
     //ButterKnife替代findViewById()
-    implementation 'com.jakewharton:butterknife:8.4.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
 
     //Banner横向滑动Banner
     implementation 'com.bigkoo:convenientbanner:2.0.5'
@@ -274,7 +274,7 @@ dependencies {
     implementation(name: 'alipaySdk-15.7.4-20200228192319-noUtdid', ext: 'aar')
 
     //兼容5.0一下系统的分包问题
-    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'androidx.multidex:multidex:2.0.0'
 
     //圆形进度条
     implementation 'com.github.ziyexiao:RoundProgressBar:1.0.3'
@@ -290,7 +290,7 @@ dependencies {
 //    implementation 'com.facebook.fresco:fresco:0.9.0+'
 
     //noinspection GradleCompatible 阻尼动画
-    implementation 'com.android.support:support-dynamic-animation:25.+'
+    implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
 
     //信用卡SDK
     implementation(name: 'beishengsdklib-release', ext: 'aar')

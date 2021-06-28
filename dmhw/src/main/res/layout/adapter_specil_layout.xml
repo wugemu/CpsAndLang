@@ -36,7 +36,7 @@
                 android:textColor="#F9E4C5"
                 android:textSize="17sp"/>
         </RelativeLayout>
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/fragment_sort_recycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

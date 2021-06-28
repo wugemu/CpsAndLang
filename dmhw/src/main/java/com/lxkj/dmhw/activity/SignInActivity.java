@@ -1,14 +1,13 @@
 package com.lxkj.dmhw.activity;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.ViewPager;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -21,7 +20,6 @@ import com.lxkj.dmhw.defined.ScaleTransitionPagerTitleView;
 import com.lxkj.dmhw.fragment.LoginCodeFragment;
 import com.lxkj.dmhw.fragment.LoginPasswordFragment;
 
-import com.lxkj.dmhw.logic.LogicActions;
 import com.lxkj.dmhw.utils.Utils;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
@@ -35,8 +33,6 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.Simple
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

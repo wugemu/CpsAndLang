@@ -6,23 +6,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.IBinder;
-import android.os.Message;
 import android.os.PowerManager;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
+import androidx.core.app.ActivityCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import com.example.test.andlang.util.ActivityUtil;
-import com.example.test.andlang.util.DateUtil;
 import com.example.test.andlang.util.LogUtil;
-import com.example.test.andlang.util.PermissionsCheckerUtil;
-import com.example.test.andlang.util.ToastUtil;
 import com.lxkj.dmhw.MyApplication;
 import com.lxkj.dmhw.logic.Constants;
-
-import java.util.Date;
-
-import static android.Manifest.permission.WAKE_LOCK;
 
 /**
  * Created by 1 on 2015/12/26.

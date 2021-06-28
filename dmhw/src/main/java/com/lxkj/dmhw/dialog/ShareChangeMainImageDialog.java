@@ -2,39 +2,27 @@ package com.lxkj.dmhw.dialog;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lxkj.dmhw.R;
-import com.lxkj.dmhw.Variable;
-import com.lxkj.dmhw.activity.ShareActivity330;
-import com.lxkj.dmhw.adapter.MarketingAdapter;
-import com.lxkj.dmhw.adapter.ShareAdapter;
 import com.lxkj.dmhw.adapter.ShareCheck;
 import com.lxkj.dmhw.adapter.ShareMainAdapter;
-import com.lxkj.dmhw.bean.Alibc;
-import com.lxkj.dmhw.bean.CommodityDetails290;
 import com.lxkj.dmhw.bean.ShareInfo;
 import com.lxkj.dmhw.defined.LinearItemDecoration;
-import com.lxkj.dmhw.defined.MultiImage.model.Image;
 import com.lxkj.dmhw.defined.SimpleDialog;
 import com.lxkj.dmhw.utils.MyLayoutManager;
 import com.lxkj.dmhw.utils.Utils;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class ShareChangeMainImageDialog extends SimpleDialog<ArrayList<ShareCheck>> {

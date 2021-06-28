@@ -1,24 +1,19 @@
 package com.lxkj.dmhw.activity;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.support.v4.app.ActivityCompat;
-import android.util.Log;
+
+import androidx.core.app.ActivityCompat;
+
 import android.view.View;
 import android.view.WindowManager;
 
 import com.lxkj.dmhw.Variable;
 import com.lxkj.dmhw.data.OtherOpen;
 import com.lxkj.dmhw.data.ScreenOpen;
-import com.lxkj.dmhw.defined.BaseActivity;
-import com.lxkj.dmhw.dialog.JurisdictionDialog;
 import com.lxkj.dmhw.dialog.UserPermissionDialog;
 import com.lxkj.dmhw.utils.ActivityManagerDefine;
 import com.orhanobut.logger.Logger;

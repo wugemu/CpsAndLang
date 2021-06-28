@@ -6,10 +6,10 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
@@ -23,7 +23,6 @@ import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.Variable;
-import com.lxkj.dmhw.adapter.ShareAdapter;
 import com.lxkj.dmhw.adapter.ShareAdapter330;
 import com.lxkj.dmhw.adapter.ShareCheck;
 import com.lxkj.dmhw.bean.H5Link;
@@ -45,8 +44,6 @@ import com.lxkj.dmhw.utils.Utils;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

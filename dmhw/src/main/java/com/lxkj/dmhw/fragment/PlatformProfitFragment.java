@@ -2,7 +2,7 @@ package com.lxkj.dmhw.fragment;
 
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextPaint;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +15,6 @@ import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.activity.TempDataSetActivity;
 import com.lxkj.dmhw.adapter.PlTimeItemAdapter;
 import com.lxkj.dmhw.bean.ProfitEveryPL;
-import com.lxkj.dmhw.defined.BaseFragment;
 import com.lxkj.dmhw.defined.LazyFragment;
 import com.lxkj.dmhw.logic.HttpCommon;
 import com.lxkj.dmhw.logic.LogicActions;
@@ -25,8 +24,6 @@ import com.lxkj.dmhw.utils.MyLayoutManager;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

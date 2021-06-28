@@ -2,25 +2,16 @@ package com.lxkj.dmhw.fragment.self;
 
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.alibaba.fastjson.JSON;
 import com.lxkj.dmhw.R;
-import com.lxkj.dmhw.adapter.JGQSortAdapter;
-import com.lxkj.dmhw.bean.HomePage;
 import com.lxkj.dmhw.bean.self.HomeZcBean;
 import com.lxkj.dmhw.defined.BaseFragment;
-import com.lxkj.dmhw.fragment.JGQSortFragment;
-import com.lxkj.dmhw.utils.GridSpacingItemDecoration;
-import com.lxkj.dmhw.utils.MyLayoutManager;
 import com.lxkj.dmhw.utils.Utils;
-
-import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

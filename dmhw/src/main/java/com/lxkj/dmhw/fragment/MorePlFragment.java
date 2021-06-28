@@ -4,15 +4,14 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.SimpleTarget;
@@ -20,13 +19,10 @@ import com.bumptech.glide.request.transition.Transition;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.Variable;
-import com.lxkj.dmhw.activity.CommodityActivity290;
 import com.lxkj.dmhw.activity.CommodityActivityPJW;
 import com.lxkj.dmhw.activity.LoginActivity;
 import com.lxkj.dmhw.activity.MorePlatformNewActivity;
-import com.lxkj.dmhw.activity.MorePlatformNewActivity340;
 import com.lxkj.dmhw.adapter.MorePlAdapter;
-import com.lxkj.dmhw.bean.Coupon;
 import com.lxkj.dmhw.bean.JDGoodsBean;
 import com.lxkj.dmhw.bean.LoginToken;
 import com.lxkj.dmhw.bean.PJWLink;
@@ -46,11 +42,8 @@ import com.lxkj.dmhw.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

@@ -18,12 +18,11 @@ import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewTreeObserver;
-import android.widget.ImageView;
 
 /**
  * 用于缩放裁剪的自定义ImageView视图
  */
-public class ClipImageView extends android.support.v7.widget.AppCompatImageView implements View.OnTouchListener, ViewTreeObserver.OnGlobalLayoutListener{
+public class ClipImageView extends androidx.appcompat.widget.AppCompatImageView implements View.OnTouchListener, ViewTreeObserver.OnGlobalLayoutListener{
 
 	private static final int BORDERDISTANCE = ClipView.BORDERDISTANCE;
 	

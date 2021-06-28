@@ -1,13 +1,12 @@
 package com.lxkj.dmhw.defined.FixedCBLoopViewPager;
 
-import android.support.v4.view.PagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.bigkoo.convenientbanner.R;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
-import com.bigkoo.convenientbanner.view.CBLoopViewPager;
 
 import java.util.List;
 

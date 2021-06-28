@@ -10,7 +10,7 @@ import android.view.View;
 
 import com.lxkj.dmhw.R;
 
-public class ClearEditText extends android.support.v7.widget.AppCompatEditText implements
+public class ClearEditText extends androidx.appcompat.widget.AppCompatEditText implements
         View.OnFocusChangeListener, TextWatcher {
 
     /**

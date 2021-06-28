@@ -3,17 +3,16 @@ package com.lxkj.dmhw.activity.self;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.os.Build;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+
+import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.TextView;
 
 import com.example.test.andlang.andlangutil.BaseLangActivity;
 import com.example.test.andlang.util.ActivityUtil;
 import com.example.test.andlang.util.ButtonUtil;
-import com.example.test.andlang.util.LogUtil;
 import com.example.test.andlang.util.RegexUtil;
 import com.example.test.andlang.util.ToastUtil;
 import com.example.test.andlang.widget.editview.CleanableEditText;

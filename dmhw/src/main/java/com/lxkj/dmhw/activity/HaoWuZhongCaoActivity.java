@@ -2,34 +2,26 @@ package com.lxkj.dmhw.activity;
 
 import android.app.Activity;
 import android.graphics.Typeface;
-import android.os.Build;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import com.google.android.material.appbar.AppBarLayout;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TableLayout;
 import android.widget.TextView;
 
-import com.ahtrun.mytablayout.ProxyDrawable;
 import com.ahtrun.mytablayout.ProxyDrawable2;
 import com.example.test.andlang.andlangutil.BaseLangActivity;
-import com.example.test.andlang.util.LogUtil;
 import com.example.test.andlang.util.StatusBarUtils;
 import com.lxkj.dmhw.R;
-import com.lxkj.dmhw.adapter.ClassTabAdatper;
-import com.lxkj.dmhw.adapter.IncomeAdapter;
 import com.lxkj.dmhw.adapter.ZhongCaoAdapter;
 import com.lxkj.dmhw.bean.HaoWuClass;
 import com.lxkj.dmhw.bean.self.ActivityBean;
-import com.lxkj.dmhw.bean.self.HomeZcBean;
 import com.lxkj.dmhw.model.ZhongCaoModel;
 import com.lxkj.dmhw.presenter.ZhongCaoPresenter;
 import com.lxkj.dmhw.utils.BBCUtil;
@@ -42,7 +34,6 @@ import java.util.List;
 import java.util.Observable;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**

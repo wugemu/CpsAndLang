@@ -4,11 +4,10 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +25,6 @@ import com.lxkj.dmhw.activity.CommodityActivityPJW;
 import com.lxkj.dmhw.activity.LoginActivity;
 import com.lxkj.dmhw.adapter.MorePlAdapter;
 import com.lxkj.dmhw.bean.JDGoodsBean;
-import com.lxkj.dmhw.bean.LoginToken;
 import com.lxkj.dmhw.bean.PJWLink;
 import com.lxkj.dmhw.bean.ShareParams;
 import com.lxkj.dmhw.bean.UserInfo;
@@ -44,11 +42,8 @@ import com.lxkj.dmhw.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

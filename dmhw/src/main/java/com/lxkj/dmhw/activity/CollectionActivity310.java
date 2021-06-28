@@ -5,9 +5,9 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.ViewPager;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -16,11 +16,8 @@ import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.Variable;
 import com.lxkj.dmhw.adapter.FragmentAdapter;
 import com.lxkj.dmhw.defined.BaseActivity;
-import com.lxkj.dmhw.defined.ScaleTransitionPagerTitleView;
 import com.lxkj.dmhw.fragment.CollectionFragment;
 import com.lxkj.dmhw.fragment.CollectionFragmentPJW;
-import com.lxkj.dmhw.fragment.ComCollArticleHistoryFragment;
-import com.lxkj.dmhw.fragment.ComCollVideoHistoryFragment;
 import com.lxkj.dmhw.utils.Utils;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
@@ -34,8 +31,6 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.Common
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

@@ -15,7 +15,7 @@
         android:background="@drawable/personal_grid_bg"
         android:layout_marginBottom="@dimen/dp_65"
         >
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/collection_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -432,7 +432,7 @@
             android:background="@null"
             android:layout_marginTop="@dimen/dp_10"
             >
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/header_fragment_topic_hot_rv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -448,7 +448,7 @@
             android:background="@null"
             android:layout_marginTop="@dimen/dp_10"
             >
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/header_fragment_topic_hot_grid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -545,7 +545,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_home_jingxuan_bg"
                         >
-                        <android.support.v7.widget.RecyclerView
+                        <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/header_fragment_room_recycler"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -583,7 +583,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_home_jingxuan_bg"
                         >
-                        <android.support.v7.widget.RecyclerView
+                        <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/header_fragment_tmall_market_recycler"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -623,7 +623,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/ic_home_jingxuan_bg"
                         >
-                        <android.support.v7.widget.RecyclerView
+                        <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/header_fragment_tmall_channel_recycler"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

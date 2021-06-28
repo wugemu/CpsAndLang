@@ -177,13 +177,13 @@
                 </com.lxkj.dmhw.view.ScaleLayout>
 
 
-                <android.support.design.widget.CoordinatorLayout
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
                     android:id="@+id/Coordinator_Layout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/onframgent_part01"
                     >
-                    <android.support.design.widget.AppBarLayout
+                    <com.google.android.material.appbar.AppBarLayout
                         android:id="@+id/AppBar_Layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -386,12 +386,12 @@
                                      android:layout_height="wrap_content"
                                      android:orientation="vertical"
                                      >
-                                 <android.support.v7.widget.RecyclerView
+                                 <androidx.recyclerview.widget.RecyclerView
                                      android:id="@+id/jingang_recycler01"
                                      android:layout_width="match_parent"
                                      android:layout_height="wrap_content"
                                      android:listSelector="#00000000"/>
-                                 <android.support.v7.widget.RecyclerView
+                                 <androidx.recyclerview.widget.RecyclerView
                                      android:id="@+id/jingang_recycler02"
                                      android:layout_width="match_parent"
                                      android:layout_height="wrap_content"
@@ -443,7 +443,7 @@
                      android:layout_height="wrap_content"
                      android:layout_marginTop="@dimen/dp_10"
                      />
-                      <android.support.v4.view.ViewPager
+                      <androidx.viewpager.widget.ViewPager
                              android:id="@+id/jgq_new_content"
                              android:layout_width="match_parent"
                              android:layout_height="match_parent"
@@ -510,7 +510,7 @@
                                  android:layout_marginTop="@dimen/dp_10"
                                  android:visibility="gone"
                                  >
-                                 <android.support.v7.widget.RecyclerView
+                                 <androidx.recyclerview.widget.RecyclerView
                                      android:id="@+id/header_fragment_topic_hot_rv"
                                      android:layout_width="match_parent"
                                      android:layout_height="wrap_content"
@@ -527,7 +527,7 @@
                                  android:layout_marginTop="@dimen/dp_8"
                                  android:visibility="gone"
                                  >
-                                 <android.support.v7.widget.RecyclerView
+                                 <androidx.recyclerview.widget.RecyclerView
                                      android:id="@+id/header_fragment_topic_hot_grid"
                                      android:layout_width="match_parent"
                                      android:layout_height="wrap_content"
@@ -621,7 +621,7 @@
                                  android:layout_marginEnd="@dimen/dp_10"
                                  android:descendantFocusability="blocksDescendants"
                                  >
-                                 <android.support.v4.view.ViewPager
+                                 <androidx.viewpager.widget.ViewPager
                                      android:id="@+id/limitbuy_viewpager"
                                      android:layout_width="match_parent"
                                      android:layout_height="wrap_content"
@@ -974,7 +974,7 @@
                                 </LinearLayout>
                             </LinearLayout>
                         </RelativeLayout>
-                         <android.support.v7.widget.RecyclerView
+                         <androidx.recyclerview.widget.RecyclerView
                              android:id="@+id/hotsell_recycler"
                              android:layout_width="match_parent"
                              android:layout_height="wrap_content"
@@ -1075,7 +1075,7 @@
                              android:layout_width="match_parent"
                              android:layout_height="wrap_content"
                              >
-                             <android.support.v7.widget.RecyclerView
+                             <androidx.recyclerview.widget.RecyclerView
                                  android:id="@+id/header_fragment_room_recycler"
                                  android:layout_width="match_parent"
                                  android:layout_height="wrap_content"
@@ -1096,10 +1096,10 @@
                             android:layout_height="wrap_content"
                             android:background="@color/white"
                             />
-                    </android.support.design.widget.AppBarLayout>
+                    </com.google.android.material.appbar.AppBarLayout>
 
 
-                    <android.support.v4.view.ViewPager
+                    <androidx.viewpager.widget.ViewPager
                         android:id="@+id/navigate_content"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -1107,7 +1107,7 @@
                         app:layout_behavior="@string/appbar_scrolling_view_behavior"
                         />
 
-                </android.support.design.widget.CoordinatorLayout>
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
             </LinearLayout>
             </RelativeLayout>
     </com.lxkj.dmhw.defined.PtrClassicRefreshLayout>

@@ -1,7 +1,7 @@
 package com.lxkj.dmhw.defined;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 
 import com.orhanobut.logger.Logger;

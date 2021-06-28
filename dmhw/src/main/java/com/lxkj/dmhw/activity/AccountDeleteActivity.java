@@ -1,39 +1,19 @@
 package com.lxkj.dmhw.activity;
 
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.Variable;
-import com.lxkj.dmhw.adapter.RewardAdapter;
 import com.lxkj.dmhw.defined.BaseActivity;
-import com.lxkj.dmhw.defined.MultiImage.MultiImageSelector;
-import com.lxkj.dmhw.defined.MultiImage.MultiImageSelectorActivity;
-import com.lxkj.dmhw.defined.ObserveGridView;
 import com.lxkj.dmhw.fragment.AccountDelOne;
-import com.lxkj.dmhw.logic.HttpCommon;
-import com.lxkj.dmhw.logic.LogicActions;
-import com.lxkj.dmhw.logic.NetworkRequest;
-import com.lxkj.dmhw.utils.Utils;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

@@ -16,11 +16,11 @@
             android:layout_height="@dimen/dp_24"/>
 
         <!--头部背景end-->
-        <android.support.design.widget.CoordinatorLayout
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:id="@+id/Coordinator_Layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
                 android:id="@+id/fragment_four_one_list"
                 android:layout_width="match_parent"
@@ -29,7 +29,7 @@
                 android:divider="@null"
                 android:listSelector="#00000000"
                 android:background="#000000"/>
-            <android.support.design.widget.AppBarLayout
+            <com.google.android.material.appbar.AppBarLayout
                 android:id="@+id/AppBar_Layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
                 app:elevation="0dp"
                 android:orientation="vertical"
                 app:layout_behavior="com.lxkj.dmhw.defined.AppBarLayoutBehaviorNew">
-                <android.support.design.widget.CollapsingToolbarLayout
+                <com.google.android.material.appbar.CollapsingToolbarLayout
                     android:background="@color/transparent"
                     android:id="@+id/collapsingToolbar"
                     android:layout_width="match_parent"
@@ -54,7 +54,7 @@
                             android:background="@mipmap/icon_special_top">
                         </com.lxkj.dmhw.view.ScaleLayout>
                     </LinearLayout>
-                </android.support.design.widget.CollapsingToolbarLayout>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
                         android:layout_height="wrap_content"
                         android:background="@color/white"
                         />
-                    <android.support.v4.view.ViewPager
+                    <androidx.viewpager.widget.ViewPager
                         android:id="@+id/navigate_content"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -81,8 +81,8 @@
                         android:layout_height="10dp"
                         android:background="@color/white"/>
                 </LinearLayout>
-            </android.support.design.widget.AppBarLayout>
-        </android.support.design.widget.CoordinatorLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
 

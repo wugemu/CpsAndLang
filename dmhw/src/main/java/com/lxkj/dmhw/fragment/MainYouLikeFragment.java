@@ -3,9 +3,9 @@ package com.lxkj.dmhw.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +15,9 @@ import com.lxkj.dmhw.activity.CommodityActivity290;
 import com.lxkj.dmhw.adapter.MyAdapter290;
 import com.lxkj.dmhw.bean.MainBottomListItem;
 import com.lxkj.dmhw.defined.BaseFragment;
-import com.lxkj.dmhw.defined.LazyFragment;
 import com.lxkj.dmhw.logic.HttpCommon;
 import com.lxkj.dmhw.logic.LogicActions;
 import com.lxkj.dmhw.logic.NetworkRequest;
-import com.lxkj.dmhw.utils.GridSpacingItemDecoration;
 import com.lxkj.dmhw.utils.MyItemDecoration;
 import com.lxkj.dmhw.utils.MyLayoutManager;
 import com.lxkj.dmhw.utils.NetStateUtils;
@@ -28,8 +26,6 @@ import com.lxkj.dmhw.utils.Utils;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

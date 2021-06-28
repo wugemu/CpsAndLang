@@ -4,14 +4,14 @@ package com.lxkj.dmhw.widget.mytab;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.TintTypedArray;
+import androidx.appcompat.widget.TintTypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 
 import com.lxkj.dmhw.R;
 
 /**
- * TabItem is a special 'view' which allows you to declare tab items for a {@link android.support.design.widget.TabLayout}
+ * TabItem is a special 'view' which allows you to declare tab items for a {@link com.google.android.material.tabs.TabLayout}
  * within a layout. This view is not actually added to TabLayout, it is just a dummy which allows
  * setting of a tab items's text, icon and custom layout. See TabLayout for more information on how
  * to use it.

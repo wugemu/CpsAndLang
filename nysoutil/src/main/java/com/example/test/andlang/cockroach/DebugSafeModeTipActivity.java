@@ -1,9 +1,9 @@
 package com.example.test.andlang.cockroach;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -15,9 +15,6 @@ import com.example.test.andlang.R2;
 import com.example.test.andlang.util.ActivityUtil;
 import com.example.test.andlang.util.StatusBarUtils;
 
-import java.util.Observable;
-
-import butterknife.BindView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

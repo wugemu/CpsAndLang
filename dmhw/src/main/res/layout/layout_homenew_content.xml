@@ -15,7 +15,7 @@
         android:addStatesFromChildren="true"
         android:background="@color/Transparent00000000"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <android.support.design.widget.CoordinatorLayout
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/Transparent00000000">
@@ -32,7 +32,7 @@
                 app:prl_refreshEnable="false"
                 app:prl_targetId="@+id/rv_todaysale"
                 app:prl_twinkEnable="true">
-                <android.support.v7.widget.RecyclerView
+                <androidx.recyclerview.widget.RecyclerView
                     android:background="@color/colorBackGroud"
                     app:layout_behavior="@string/appbar_scrolling_view_behavior"
                     android:overScrollMode="never"
@@ -40,7 +40,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
             </com.yan.pullrefreshlayout.PullRefreshLayout>
-            <android.support.design.widget.AppBarLayout
+            <com.google.android.material.appbar.AppBarLayout
                 app:elevation="0dp"
                 app:layout_behavior="com.lxkj.dmhw.widget.AppBarLayoutBehavior"
                 android:id="@+id/appbar_todaysale"
@@ -50,7 +50,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <android.support.design.widget.CollapsingToolbarLayout
+                <com.google.android.material.appbar.CollapsingToolbarLayout
                     android:background="@color/Transparent00000000"
                     android:id="@+id/collapsingToolbar"
                     android:layout_width="match_parent"
@@ -97,7 +97,7 @@
                             <include layout="@layout/include_theme_new"/>
                         </LinearLayout>
                     </LinearLayout>
-                </android.support.design.widget.CollapsingToolbarLayout>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
 
                 <RelativeLayout
                     android:id="@+id/rl_limitime"
@@ -113,7 +113,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@mipmap/icon_home_xsms"/>
-                    <android.support.design.widget.TabLayout
+                    <com.google.android.material.tabs.TabLayout
                         android:layout_marginLeft="1dp"
                         android:paddingTop="7dp"
                         android:paddingBottom="7dp"
@@ -133,9 +133,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="800dp"
                     android:id="@+id/empty_view"/>
-            </android.support.design.widget.AppBarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
 
-        </android.support.design.widget.CoordinatorLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
     </com.lxkj.dmhw.widget.swipe.RefreshLayout>
 
     <include layout="@layout/lang_common_bottom_loading"

@@ -3,12 +3,10 @@ package com.lxkj.dmhw.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -19,9 +17,7 @@ import com.lxkj.dmhw.activity.ImageActivity;
 import com.lxkj.dmhw.activity.LoginActivity;
 import com.lxkj.dmhw.activity.MainActivity;
 import com.lxkj.dmhw.activity.VideoActivity;
-import com.lxkj.dmhw.bean.MarketSort;
 import com.lxkj.dmhw.data.DateStorage;
-import com.lxkj.dmhw.defined.BaseFragment;
 import com.lxkj.dmhw.R;
 import com.lxkj.dmhw.adapter.MarketingAdapter;
 import com.lxkj.dmhw.bean.Marketing;
@@ -33,14 +29,10 @@ import com.lxkj.dmhw.logic.NetworkRequest;
 import com.lxkj.dmhw.utils.MyLayoutManager;
 import com.lxkj.dmhw.utils.ToastUtil;
 
-import net.lucode.hackware.magicindicator.MagicIndicator;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import in.srain.cube.views.ptr.PtrClassicFrameLayout;

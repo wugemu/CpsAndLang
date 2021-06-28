@@ -22,7 +22,7 @@ buildscript {
         //信用卡SDK
         classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
 
-        classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-rc2'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.1.0'
 
         //打包上传jitpack
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'

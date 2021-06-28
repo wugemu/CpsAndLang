@@ -1,23 +1,16 @@
 package com.example.test.andlang.andlangutil;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.hardware.SensorEvent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.SupportActivity;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.LinearInterpolator;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -34,14 +27,11 @@ import com.example.test.andlang.util.StatusBarUtils;
 import com.example.test.andlang.util.ToastUtil;
 //import com.squareup.leakcanary.RefWatcher;
 import com.example.test.andlang.util.imageload.GlideUtil;
-import com.example.test.andlang.util.imageload.ImageLoadUtils;
 import com.umeng.analytics.MobclickAgent;
 
 import java.lang.reflect.Field;
-import java.util.Observable;
 import java.util.Observer;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 

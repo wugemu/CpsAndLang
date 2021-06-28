@@ -1,17 +1,13 @@
 package com.lxkj.dmhw.defined;
 
 import android.content.Context;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
+import com.google.android.material.appbar.AppBarLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.OverScroller;
-
-import com.heytap.mcssdk.utils.LogUtil;
-import com.lxkj.dmhw.logic.InternalMessage;
-import com.lxkj.dmhw.logic.LogicActions;
 
 import java.lang.reflect.Field;
 

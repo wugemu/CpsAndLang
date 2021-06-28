@@ -171,7 +171,7 @@
 
 
     </LinearLayout>
-      <android.support.v7.widget.RecyclerView
+      <androidx.recyclerview.widget.RecyclerView
           android:id="@+id/adapter_recommend_recycler"
           android:layout_width="wrap_content"
           android:layout_height="match_parent"

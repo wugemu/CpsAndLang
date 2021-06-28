@@ -1,12 +1,10 @@
 package com.lxkj.dmhw.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
 
 import com.ahtrun.mytablayout.DetialListTablayout;
 import com.example.test.andlang.andlangutil.BaseLangActivity;
 import com.lxkj.dmhw.R;
-import com.lxkj.dmhw.activity.self.order.OrderListActivity;
 
 import java.util.Observable;
 
