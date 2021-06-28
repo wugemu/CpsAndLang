@@ -681,7 +681,19 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
-        </provider> <!-- 穿山甲广告SDK配置开始 -->
+        </provider>
+        <provider
+            android:name=".utils.BuglyFileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="name,authorities,exported,grantUriPermissions">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="name,resource" />
+        </provider>
+        <!-- 穿山甲广告SDK配置开始 -->
         <!-- 穿山甲普通版 -->
         <!-- <provider -->
         <!-- android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider" -->
